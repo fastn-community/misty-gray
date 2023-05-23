@@ -1,0 +1,23 @@
+-- import: fastn-community.github.io/source-code-pro-font/assets as source-code-pro-assets
+-- import: fastn-community.github.io/rubik-font/assets as rubik-assets
+
+
+
+
+-- ftd.type copy-regular-bold-mobile:
+line-height.px: 24
+size.px: 16
+letter-spacing.px: 0
+weight: 700
+font-family: $rubik-assets.fonts.Rubik
+
+-- ftd.type copy-regular-bold-desktop:
+line-height.px: 30
+size.px: 18
+letter-spacing.px: 0
+font-family: $rubik-assets.fonts.Rubik
+weight: 700
+
+-- ftd.responsive-type copy-regular-bold:
+desktop: $copy-regular-bold-desktop
+mobile: $copy-regular-bold-mobile

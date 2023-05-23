@@ -1,0 +1,81 @@
+-- import: fastn/processors as pr
+-- import: fastn-community.github.io/set-3-ds/assets
+
+-- boolean show-footer: true
+
+-- string $site-name: Fastn
+
+-- integer logo-width: 200
+
+-- integer logo-height: 32
+
+-- string $site-url: index.html
+
+-- integer $width: 1320
+
+-- pr.sitemap-data sitemap:
+$processor$: pr.sitemap
+
+-- pr.sitemap-data footer-toc:
+$processor$: pr.full-sitemap
+
+
+
+-- pr.toc-item list footer-list:
+$processor$: pr.toc
+
+-- fastn.app-ui apps:
+$processor$: pr.fastn-apps
+
+-- record social-media:
+ftd.image-src src:
+string link: /
+
+-- social-media list social-links:
+
+-- social-media:
+link: /
+src: $assets.files.static.meta.svg
+
+-- social-media: 
+link: /
+src: $assets.files.static.figma.svg
+
+-- social-media:
+link: /
+src: $assets.files.static.google.svg
+
+-- social-media: 
+link: /
+src: $assets.files.static.tweak.svg
+
+-- social-media: 
+link: /
+src: $assets.files.static.ball.svg
+
+-- end: social-links
+
+
+-- pr.toc-item list footer-links:
+$processor$: pr.toc
+
+- Heading1: about/
+  - Footer link 1: /
+  - Footer link 2: /
+  - Footer link 3: /
+  - Footer link 4: /
+- Heading2: about/
+  - Footer link 1: /
+  - Footer link 2: /
+  - Footer link 3: /
+  - Footer link 4: /
+- Heading3: about/
+  - Footer link 1: /
+  - Footer link 2: /
+  - Footer link 3: /
+  - Footer link 4: /
+- Heading4: about/
+  - Footer link 1: /
+  - Footer link 2: /
+  - Footer link 3: /
+  - Footer link 4: /

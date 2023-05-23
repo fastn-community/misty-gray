@@ -2,8 +2,11 @@
 
 -- fastn.package: fastn-community.github.io/set-3-ds
 
--- fastn.dependency: fifthtry.github.io/doc-site as ds
--- fastn.dependency: fifthtry.github.io/bling as bling
+-- fastn.dependency: fastn-community.github.io/set-3-cs as cs
+-- fastn.dependency: fastn-community.github.io/set-3-typography as typo
+-- fastn.dependency: fastn-community.github.io/dark-mode-switcher
+-- fastn.dependency: fastn-community.github.io/code-block
+-- fastn.dependency: fastn-community.github.io/typography
 
--- fastn.auto-import: bling/chat as chat
--- fastn.auto-import: ds
+-- fastn.auto-import: cs
+-- fastn.auto-import: typo

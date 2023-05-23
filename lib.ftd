@@ -1,0 +1,1171 @@
+-- import: fastn-community.github.io/set-3-ds/common/fonts as fonts
+
+-- component page:
+optional caption title:
+optional body body:
+children page-wrap:
+ftd.type-data types: $typo.types
+ftd.color-scheme colors: $cs.main
+pr.toc-item list sections: $sitemap.sections
+pr.toc-item list sub-sections: $sitemap.subsections
+optional pr.toc-item current-section: $sitemap.current-section
+optional pr.toc-item current-subsection: $sitemap.current-subsection
+optional pr.toc-item current-page: $sitemap.current-page
+pr.toc-item list toc: $sitemap.toc
+optional string cta-placeholder:
+string brand-name:
+string heading:
+string cta-text:
+optional boolean show-search: false
+footer-logo-record list list-of-footer-logo:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+
+-- dark-mode-switcher-float:
+
+-- header: $page.brand-name
+heading: $page.heading
+cta-text: $page.cta-text
+sections: $page.sections
+sub-sections: $page.sub-sections
+current-section: $page.current-section
+current-subsection: $page.current-subsection
+current-page: $page.current-page
+toc: $page.toc
+
+-- ftd.row:
+if: { page.title != NULL }
+width: fill-container
+spacing: space-between
+padding-horizontal.px: 40
+padding-vertical.px: 50
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $page.title
+if: { page.title != NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.row:
+align-self: end
+
+-- ftd.text-input:
+if: { page.show-search }
+min-width.fixed.px: 375
+placeholder: $page.cta-placeholder
+background.solid: transparent
+border-color: $inherited.colors.cta-primary.base
+border-width.px: 1 
+border-radius.px: 6
+padding.px: 15
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.column:
+background.solid: $inherited.colors.background.base
+width: fill-container
+
+-- ftd.text: 
+if: { page.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$page.body
+
+-- ftd.column:
+width: fill-container
+align-content: center
+align-self: center
+children: $page.page-wrap
+min-height.fixed.px: 300
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- footer: Fastn
+list-of-footer-logo: $page.list-of-footer-logo
+bg-color: $inherited.colors.background.base
+
+Copyright ©2022. Fastn Inc. 
+
+-- footer-links-wrapper:
+
+-- footer-links: HEADING
+link1: Footer Link 01
+link2: Footer Link 02
+link3: Footer Link 03
+link4: Footer Link 04
+link5: Footer Link 05
+
+-- footer-links: HEADING
+link1: Footer Link 01
+link2: Footer Link 02
+link3: Footer Link 03
+link4: Footer Link 04
+link5: Footer Link 05
+
+-- footer-links: HEADING
+link1: Footer Link 01
+link2: Footer Link 02
+link3: Footer Link 03
+link4: Footer Link 04
+link5: Footer Link 05
+
+-- footer-links: HEADING
+link1: Footer Link 01
+link2: Footer Link 02
+link3: Footer Link 03
+link4: Footer Link 04
+link5: Footer Link 05
+
+-- end: footer-links-wrapper
+
+-- end: footer
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+
+
+
+
+
+
+
+-- component header:
+caption brand-name: 
+string cta-text:
+string heading:
+pr.toc-item list sections: 
+pr.toc-item list sub-sections: 
+pr.toc-item list toc: 
+optional pr.toc-item current-section: 
+optional pr.toc-item current-subsection: 
+optional pr.toc-item current-page:
+integer width: $width
+
+-- ftd.column: 
+width: fill-container
+background.solid: $inherited.colors.background.base
+align-content: center
+padding-top.px: 40
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 40
+min-height.fixed.px: 112
+align-content: center
+max-width.fixed.px: 1440
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+align-content: center
+
+-- ftd.text: $header.brand-name
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+
+-- ftd.row:
+align-content: center
+spacing.fixed.px: 32
+
+-- section-loop: $obj.title
+$loop$: $header.sections as $obj
+url: $obj.url
+is-active: $obj.is-active
+
+-- end: ftd.row
+
+-- cta-button: $header.cta-text
+role: primary
+link: /
+
+-- end: ftd.row
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+
+-- ftd.row:
+width: fill-container
+padding-vertical.px: 50
+
+-- subsections-links: $obj.title
+$loop$: $header.sections as $obj
+item: $obj.children
+is-active: $obj.is-active
+url: $obj.url
+
+-- end: ftd.row
+
+-- ftd.text: $header.heading
+role: $inherited.types.heading-hero
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: header
+
+
+
+
+
+
+
+
+
+
+-- component section-loop:
+caption title:
+string url:
+boolean is-active:
+
+-- ftd.column:
+
+-- ftd.text: $section-loop.title
+role: $inherited.types.copy-regular
+link: $section-loop.url
+color: $inherited.colors.text-strong
+color if { section-loop.is-active }: $inherited.colors.text
+style if { section-loop.is-active }: bold
+
+-- end: ftd.column
+
+-- end: section-loop
+
+
+
+
+
+
+
+
+
+
+-- component subsections-links:
+caption title:
+optional boolean is-active:
+optional string url: 
+pr.toc-item list item:
+
+-- ftd.row:
+spacing.fixed.px: 14
+padding-horizontal.px: 8
+
+-- ftd.text: $subsections-links.title
+color: $inherited.colors.text-strong
+color if { subsections-links.is-active }: $inherited.colors.shadow
+role: $inherited.types.label-large
+white-space: nowrap
+link: $subsections-links.url
+
+-- ftd.image:
+src: $assets.files.static.right.svg
+align-self: center
+
+-- end: ftd.row
+
+-- end: subsections-links
+
+
+
+
+
+
+
+
+
+
+-- component cta-button:
+caption title:
+optional string role:
+optional string link: /
+optional boolean show-arrow: false
+boolean align-center: false
+boolean transparent: false
+
+-- ftd.column:
+align-self if { cta-button.align-center }: center
+
+-- ftd.row:
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+border-radius.px: 4
+padding-vertical.px: 10
+padding-horizontal.px: 28
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-medium
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+white-space: nowrap
+text-align: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button
+
+
+
+
+
+
+
+
+
+
+-- component use-case:
+caption title:
+optional integer margin-top:
+optional boolean shadow: false
+optional boolean left: false
+
+-- ftd.column:
+padding-vertical.px: 7
+padding-left.px if { use-case.left }: 44
+margin-top.px if { use-case.margin-top != NULL }: $use-case.margin-top
+
+-- ftd.row:
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+
+-- ftd.column:
+width.fixed.px: 8
+height.fixed.px: 8
+border-radius.percent: 100
+background.solid if { use-case.shadow }: $inherited.colors.shadow
+background.solid: $inherited.colors.text
+
+-- end: ftd.column
+
+-- ftd.text: $use-case.title
+role: $inherited.types.copy-regular
+color if { use-case.shadow }: $inherited.colors.shadow
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: use-case
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+caption title:
+body body:
+footer-logo-record list list-of-footer-logo:
+children footer-wrap:
+optional ftd.color bg-color:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid if { footer.bg-color != NULL }: $footer.bg-color
+
+-- ftd.column:
+width: fill-container
+align-content: center
+children: $footer.footer-wrap
+
+-- end: ftd.column
+
+-- footer-links-wrapper:
+
+-- end: footer-links-wrapper
+
+-- footer-copyright: $footer.title
+list-of-footer-logo: $footer.list-of-footer-logo
+
+$footer.body
+
+-- end: footer-copyright
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+
+
+
+-- component footer-links:
+caption title:
+string link1:
+string link2:
+string link3:
+string link4:
+string link5:
+
+-- ftd.column:
+color: $inherited.colors.shadow
+spacing.fixed.px: 7
+
+-- ftd.text: $footer-links.title
+role: $inherited.types.heading-tiny
+
+-- ftd.text: $footer-links.link1
+role: $inherited.types.copy-large
+
+-- ftd.text: $footer-links.link2
+role: $inherited.types.copy-large
+
+-- ftd.text: $footer-links.link3
+role: $inherited.types.copy-large
+
+-- ftd.text: $footer-links.link4
+role: $inherited.types.copy-large
+
+-- ftd.text: $footer-links.link5
+role: $inherited.types.copy-large
+
+-- end: ftd.column
+
+-- end: footer-links
+
+
+
+
+
+
+
+
+
+
+-- component footer-links-wrapper:
+integer width: $width
+children footer-child:
+
+-- ftd.row:
+margin-top.px: 54
+spacing: space-between
+width: fill-container
+max-width.fixed.px: $footer-links-wrapper.width
+children: $footer-links-wrapper.footer-child
+
+-- end: ftd.row
+
+-- end: footer-links-wrapper
+
+
+
+
+
+
+
+
+
+
+-- component footer-copyright:
+caption title:
+body body:
+footer-logo-record list list-of-footer-logo:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-bottom.px: 54
+
+-- ftd.text: $footer-copyright.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+
+-- ftd.row:
+padding-vertical.px: 24
+
+-- ftd.image:
+$loop$: $footer-copyright.list-of-footer-logo as $item
+src: $item.src
+margin-horizontal.px: 12
+
+-- end: ftd.row
+
+-- ftd.text: 
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+$footer-copyright.body
+
+-- end: ftd.column
+
+-- end: footer-copyright
+
+
+
+
+
+
+
+
+
+
+-- component markdown:
+body body:
+
+-- ftd.column:
+margin-vertical.px: 20
+
+-- ftd.text:
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+opacity: 0.60
+
+$markdown.body
+
+-- end: ftd.column
+
+-- end: markdown
+
+
+
+
+
+
+
+
+
+
+-- component page-wrapper:
+integer width: 1440
+children child:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+children: $page-wrapper.child
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: page-wrapper
+
+
+
+
+
+
+
+
+
+
+-- component h2:
+caption title:
+optional body body:
+optional string id:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 24
+spacing.fixed.px: 18
+id if { h2.id != NULL }: $h2.id
+region: h2
+
+-- ftd.text: $h2.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+
+-- ftd.text:
+if: { h2.body != NULL }
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+opacity: 0.60
+
+$h2.body
+
+-- end: ftd.column
+
+-- end: h2
+
+
+
+
+
+
+
+
+
+
+-- component sidenav:
+sidebar list links: $subtitle
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 50
+padding-vertical.px: 30
+padding-horizontal.px: 36
+border-color: $inherited.colors.border
+border-top-width.px: 1 
+max-width.fixed.px: 320
+
+-- navbar-list: $obj
+$loop$: $sidenav.links as $obj
+
+-- end: ftd.column
+
+-- end: sidenav
+
+
+
+
+
+
+
+
+
+
+-- component navbar-list:
+caption sidebar item:
+boolean $show-sub-nav: true
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 30
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+spacing.fixed.px: 15
+align-content: center
+$on-click$: $ftd.toggle($a= $navbar-list.show-sub-nav)
+
+-- ftd.image:
+if: { navbar-list.item.arrow && !navbar-list.show-sub-nav }
+src: $assets.files.static.right.svg
+
+-- ftd.image:
+if: { navbar-list.item.arrow && navbar-list.show-sub-nav }
+src: $assets.files.static.down.svg
+
+-- ftd.text: $navbar-list.item.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- sub-nav: $obj
+if: { navbar-list.show-sub-nav }
+$loop$: $navbar-list.item.sub-nav as $obj
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: navbar-list
+
+
+
+
+
+
+
+
+
+
+-- component sub-nav:
+caption sidebar item:
+
+-- ftd.column:
+width: fill-container
+padding-left.px: 35
+padding-top.px: 24
+
+-- ftd.text: $sub-nav.item.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: sub-nav
+
+
+
+
+
+
+
+
+
+
+-- component right-sidenav:
+right-sidebar list links: $right-subtitle
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 20
+margin-top.px: 50
+padding-top.px: 30
+border-color: $inherited.colors.border
+border-top-width.px: 1 
+max-width.fixed.px: 370
+
+-- right-navbar-list: $obj
+$loop$: $right-sidenav.links as $obj
+
+-- end: ftd.column
+
+-- end: right-sidenav
+
+
+
+
+
+
+
+
+
+
+-- component right-navbar-list:
+caption right-sidebar item:
+boolean $active: false
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 30
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 15
+$on-click$: $ftd.set-bool($a= $right-navbar-list.active, v = true)
+
+-- ftd.text: $right-navbar-list.item.title
+role: $inherited.types.label-large
+style if { right-navbar-list.active }: bold
+color: $inherited.colors.text
+color if { right-navbar-list.active}: $inherited.colors.shadow
+link: $right-navbar-list.item.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: right-navbar-list
+
+
+
+
+
+
+
+
+
+
+-- component dark-mode-switcher-float:
+
+-- ftd.row:
+anchor: window
+right.px: 50
+bottom.px: 50
+padding.px: 10
+background.solid: $inherited.colors.background.base
+border-width.px: 1
+border-color: $inherited.colors.border
+border-radius.px: 4
+z-index: 99999999999999
+
+-- ftd.row:
+if: { ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-light-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/system-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { !ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-dark-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/light-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+
+-- ftd.row:
+if: { ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-system-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/dark-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: dark-mode-switcher-float
+
+
+
+
+
+
+
+
+
+-- component h1:
+caption title:
+body body:
+optional string id: 
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+padding-vertical.px: 14
+id if { h1.id != NULL }: $h1.id
+region: h1
+
+-- ftd.text: $h1.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- ftd.text:
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+opacity: 0.60
+
+$h1.body
+
+-- end: ftd.column
+
+-- end: h1
+
+
+
+
+
+
+
+
+
+
+-- component code:
+optional caption caption:
+body body:
+string lang:
+boolean copy: true
+optional ftd.resizing max-height:
+optional ftd.resizing max-width:
+optional string download:
+
+-- cb.code:
+caption: $code.caption
+lang: $code.lang
+max-height: $code.max-height
+max-width: $code.max-width
+copy: $code.copy
+download: $code.download
+
+$code.body
+
+-- end: code
+
+
+
+
+
+
+
+
+
+-- component image:
+optional caption caption:
+optional body body:
+optional string link:
+ftd.image-src src:
+optional ftd.align alignment: center
+optional ftd.resizing width:
+optional ftd.resizing height:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+height: $image.height
+
+-- ftd.image:
+src: $image.src
+width: auto
+width if { image.width != NULL }: $image.width
+max-width: fill-container
+height: auto
+align-self: center
+
+-- ftd.text:
+if: { image.caption != NULL }
+text: $image.caption
+color: $inherited.colors.text
+role: $inherited.types.label-large
+border-bottom-left-radius.px: 5
+border-bottom-right-radius.px: 5
+background.solid: $inherited.colors.background.step-1
+padding-vertical.rem: 0.5
+padding-horizontal.rem: 1.25
+text-align: center
+
+-- ftd.column:
+if: { image.body != NULL }
+margin-top.px: 20
+align-self: start
+
+-- markdown:
+body: $image.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: image
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component toast:
+caption title:
+body body:
+
+-- ftd.column:
+background.solid: $inherited.colors.info.text
+padding-vertical.px: 12
+border-radius.px: 8
+padding-right.px: 8
+margin-vertical.px: 44
+
+-- ftd.row:
+
+-- ftd.image:
+src: $assets.files.static.info-icon.svg
+padding-right.px: 8
+padding-left.px: 16
+align-self: center
+
+-- ftd.column:
+spacing.fixed.px: 4
+
+-- ftd.text: $toast.title
+role: $fonts.copy-large
+color: $inherited.colors.text
+
+-- ftd.text: 
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$toast.body
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: toast
+
+
+
+
+
+
+
+
+
+
+-- component col:
+children child:
+
+-- ftd.column:
+margin-top.px: 50
+padding-top.px: 40
+padding-horizontal.px: 50
+border-color: $inherited.colors.border
+border-top-width.px: 1 
+border-left-width.px: 1
+border-right-width.px: 1
+width: fill-container
+
+-- ftd.column:
+children: $col.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: col
+
+
+
+
+
+
+
+
+
+
+-- record footer-logo-record:
+ftd.image-src src:
+
+-- footer-logo-record list list-of-footer-logo:
+
+-- footer-logo-record: 
+src: $assets.files.static.fb.png
+
+-- footer-logo-record: 
+src: $assets.files.static.figma.png
+
+-- footer-logo-record: 
+src: $assets.files.static.google.png
+
+-- footer-logo-record: 
+src: $assets.files.static.chat.png
+
+-- footer-logo-record: 
+src: $assets.files.static.social.png
+
+-- end: list-of-footer-logo
+
+
+
+
+
+
+
+
+
+
+-- record sidebar:
+caption title:
+boolean arrow: false
+sidebar list sub-nav:
+
+-- sidebar list subtitle:
+
+-- sidebar: Home
+arrow: true
+
+-- sidebar: Pocket
+arrow: true
+
+-- sidebar: History
+arrow: true
+
+-- sidebar: Service
+arrow: true
+
+-- sidebar.sub-nav: 
+
+-- sidebar: Credit
+
+-- sidebar: Transfer
+
+-- sidebar: Cash
+
+-- sidebar: My Bills
+
+-- end: sidebar.sub-nav
+
+-- sidebar: Saved
+arrow: true
+
+-- end: subtitle
+
+
+
+
+
+
+
+
+
+
+-- record right-sidebar:
+caption title:
+string link: 
+
+-- right-sidebar list right-subtitle:
+
+-- right-sidebar: Create Edge Middleware
+link: #create-edge-mioddleware
+
+-- right-sidebar: Match Paths based on custom matcher config
+link: #create-edge-mioddleware
+
+-- right-sidebar: Match a single path
+link: #create-edge-mioddleware
+
+-- right-sidebar: Match multiple paths
+link: #create-edge-mioddleware
+
+-- right-sidebar: Match using regex
+link: #create-edge-mioddleware
+
+-- right-sidebar: Match based on character matching
+link: #create-edge-mioddleware
+
+-- right-sidebar: Match paths based on conditional statements
+link: #create-edge-mioddleware
+
+-- right-sidebar: Loggings
+link: #create-edge-mioddleware
+
+-- right-sidebar: Existing login connection
+link: #create-edge-mioddleware
+
+-- right-sidebar: Choosing a connection when creating a project
+link: #create-edge-mioddleware
+
+-- right-sidebar: Known limitations
+link: #create-edge-mioddleware
+
+-- end: right-subtitle
