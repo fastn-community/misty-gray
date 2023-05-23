@@ -181,6 +181,16 @@ For a full list of convenience images, which are built by CircleCI, see the
 -- page.footer:
 
 -- footer:
+social: true
+site-logo: $assets.files.assets.dummy-site-logo.png
+site-url: /
+site-name: Site name
+logo-1-url: https://twitter.com/FifthTryHQ
+logo-2-url: /
+logo-3-url: https://discord.gg/bucrdvptYd
+logo-4-url: /
+logo-5-url: /
+copyright: Copyright © 2023 - fifthtry.com
 
 -- end: page.footer
 
