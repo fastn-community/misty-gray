@@ -10,3 +10,33 @@
 
 -- fastn.auto-import: cs
 -- fastn.auto-import: typo
+
+
+
+-- fastn.sitemap:
+
+# Home: /
+
+## Home Child: /
+
+- Service: /
+  - Documentation: /
+  - Transfer: /
+  - Cash: /
+  - My Bills: /
+
+- Home: /
+
+- Pocket: /
+
+- History: /
+
+## Home Child: /
+
+# Label: /
+
+# Label: /
+
+# Label: /
+
+# Label: /

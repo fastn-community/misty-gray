@@ -16,13 +16,16 @@
 optional ftd.image-src site-logo:
 string site-url: /
 optional string site-name:
-ftd.image-src menu-icon: $assets.files.static.header.hamburger-dark.svg
 pr.toc-item list sections: 
 pr.toc-item list sub-sections: 
-pr.toc-item list toc: 
+pr.toc-item list toc:
+ftd.image-src menu-icon: $assets.files.static.hamburger.svg
 optional pr.toc-item current-section: 
 optional pr.toc-item current-subsection: 
 optional pr.toc-item current-page: 
+optional string login-btn-txt:
+optional string login-btn-url:
+boolean login-button: false
 integer logo-width: 120
 integer logo-height: 44
 boolean $sidebar-open: false
@@ -121,7 +124,7 @@ padding-horizontal.px: 40
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 48
+spacing: space-between
 padding-vertical.px: 40
 
 -- ftd.row:
@@ -208,8 +211,8 @@ align-self: center
 
 -- ftd.row:
 width: hug-content
-align-content: center
 spacing.fixed.rem: 2
+align-self: end
 
 -- subsections-links: $obj.title
 $loop$: $header-desktop.sub-sections as $obj
