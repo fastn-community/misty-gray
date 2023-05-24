@@ -160,6 +160,7 @@ variant in the Design panel.
 You can remove a list item from the default component by deleting it in the Layers panel.
 
 -- h3: Docker
+id: docker
 
 Our suite of products are open source and available on Github. You are free to download 
 install and customize them to your needs.We’d love to hear your feedback and suggestions, 
@@ -192,6 +193,7 @@ Find out more about the Docker execution environment on the using docker
 -- small-heading: Material for MKDocs
 
 -- h3: Linux VM
+id: linux-vm
 
 To access the Docker execution environment, use the docker executor and specify an image. 
 For a full list of convenience images, which are built by CircleCI, see the
@@ -201,6 +203,7 @@ For a full list of convenience images, which are built by CircleCI, see the
 -- tabs:
 
 -- h3: macOS
+id: mac-os
 
 -- small-heading: Material for MKDocs
 
@@ -223,6 +226,7 @@ Find out more about the Docker execution environment on the using docker
 -- small-heading: Material for MKDocs
 
 -- h3: Windows
+id: windows
 
 To access the Docker execution environment, use the docker executor and specify an image. 
 For a full list of convenience images, which are built by CircleCI, see the
@@ -232,6 +236,7 @@ For a full list of convenience images, which are built by CircleCI, see the
 -- tabs:
 
 -- h3: GPU
+id: gpu
 
 To access the Docker execution environment, use the docker executor and specify an image. 
 For a full list of convenience images, which are built by CircleCI, see the
@@ -247,6 +252,7 @@ Please note that some functionality (for example, anchor links) will not work in
 development. The functionality will work as expected in production.
 
 -- h3: Arm
+id: arm
 
 To access the Docker execution environment, use the docker executor and specify an image. 
 For a full list of convenience images, which are built by CircleCI, see the
@@ -256,11 +262,13 @@ For a full list of convenience images, which are built by CircleCI, see the
 -- tabs:
 
 -- h3: Self-hosted runner
+id: self-hosted-runner
 
 To access the Docker execution environment, use the docker executor and specify an image. 
 For a full list of convenience images, which are built by CircleCI, see the
 
 -- h3: Next Steps
+id: next-steps
 
 To access the Docker execution environment, use the docker executor and specify an image. 
 For a full list of convenience images, which are built by CircleCI, see the
