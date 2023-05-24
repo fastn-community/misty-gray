@@ -12,7 +12,7 @@ export: h0, h1, h2, h3, markdown
 export: code, rendered
 
 -- pr.sitemap-data sitemap:
-$processor$: pr.full-sitemap
+$processor$: pr.sitemap
 
 -- pr.toc-item list empty-toc:
 
