@@ -17,21 +17,23 @@
 
 # Home: /
 
-## Home Child: /
-
-- Service: /
-  - Documentation: /
-  - Transfer: /
-  - Cash: /
-  - My Bills: /
+## Home: /
 
 - Home: /
+  - Credit: /
+  - Transfer: /
 
 - Pocket: /
+  - Credit: /
+  - Transfer: /
 
 - History: /
+  - Credit: /
+  - Transfer: /
 
-## Home Child: /
+- Service: /
+  - Credit: /
+  - Transfer: /
 
 # Label: /
 

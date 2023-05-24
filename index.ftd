@@ -451,8 +451,6 @@ margin-horizontal.rem: 2.5
 margin-bottom.rem: 3.12
 margin-top.px: 10
 
--- breadcrumbs:
-
 -- ftd.text: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
@@ -479,7 +477,6 @@ toc-obj: $doc-page-desktop.toc
 -- ftd.column:
 padding-horizontal.px: 50
 padding-top.px: 50
-border-right-width.px: 1
 border-color: $inherited.colors.text
 width: fill-container
 align-content: top-left
@@ -551,25 +548,13 @@ width: fill-container
 spacing.fixed.px: 15
 $on-click$: $ftd.toggle($a = $toc-instance.toc-clone.is-open)
 
--- ftd.image:
-src: $assets.files.static.right.svg
-src if { !toc-instance.toc-clone.is-open }: $assets.files.static.down.svg
-align-self: center
-
 -- ftd.text: $toc-instance.toc.title
+margin-left.px: 28
 link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 role: $inherited.types.button-medium
-color: $inherited.colors.text
-color if { toc-instance.toc.is-active }: $inherited.colors.text
+color: $inherited.colors.accent.primary
+color if { toc-instance.toc.is-active }: $inherited.colors.accent.primary
 width: fill-container
-
--- ftd.image:
-if: { !ftd.is_empty(toc-instance.toc.children) }
-src: $assets.files.assets.arrow-up.svg
-src if { !toc-instance.toc-clone.is-open }: $assets.files.assets.arrow-down.svg
-height.fixed.px: 24
-width: auto
-align-self: center
 
 -- end: ftd.row
 
@@ -577,9 +562,11 @@ align-self: center
 if: { !ftd.is_empty(toc-instance.toc.children) && toc-instance.toc-clone.is-open }
 margin-left.px: 44
 padding-left.px: 10
-margin-top.rem: 2.25
+margin-top.px: 18
 padding-top.rem: 0
-spacing.fixed.rem: 1.75
+spacing.fixed.px: 28
+border-left-width.px: 2
+border-color: $inherited.colors.border
 
 -- childrens:
 $loop$: $toc-instance.toc.children as $obj
@@ -2064,62 +2051,6 @@ classes: markdown
 
 -- end: markdown
 
-
-
-
-
-
-
-
-
-
--- component breadcrumbs:
-caption title: Breadcrumbs
-string child1: Breadcrumbs
-string child2: Breadcrumbs
-string child3: Breadcrumbs
-
--- ftd.row:
-spacing.fixed.px: 7
-margin-vertical.px: 50
-align-content: center
-
--- ftd.text: $breadcrumbs.title
-role: $inherited.types.label-large
-color: $inherited.colors.text
-
--- ftd.image:
-src: $assets.files.assets.side-arrow.svg
-width.fixed.px: 5
-height.fixed.px: 8
-
--- ftd.text: $breadcrumbs.title
-role: $inherited.types.label-large
-color: $inherited.colors.text
-
--- ftd.image:
-src: $assets.files.assets.side-arrow.svg
-width.fixed.px: 5
-height.fixed.px: 8
-
--- ftd.text: $breadcrumbs.title
-role: $inherited.types.label-large
-color: $inherited.colors.text
-
--- ftd.image:
-src: $assets.files.assets.side-arrow.svg
-width.fixed.px: 5
-height.fixed.px: 8
-
--- ftd.text: $breadcrumbs.title
-role: $inherited.types.label-large
-color: $inherited.colors.accent.primary
-
--- end: ftd.text
-
--- end: ftd.row
-
--- end: breadcrumbs
 
 
 
