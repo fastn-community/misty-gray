@@ -22,13 +22,15 @@ pr.toc-item list toc:
 ftd.image-src menu-icon: $assets.files.static.hamburger.svg
 optional pr.toc-item current-section: 
 optional pr.toc-item current-subsection: 
-optional pr.toc-item current-page:
+optional pr.toc-item current-page: 
 optional string login-btn-txt:
 optional string login-btn-url:
 boolean login-button: false
 integer logo-width: 120
 integer logo-height: 44
 boolean $sidebar-open: false
+boolean github-icon: false
+optional string github-url:
 
 -- ftd.column:
 width: fill-container

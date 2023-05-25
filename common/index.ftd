@@ -1,6 +1,13 @@
 -- import: fastn/processors as pr
 -- import: fastn-community.github.io/set-3-ds/assets
 
+-- pr.sitemap-data sitemap:
+$processor$: pr.sitemap
+
+-- pr.toc-item list empty-toc:
+
+-- boolean social: false
+
 -- boolean show-footer: true
 
 -- string $site-name: Fastn
@@ -8,6 +15,10 @@
 -- integer logo-width: 200
 
 -- integer logo-height: 32
+
+-- ftd.image-src site-logo: 
+light: https://fastn.com/-/fastn.com/images/fastn.svg
+dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
 
 -- string $site-url: index.html
 
@@ -20,10 +31,6 @@ $processor$: pr.sitemap
 $processor$: pr.full-sitemap
 
 
-
--- pr.toc-item list footer-list:
-$processor$: pr.toc
-
 -- fastn.app-ui apps:
 $processor$: pr.fastn-apps
 
@@ -35,29 +42,30 @@ string link: /
 
 -- social-media:
 link: /
-src: $assets.files.static.meta.svg
+src: $assets.files.assets.meta.svg
 
 -- social-media: 
 link: /
-src: $assets.files.static.figma.svg
+src: $assets.files.assets.figma.svg
 
 -- social-media:
 link: /
-src: $assets.files.static.google.svg
+src: $assets.files.assets.google.svg
 
 -- social-media: 
 link: /
-src: $assets.files.static.tweak.svg
+src: $assets.files.assets.tweak.svg
 
 -- social-media: 
 link: /
-src: $assets.files.static.ball.svg
+src: $assets.files.assets.ball.svg
 
 -- end: social-links
 
 
 -- pr.toc-item list footer-links:
 $processor$: pr.toc
+
 
 - Heading1: about/
   - Footer link 1: /

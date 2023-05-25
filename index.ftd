@@ -1,5 +1,6 @@
 -- import: fastn/processors as pr
 -- import: fastn-community.github.io/set-3-ds/assets
+-- import: fastn-community.github.io/set-3-ds/common
 -- import: fastn-community.github.io/set-3-ds/common/fonts as fonts
 -- import: fastn-community.github.io/dark-mode-switcher as dms
 -- import: fastn-community.github.io/set-3-ds/header as h
@@ -11,63 +12,6 @@ export: h0, h1, h2, h3, markdown
 -- import: fastn-community.github.io/code-block as cb
 export: code, rendered
 
--- pr.sitemap-data sitemap:
-$processor$: pr.sitemap
-
--- pr.toc-item list empty-toc:
-
--- boolean social: false
-
--- boolean show-footer: true
-
--- string $site-name: Fastn
-
--- integer logo-width: 200
-
--- integer logo-height: 32
-
--- ftd.image-src site-logo: 
-light: https://fastn.com/-/fastn.com/images/fastn.svg
-dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
-
--- string $site-url: index.html
-
--- integer $width: 1320
-
--- pr.sitemap-data sitemap:
-$processor$: pr.sitemap
-
-
--- fastn.app-ui apps:
-$processor$: pr.fastn-apps
-
--- record social-media:
-ftd.image-src src:
-string link: /
-
--- social-media list social-links:
-
--- social-media:
-link: /
-src: $assets.files.assets.meta.svg
-
--- social-media: 
-link: /
-src: $assets.files.assets.figma.svg
-
--- social-media:
-link: /
-src: $assets.files.assets.google.svg
-
--- social-media: 
-link: /
-src: $assets.files.assets.tweak.svg
-
--- social-media: 
-link: /
-src: $assets.files.assets.ball.svg
-
--- end: social-links
 
 
 -- page: Documentation 
@@ -79,8 +23,8 @@ show-footer: true
 -- footer:
 social: true
 site-logo: $assets.files.assets.dummy-site-logo.png
-site-url: /
-site-name: Fastn
+site-url: $common.site-url
+site-name: $common.site-name
 twitter-url: https://twitter.com/FifthTryHQ
 facebook-url: /
 discord-url: https://discord.gg/bucrdvptYd
@@ -294,29 +238,31 @@ optional string document-description:
 optional ftd.raw-image-src document-image: 
 optional body body:
 optional ftd.image-src site-logo: 
-integer logo-width: $logo-width
-integer logo-height: $logo-height
-optional string $site-url: $site-url
-optional string site-name: $site-name
-pr.toc-item list toc: $sitemap.toc
+integer logo-width: $common.logo-width
+integer logo-height: $common.logo-height
+optional string $site-url: $common.site-url
+optional string site-name:
+pr.toc-item list toc: $common.sitemap.toc
 optional string login-btn-txt: Login
 optional string login-btn-url: index.html
 boolean login-button: false
-pr.toc-item list sections: $sitemap.sections
-pr.toc-item list sub-sections: $sitemap.subsections
-optional pr.toc-item current-section: $sitemap.current-section
-optional pr.toc-item current-subsection: $sitemap.current-subsection
-optional pr.toc-item current-page: $sitemap.current-page
+pr.toc-item list sections: $common.sitemap.sections
+pr.toc-item list sub-sections: $common.sitemap.subsections
+optional pr.toc-item current-section: $common.sitemap.current-section
+optional pr.toc-item current-subsection: $common.sitemap.current-subsection
+optional pr.toc-item current-page: $common.sitemap.current-page
 children wrapper:
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
 ftd.ui list right-sidebar:
 boolean sidebar: false
-boolean show-footer: $show-footer
+boolean show-footer: $common.show-footer
 ftd.ui list footer:
 boolean full-width: false
 boolean show-banner: false
 ftd.ui list banner:
+boolean github-icon: false
+optional string github-url:
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -359,6 +305,8 @@ site-logo: $page.site-logo
 site-url: $page.site-url
 sidebar: $page.sidebar
 right-sidebar: $page.right-sidebar
+github-icon: $page.github-icon
+github-url: $page.github-url
 
 -- end: ftd.desktop
 
@@ -377,6 +325,8 @@ site-name: $page.site-name
 site-logo: $page.site-logo
 site-url: $page.site-url
 right-sidebar: $page.right-sidebar
+github-icon: $page.github-icon
+github-url: $page.github-url
 
 -- end: ftd.mobile
 
@@ -425,6 +375,8 @@ optional string login-btn-url: index.html
 boolean login-button: false
 boolean sidebar: false
 ftd.ui list right-sidebar:
+boolean github-icon: false
+optional string github-url: 
 
 -- ftd.column:
 width: fill-container
@@ -444,7 +396,9 @@ logo-width: $doc-page-desktop.logo-width
 site-logo: $doc-page-desktop.site-logo
 site-url: $doc-page-desktop.site-url
 site-name: $doc-page-desktop.site-name
-menu-icon: $assets.files.static.hamburger.svg
+menu-icon: $assets.files.assets.hamburger.svg
+github-icon: $doc-page-desktop.github-icon
+github-url: $doc-page-desktop.github-url
 
 -- ftd.column:
 margin-horizontal.rem: 2.5
@@ -882,6 +836,8 @@ optional pr.toc-item current-page:
 optional pr.toc-item current-subsection:
 ftd.ui list right-sidebar:
 children wrapper:
+boolean github-icon: false
+optional string github-url: 
 
 -- ftd.column:
 width: fill-container
@@ -969,6 +925,12 @@ padding-horizontal.px: 24
 -- end: ftd.column
 
 -- end: doc-page-mobile
+
+
+
+
+
+
 
 
 
@@ -1353,24 +1315,24 @@ color: $inherited.colors.text-strong
 
 -- component footer:
 optional string site-name:
-optional string site-url: /
+optional string site-url:
 optional ftd.image-src logo-1: $assets.files.assets.meta.png
 optional ftd.image-src logo-2: $assets.files.assets.figma.png
 optional ftd.image-src logo-3: $assets.files.assets.google.png
 optional ftd.image-src logo-4: $assets.files.assets.messanger.png
 optional ftd.image-src logo-5: $assets.files.assets.basketball.png
-optional string twitter-url: / 
-optional string facebook-url: / 
-optional string discord-url: /
-optional string instagram-url: / 
-optional string telegram-url: /
+optional string twitter-url:
+optional string facebook-url:
+optional string discord-url:
+optional string instagram-url:
+optional string telegram-url:
 optional string copyright:
 optional body bio:
 optional ftd.image-src site-logo: $assets.files.assets.google.svg
 integer logo-height: 32
 boolean social: false
 optional ftd.color background-color: $inherited.colors.background.step-1
-pr.toc-item list footer-list: $sitemap.sections
+pr.toc-item list footer-list: $common.sitemap.sections
 
 -- ftd.column:
 width: fill-container
@@ -1512,7 +1474,7 @@ spacing.fixed.px: 32
 title: $obj.title
 url: $obj.url
 is-active: $obj.is-active
-sub-sections: $empty-toc
+sub-sections: $common.empty-toc
 $loop$: $footer-desktop.footer-list as $obj
 
 -- end: ftd.row
@@ -1621,7 +1583,7 @@ spacing.fixed.px: 32
 title: $obj.title
 url: $obj.url
 is-active: $obj.is-active
-sub-sections: $empty-toc
+sub-sections: $common.empty-toc
 $loop$: $footer-mobile.footer-list as $obj
 
 -- end: ftd.row
@@ -1668,11 +1630,11 @@ optional ftd.image-src logo-2:
 optional ftd.image-src logo-3:
 optional ftd.image-src logo-4:
 optional ftd.image-src logo-5:
-optional string twitter-url: 
-optional string facebook-url: 
-optional string discord-url: 
-optional string instagram-url: 
-optional string telegram-url: 
+optional string twitter-url:
+optional string facebook-url:
+optional string discord-url:
+optional string instagram-url:
+optional string telegram-url:
 
 -- ftd.row:
 spacing.fixed.px: 24
@@ -1730,6 +1692,11 @@ height.fixed.px if { ftd.device == "mobile" }: 24
 
 
 
+
+
+
+
+
 -- component logo-with-name:
 optional string site-name:
 optional string site-url: 
@@ -1768,13 +1735,14 @@ role: $inherited.types.heading-small
 
 
 
+
 -- component footer-list-section:
 caption title:
 optional string url: /
 boolean is-active: false
 ftd.color text-color: $inherited.colors.text-strong
 ftd.color active-text-color: $inherited.colors.text-strong
-pr.toc-item list sub-sections: $empty-toc
+pr.toc-item list sub-sections: $common.empty-toc
 boolean show-toc: false
 boolean show-subsections: false
 
@@ -1813,7 +1781,7 @@ if: { !footer-list-section.show-toc }
 title: $obj.title
 url: $obj.url
 is-active: $obj.is-active
-toc: $empty-toc
+toc: $common.empty-toc
 show-subsections: $footer-list-section.show-subsections 
 $loop$: $footer-list-section.sub-sections as $obj
 
@@ -1844,7 +1812,7 @@ optional string url: /
 boolean is-active: false
 ftd.color text-color: $inherited.colors.text-strong
 ftd.color active-text-color: $inherited.colors.text-strong 
-pr.toc-item list toc: $empty-toc
+pr.toc-item list toc: $common.empty-toc
 children wrap:
 boolean show-subsections: false
 
@@ -1905,7 +1873,7 @@ optional string url: /
 boolean is-active: false
 ftd.color text-color: $inherited.colors.text-strong
 ftd.color active-text-color: $inherited.colors.text-strong 
-pr.toc-item list toc: $empty-toc
+pr.toc-item list toc: $common.empty-toc
 children wrap:
 
 -- ftd.column:
