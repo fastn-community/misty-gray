@@ -4,27 +4,6 @@
 
 
 
--- ftd.type copy-regular-bold-mobile:
-line-height.px: 24
-size.px: 16
-letter-spacing.px: 0
-weight: 700
-font-family: $rubik-assets.fonts.Rubik
-
--- ftd.type copy-regular-bold-desktop:
-line-height.px: 30
-size.px: 18
-letter-spacing.px: 0
-font-family: $rubik-assets.fonts.Rubik
-weight: 700
-
--- ftd.responsive-type copy-regular-bold:
-desktop: $copy-regular-bold-desktop
-mobile: $copy-regular-bold-mobile
-
-
-
-
 
 -- ftd.type heading-large-v2-type:
 line-height.px: 54
@@ -34,30 +13,3 @@ weight: 700
 font-family: $rubik-assets.fonts.Rubik
 
 -- ftd.responsive-type heading-large-v2: $heading-large-v2-type
-
-
-
-
-
--- ftd.type heading-small-v2-type:
-line-height.px: 40
-size.px: 24
-letter-spacing.px: 0
-weight: 700
-font-family: $rubik-assets.fonts.Rubik
-
--- ftd.responsive-type heading-small-v2: $heading-small-v2-type
-
-
-
-
-
-
--- ftd.type blockquote-type:
-line-height.px: 21
-size.px: 16
-letter-spacing.px: 0
-weight: 700
-font-family: $rubik-assets.fonts.Rubik
-
--- ftd.responsive-type blockquote: $blockquote-type

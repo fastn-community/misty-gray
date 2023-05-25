@@ -742,8 +742,9 @@ max-width.fixed.percent: 20
 align-self: start
 
 -- ftd.text: On this page
-role: $fonts.blockquote
+role: $inherited.types.blockquote
 color: $inherited.colors.text
+style: bold
 margin-bottom.px: 20
 
 -- ftd.column:
@@ -1969,8 +1970,9 @@ width: fill-container
 margin-top.px: 50
 
 -- ftd.text: $h3.title
-role: $fonts.heading-small-v2
+role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
+style: bold
 margin-bottom.rem: 1
 width: fill-container
 padding-top.em: 0.17
