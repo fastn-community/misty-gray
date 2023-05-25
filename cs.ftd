@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/set-1-ds as ds
+-- import: fastn-community.github.io/set-3-ds as ds
 
 
 
@@ -13,8 +13,8 @@
 -- ds.link-group: How to add color scheme?
 cta: cs/#how-to-add-color-scheme
 
--- ds.link: How to create a global my-ds page module for set-1-ds?
-cta: cs/#how-to-create-a-global-my-ds-page-module-for-set-1-ds
+-- ds.link: How to create a global my-ds page module for set-3-ds?
+cta: cs/#how-to-create-a-global-my-ds-page-module-for-set-3-ds
 
 -- end: ds.link-group
 
@@ -22,9 +22,9 @@ cta: cs/#how-to-create-a-global-my-ds-page-module-for-set-1-ds
 
 -- my-ds.page.body:
 
-In this section, we will learn about changing color scheme of `set-1-ds`.
+In this section, we will learn about changing color scheme of `set-3-ds`.
 
-`set-1-ds` uses `fastn` default color scheme. If you wish to update color
+`set-3-ds` uses `fastn` default color scheme. If you wish to update color
 scheme, choose a color scheme from our[fastn-community]
 (https://fastn.com/featured/cs/) color schemes.
 
@@ -46,11 +46,11 @@ example:
 -- ds.code:
 lang: ftd
 
-\-- fastn.dependency: fastn-community.github.io/set-1-ds
+\-- fastn.dependency: fastn-community.github.io/set-3-ds
 \-- fastn.dependency: fastn-community.github.io/set-1-cs
 
--- ds.h3: How to create a global `my-ds` page module for `set-1-ds`?
-id: how-to-create-a-global-my-ds-page-module-for-set-1-ds
+-- ds.h3: How to create a global `my-ds` page module for `set-3-ds`?
+id: how-to-create-a-global-my-ds-page-module-for-set-3-ds
 
 You can create a `my-ds.ftd` module inside your `fastn` package and create your
 custom `my-ds` page component.
@@ -65,7 +65,7 @@ Here’s what your `my-ds.ftd` module would look like:
 lang: ftd
 download: my-ds.ftd
 
-\-- import: fastn-community.github.io/set-1-ds as ds
+\-- import: fastn-community.github.io/set-3-ds as ds
 \-- import: fastn-community.github.io/set-1-cs
 
 \-- component page:
@@ -112,7 +112,7 @@ Then use `my-ds` component to create a new page using it.
 lang: ftd
 download: cs.ftd
 
-\-- import: fastn-community.github.io/set-1-ds as ds
+\-- import: fastn-community.github.io/set-3-ds as ds
 \-- import: <your fastn package name>/my-ds
 
 \-- my-ds.page: This is page title
