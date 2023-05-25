@@ -1,0 +1,156 @@
+-- import: fastn-community.github.io/set-1-ds as ds
+
+
+
+
+
+-- my-ds.page: Changing Typography
+
+
+-- my-ds.page.right-sidebar:
+
+-- ds.toc-title: On this page
+
+-- ds.link-group: fastn Typography collection:
+cta: types/#fastn-typography-collection
+
+-- ds.link-group: How to add a typography?
+cta: types/#how-to-add-a-typography
+
+-- ds.link: How to create a global my-ds page module for set-1-ds?
+cta: types/#how-to-create-a-global-my-ds-page-module-for-Set-1-ds
+
+-- end: ds.link-group
+
+-- end: my-ds.page.right-sidebar
+
+-- my-ds.page.body:
+
+In this section, we will learn about changing typography of `set-1-ds`.
+
+`set-1-ds` uses `fastn` default typography. If you wish to update it, 
+
+-- ds.h2: fastn Typography collection:
+id: fastn-typography-collection
+
+Choose a typography of font of your choice from our fastn-community.
+[Click here to search](https://github.com/orgs/fastn-community/repositories?q=typography&type=all&sort=).
+
+-- ds.h2: How to add a typography?
+id: how-to-add-a-typography
+
+To add typography to your fastn web sites. Edit your `FASTN.ftd` file and add
+typography dependency into it.
+
+In below example we are using https://fastn-community.github.io/set-1-typography/
+typography.
+
+Add typography dependency into your `FASTN.ftd` file as shown in below example:
+
+-- ds.code:
+lang: ftd
+
+\-- fastn.dependency: fastn-community.github.io/set-1-ds
+\-- fastn.dependency: fastn-community.github.io/set-1-typography
+
+-- ds.h3: How to create a global `my-ds` page module for `set-1-ds`?
+id: how-to-create-a-global-my-ds-page-module-for-Set-1-ds
+
+You can create a `my-ds.ftd` module inside your `fastn` package and create your
+custom `my-ds` page component.
+
+Let's learn how to create a module:
+
+Create a new file let’s say `my-ds.ftd`. 
+
+Here’s what your `my-ds.ftd` module would look like:
+
+-- cb.code: my-ds.ftd module
+lang: ftd
+download: my-ds.ftd
+
+\-- import: fastn-community.github.io/set-1-ds as ds
+\-- import: fastn-community.github.io/set-1-typography
+
+\-- component page:
+children wrapper:
+optional caption title:
+optional body body:
+boolean sidebar: false
+
+\-- ds.page: $page.title
+site-logo: $fastn-assets.files.images.fastn.svg
+body: $page.body
+sidebar: $page.sidebar
+types: $set-1-typography.types
+
+\-- end: ds.page.banner
+
+\-- ds.page.extra-headers:
+
+\-- ds.h3: Heading in sidebar
+
+`<You can add any component like this inside sidebar.>`
+
+\-- end: ds.page.extra-headers
+
+\-- ftd.column:
+spacing.fixed.em: 0.8
+width: fill-container
+children: $page.wrapper
+
+\-- end: ftd.column
+
+\-- end: ds.page
+
+\-- end: page
+
+-- ds.markdown:
+
+Click on download icon of above code-block. `my-ds.ftd` file will be
+downloaded. Import this file inside your new `.ftd` file.
+
+Then use `my-ds` component to create a new page using it.
+
+-- ds.code:
+lang: ftd
+download: typography.ftd
+
+\-- import: fastn-community.github.io/set-1-ds as ds
+\-- import: <your fastn package name>/my-ds
+
+\-- my-ds.page: This is page title
+
+This is body area. It contains multiple paragraphs.
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+praesentium voluptatum.
+
+\-- ds.h1: This is heading level 1
+
+This is heading level 1 optional body content.
+
+\-- ds.h2: This is heading level 2
+
+This is heading level 2 optional body content.
+
+\-- ds.h3: This is heading level 3
+
+This is heading level 3 optional body content.
+
+\-- end: my-ds.page
+
+
+-- ds.markdown:
+
+Click on download icon of above code-block. `typography.ftd` file will be
+downloaded.
+
+Add this file inside your `fastn` project and deploy or run `fastn serve` on
+your localhost. Access your localhost in browser
+e.g.`http://127.0.0.1:8000/typography/` you will see page text with
+[set-1-typography](https://fastn-community.github.io/set-1-typography/) font
+sizes in [Opensans](https://fastn-community.github.io/opensans-font/) font and 
+[Poppins](https://fastn-community.github.io/poppins-font/) font.
+
+-- end: my-ds.page

@@ -1,0 +1,38 @@
+-- import: fastn-community.github.io/set-3-ds as ds
+
+
+
+
+
+-- my-ds.page: Adding Favicon
+
+-- my-ds.page.right-sidebar:
+
+-- ds.toc-title: On this page
+
+-- ds.link-group: How to add favicon?
+cta: favicon/#how-to-add-favicon
+
+-- end: my-ds.page.right-sidebar
+
+-- my-ds.page.body:
+
+In this section, we will learn about adding favicon to your `fastn` web site.
+
+A favicon (short for "favorite icon") is a small icon that is associated with a
+website or web page. It typically appears in the web browser's address bar,
+next to the page title, and in the bookmarks or favorites list.
+
+-- ds.h2: How to add favicon?
+id: how-to-add-favicon
+
+To add favicon to your fastn web sites. Edit your `FASTN.ftd` file and add it as
+a property to `fastn.package`.
+
+-- ds.code:
+lang: ftd
+
+\-- fastn.package: fastn-package-name
+favicon: /-/fastn-package-name/favicon.svg
+
+-- end: my-ds.page
