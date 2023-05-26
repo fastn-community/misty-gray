@@ -91,6 +91,7 @@ width: fill-container
 
 -- ftd.image:
 src: $tab-image.src2
+width: fill-container
 
 -- end: ftd.column
 
@@ -100,6 +101,7 @@ width: fill-container
 
 -- ftd.image:
 src: $tab-image.src3
+width: fill-container
 
 -- end: ftd.column
 
