@@ -1,0 +1,114 @@
+-- import: fastn-community.github.io/set-3-ds/assets
+-- import: fastn-community.github.io/set-3-ds/common
+
+-- integer $current-tab: 1
+
+
+-- component tabs:
+children tabs:
+
+-- ftd.row:
+margin-top.px: 9
+width: fill-container
+spacing: space-between
+z-index: 10
+
+-- ftd.row:
+children: $tabs.tabs
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: tabs
+
+
+
+
+
+
+
+
+
+
+-- component tab:
+caption title:
+optional boolean $active-item: false
+integer index:
+
+-- ftd.column:
+$on-click$: $ftd.toggle($a = $tab.active-item)
+$on-click$: $ftd.set-integer($a = $current-tab, v = $tab.index)
+border-bottom-width.px if { tab.index == current-tab }: 1
+border-bottom-color if { tab.index == current-tab }: $inherited.colors.accent.primary
+padding-vertical.px: 12
+width.fixed.px: 120
+margin-left.px: 0
+align-content: center
+
+-- ftd.text: $tab.title
+role: $inherited.types.label-large
+color: $inherited.colors.text
+color if { tab.index == current-tab }: $inherited.colors.cta-primary.base
+white-space: nowrap
+style: bold
+
+-- end: ftd.column
+
+-- end: tab
+
+
+
+
+
+
+
+
+
+
+-- component tab-image:
+ftd.image-src src1: $assets.files.assets.windows.png
+ftd.image-src src2: $assets.files.assets.linux-vm.png
+ftd.image-src src3: $assets.files.assets.windows.png
+
+-- ftd.column:
+width: fill-container
+margin-top.px: -11
+
+-- ftd.column:
+width: fill-container
+if: { current-tab == 1 }
+
+-- ftd.image:
+src: $tab-image.src1 
+width: fill-container
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { current-tab == 2 }
+width: fill-container
+
+-- ftd.image:
+src: $tab-image.src2
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { current-tab == 3 }
+width: fill-container
+
+-- ftd.image:
+src: $tab-image.src3
+
+-- end: ftd.column
+
+-- ftd.text: 
+text: Find out more about the Docker execution environment on the using docker 
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 18
+
+-- end: ftd.column
+
+-- end: tab-image

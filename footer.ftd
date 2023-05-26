@@ -1,0 +1,149 @@
+-- import: fastn-community.github.io/set-3-ds as ds
+
+
+
+
+
+
+-- my-ds.page: Adding Footer
+
+-- my-ds.page.right-sidebar:
+
+-- ds.toc-title: On this page
+
+-- ds.link-group: How to create a global my-ds page module for set-3-ds?
+cta: footer/#how-to-create-a-global-my-ds-page-Module-for-set-3-ds
+
+-- end: my-ds.page.right-sidebar
+
+-- my-ds.page.body:
+
+In this section, we will learn about adding footer into your pages in
+`set-3-ds`.
+
+`page` component has `show-footer` boolean type property. You can add different
+footers using `show-footer: true` property.
+
+We have created few footer components for you. Please, [visit our footer
+package](https://fastn-community.github.io/footer/), you can choose footer of
+your choice from there. 
+
+In below example we are using `basic-footer` from [footer
+ package](https://fastn-community.github.io/footer/basic-footer/).
+
+Add footer dependency inside your `FASTN.ftd` file.
+
+-- ds.code:
+lang: ftd
+
+\-- fastn.dependency: fastn-community.github.io/footer
+
+-- ds.h3: How to create a global `my-ds` page module for `set-3-ds`?
+id: how-to-create-a-global-my-ds-page-Module-for-set-3-ds
+
+You can create a `my-ds.ftd` module inside your `fastn` package and create your
+custom `my-ds` page component.
+
+Let's learn how to create a module:
+
+Create a new file let’s say `my-ds.ftd`. 
+
+Here’s what your `my-ds.ftd` module would look like:
+
+-- cb.code: my-ds.ftd module
+lang: ftd
+download: my-ds.ftd
+
+\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/set-3-ds/common
+\-- import: fastn-community.github.io/footer
+
+\-- component page:
+children wrapper:
+optional caption title:
+optional body body:
+
+\-- ds.page: $page.title
+site-logo: $fastn-assets.files.images.fastn.svg
+body: $page.body
+show-footer: true
+
+\-- page.footer:
+
+\-- footer:
+social: true
+site-logo: $assets.files.assets.dummy-site-logo.png
+site-url: $common.site-url
+site-name: $common.site-name
+twitter-url: https://twitter.com/FifthTryHQ
+facebook-url: /
+discord-url: https://discord.gg/bucrdvptYd
+instagram-url: /
+telegram-url: /
+copyright: Copyright © 2023 - fifthtry.com
+
+Stay in touch with everything you need
+
+\-- end: page.footer
+
+\-- ds.page.body:
+
+Some page body components and content here
+
+\-- ftd.column:
+spacing.fixed.em: 0.8
+width: fill-container
+children: $page.wrapper
+
+\-- end: ftd.column
+
+\-- end: ds.page
+
+\-- end: page
+
+-- ds.markdown:
+
+Click on download icon of above code-block. `my-ds.ftd` file will be downloaded.
+Import this file inside your new `.ftd` or download below given `footer.ftd`
+file.
+
+Use `my-ds` component to create a new page using it.
+
+-- ds.code:
+lang: ftd
+download: footer.ftd
+
+\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: <your fastn package name>/my-ds
+
+\-- my-ds.page: This is page title
+
+This is body area. It contains multiple paragraphs.
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+praesentium voluptatum.
+
+\-- ds.h1: This is heading level 1
+
+This is heading level 1 optional body content.
+
+\-- ds.h2: This is heading level 2
+
+This is heading level 2 optional body content.
+
+\-- ds.h3: This is heading level 3
+
+This is heading level 3 optional body content.
+
+\-- end: my-ds.page
+
+-- ds.markdown:
+
+Click on download icon of above code-block. `footer.ftd` file will be
+downloaded.
+
+Add this file inside your `fastn` project and deploy or run `fastn serve` on
+your localhost. Access your localhost in browser
+e.g.`http://127.0.0.1:8000/footer/` you will see page with footer.
+
+-- end: my-ds.page
