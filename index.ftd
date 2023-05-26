@@ -912,7 +912,7 @@ site-logo: $doc-page-mobile.site-logo
 site-url: $doc-page-mobile.site-url
 site-name: $doc-page-mobile.site-name
 logo-height: 38
-menu-icon: $assets.files.assets.header.hamburger.svg
+menu-icon: $assets.files.assets.hamburger.svg
 
 -- ftd.column:
 width: fill-container
@@ -1303,6 +1303,10 @@ optional string instagram-url:
 optional string telegram-url:
 optional string copyright:
 optional body bio:
+integer logo-width: $common.logo-width
+integer logo-height: $common.logo-height
+pr.toc-item list footer-links: $common.footer-links
+common.social-media list social-links: $common.social-links
 optional ftd.image-src site-logo: $assets.files.assets.google.svg
 integer logo-height: 32
 boolean social: false
@@ -1434,8 +1438,7 @@ padding-horizontal.px: 40
 width: fill-container
 align-content: center
 
--- ftd.text: 
-text: $footer-desktop.copyright
+-- ftd.text: $footer-desktop.copyright
 color: $inherited.colors.text
 role: $inherited.types.label-small
 width: fill-container
@@ -1994,6 +1997,35 @@ classes: markdown
 -- end: ftd.column
 
 -- end: markdown
+
+
+
+
+
+
+
+
+
+
+-- component toc-title:
+caption title:
+
+-- ftd.row:
+align-content: center
+spacing.fixed.rem: 1.2
+margin-bottom.rem: 1.2
+
+-- ftd.image:
+src: $assets.files.assets.hamburger.svg
+
+-- ftd.text: $toc-title.title
+role: $inherited.types.button-medium
+color: $inherited.colors.text
+style: bold
+
+-- end: ftd.row
+
+-- end: toc-title
 
 
 

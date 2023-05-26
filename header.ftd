@@ -19,7 +19,7 @@ optional string site-name:
 pr.toc-item list sections: 
 pr.toc-item list sub-sections: 
 pr.toc-item list toc:
-ftd.image-src menu-icon: $assets.files.static.hamburger.svg
+ftd.image-src menu-icon: $assets.files.assets.hamburger.svg
 optional pr.toc-item current-section: 
 optional pr.toc-item current-subsection: 
 optional pr.toc-item current-page: 
@@ -500,13 +500,13 @@ width: fill-container
 
 -- ftd.image: 
 if: { !header-mobile.show-section }
-src: $assets.files.static.down-arrow-dark.svg
+src: $assets.files.assets.down-arrow-dark.svg
 height: hug-content
 width.fixed.px: 12
 
 -- ftd.image: 
 if: { header-mobile.show-section }
-src: $assets.files.static.up-arrow-dark.svg
+src: $assets.files.assets.up-arrow-dark.svg
 width.fixed.px: 12
 
 -- end: ftd.row
@@ -660,7 +660,7 @@ z-index: 1
 $on-click$: $ftd.toggle($a = $mobile-sidebar.sidebar-open)
 
 -- ftd.image:
-src: $assets.files.static.header.cross.svg
+src: $assets.files.assets.cross.svg
 height.fixed.px: 24
 width: hug-content
 anchor: window
