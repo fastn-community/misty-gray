@@ -7,7 +7,7 @@ FASTN Blank Package Template Repo
 
 > 🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
 
-![doc-site](doc-site-example.png)
+![set-3-ds](set-3-ds-example.png)
 
 
 ## 🚀 Project Structure

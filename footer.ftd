@@ -18,18 +18,18 @@ cta: footer/#how-to-create-a-global-my-ds-page-Module-for-set-3-ds
 
 -- my-ds.page.body:
 
-In this section, we will learn about adding footer into your pages in
+In this section, we will learn about adding a footer to your pages in
 `set-3-ds`.
 
-`page` component has `show-footer` boolean type property. You can add different
-footers using `show-footer: true` property.
+The `page` component has a `show-footer` boolean type property. You can add 
+different footers using the `show-footer: true` property.
 
-We have created few footer components for you. Please, [visit our footer
-package](https://fastn-community.github.io/footer/), you can choose footer of
+We have created a few footer components for you. Please, [visit our footer
+package](https://fastn-community.github.io/footer/), you can choose the footer of
 your choice from there. 
 
-In below example we are using `basic-footer` from [footer
- package](https://fastn-community.github.io/footer/basic-footer/).
+In the below example, we are using a `basic-footer` from 
+[footer package](https://fastn-community.github.io/footer/basic-footer/).
 
 Add footer dependency inside your `FASTN.ftd` file.
 
@@ -103,7 +103,7 @@ children: $page.wrapper
 
 -- ds.markdown:
 
-Click on download icon of above code-block. `my-ds.ftd` file will be downloaded.
+Click on the download icon of the above code-block. `my-ds.ftd` file will be downloaded.
 Import this file inside your new `.ftd` or download below given `footer.ftd`
 file.
 
@@ -139,11 +139,11 @@ This is heading level 3 optional body content.
 
 -- ds.markdown:
 
-Click on download icon of above code-block. `footer.ftd` file will be
+Click on the download icon of the above code-block. `footer.ftd` file will be
 downloaded.
 
 Add this file inside your `fastn` project and deploy or run `fastn serve` on
-your localhost. Access your localhost in browser
-e.g.`http://127.0.0.1:8000/footer/` you will see page with footer.
+your localhost. Access your localhost in the browser
+e.g.`http://127.0.0.1:8000/footer/` you will see the page with the footer.
 
 -- end: my-ds.page

@@ -18,9 +18,9 @@ cta: getting-started/#what-next
 
 -- my-ds.page.body:
 
-You can create your documentation web-sites using `set-3-ds`. `set-3-ds` also
-helps authors, entrepreneurs, corporate groups and bloggers to create their own
-fastn web project.
+You can create your documentation websites using `set-3-ds`. `set-3-ds` also 
+helps authors, entrepreneurs, corporate groups, and bloggers to create their 
+own fastn web projects.
 
 -- ds.h3: 🎨 Creating fastn web-site using `set-3-ds`
 id: creating-fastn-web-site-using-set-3-ds
@@ -45,9 +45,9 @@ v: tsHB2Vrhb2c
 -- ds.h3: 🌟 Whats next?
 id: what-next
 
-`-- page` component comes with inbuit navbar, sidebar and body content area.
-Start creating new `.ftd` files inside your project and use `set-3-ds` `page`
-component to write your documentation, blog posts etc.
+The `-- page` component comes with an inbuilt navbar, sidebar, and body content area. 
+Start creating new `.ftd` files inside your project and use the `set-3-ds` `page` 
+component to write your documentation, blog posts, etc.
 
 ✨ [Click here](https://fastn-community.github.io/set-3-ds/page/) to know more
 details of `page` component.

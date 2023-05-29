@@ -34,11 +34,7 @@ would be possible without your support. We would love to hear from you.
 
 -- my-ds.page.body:
 
-In this section, we will learn adding right-sidebar in `set-3-ds`.
-
-If you want to show right-sidebar on all pages and content of your right-sidebar
-is same for all pages then, we recommond creating a global module which helps
-you to keep all your global properties and configurations in one `.ftd` file.
+In this section, we will learn how to add right-sidebar in `set-3-ds`.
 
 -- ds.h3: How to create a global `my-ds` page module for `set-3-ds`?
 id: how-to-create-a-global-my-ds-page-module-for-set-3-DS
@@ -97,9 +93,9 @@ children: $page.wrapper
 
 -- ds.markdown:
 
-Click on download icon of above code-block. `my-ds.ftd` file will be downloaded.
-Import this file inside your new `.ftd` or download below given `sidebar.ftd`
-file.
+Click on the download icon of the above code-block. `my-ds.ftd` file will 
+be downloaded. Import this file inside your new `.ftd` or download below given 
+`sidebar.ftd` file.
 
 Use `my-ds` component to create a new page using it.
 

@@ -14,7 +14,7 @@ cta: markdown/#markdown
 `set-3-ds` supports markdown. If you want to use it you can use `--
 ds.mardkdown` for inline anchor links etc.
 
-`set-3-ds` comes with inbuit `-- ds.markdown` component.
+`set-3-ds` comes with an inbuilt `-- ds.markdown` component.
 
 -- ds.h3: Markdown
 id: markdown

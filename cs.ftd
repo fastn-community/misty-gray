@@ -17,12 +17,12 @@ cta: cs/#how-to-create-a-global-my-ds-page-module-for-set-3-ds
 
 In this section, we will learn about changing color scheme of `set-3-ds`.
 
-`set-3-ds` uses `fastn` default color scheme. If you wish to update color
-scheme, choose a color scheme from our[fastn-community]
+`set-3-ds` uses `fastn` default color scheme. If you wish to update color 
+scheme, choose a color scheme from our [fastn-community]
 (https://fastn.com/featured/cs/) color schemes.
 
-To choose one of featured color scheme, visit our[featured color schemes]
-(https://fastn.com/featured/cs/)
+To choose one of featured color scheme, visit our 
+[featured color schemes](https://fastn.com/featured/cs/)
 
 -- ds.h3: How to add color scheme?
 id: how-to-add-color-scheme
@@ -30,7 +30,7 @@ id: how-to-add-color-scheme
 To add color scheme to your fastn web sites. Edit your `FASTN.ftd` file and add
 color scheme dependency into it.
 
-In below example we are using https://fastn-community.github.io/set-3-cs/
+In the below example, we are using https://fastn-community.github.io/set-3-cs/
 color scheme.
 
 Add color scheme dependency into your `FASTN.ftd` file as shown in below
@@ -131,11 +131,12 @@ This is heading level 3 optional body content.
 
 -- ds.markdown:
 
-Click on download icon of above code-block. `cs.ftd` file will be downloaded.
+Click on the download icon of the above code-block. `my-ds.ftd` file will be
+downloaded. Import this file inside your new `.ftd` file.
 
 Add this file inside your `fastn` project and deploy or run `fastn serve` on
-your localhost. Access your localhost in browser
-e.g.`http://127.0.0.1:8000/cs/` you will see page colors with[SET 2 CS]
-(https://fastn-community.github.io/set-3-cs/)
+your localhost. Access your localhost in the browser
+e.g.`http://127.0.0.1:8000/cs/` you will see page colors with
+[Set 3 CS](https://fastn-community.github.io/set-3-cs/)
 
 -- end: my-ds.page
