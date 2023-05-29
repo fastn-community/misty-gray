@@ -7,7 +7,7 @@
 
 -- ftd.image-src site-logo: $assets.files.assets.ipsum-logo.svg
 
--- string site-name: Doc Site
+-- string site-name: Fastn
 
 -- integer logo-width: 200
 
@@ -34,23 +34,23 @@ string link: /
 
 -- social-media:
 link: /
-src: $assets.files.assets.fb.png
+src: $assets.files.assets.meta.svg
 
 -- social-media: 
 link: /
-src: $assets.files.assets.figma.png
+src: $assets.files.assets.figma.svg
 
 -- social-media:
 link: /
-src: $assets.files.assets.google.png
+src: $assets.files.assets.google.svg
 
 -- social-media: 
 link: /
-src: $assets.files.assets.chat.png
+src: $assets.files.assets.ball.svg
 
 -- social-media: 
 link: /
-src: $assets.files.assets.social.png
+src: $assets.files.assets.tweak.svg
 
 -- end: social-links
 
