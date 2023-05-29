@@ -16,9 +16,7 @@ $processor$: pr.sitemap
 
 -- integer logo-height: 32
 
--- ftd.image-src site-logo: 
-light: https://fastn.com/-/fastn.com/images/fastn.svg
-dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
+-- ftd.image-src site-logo: $assets.files.assets.ipsum-logo.svg
 
 -- string $site-url: index.html
 

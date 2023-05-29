@@ -127,7 +127,7 @@ padding-horizontal.px: 40
 -- ftd.row:
 width: fill-container
 spacing: space-between
-padding-vertical.px: 40
+padding-vertical.px: 20
 
 -- ftd.row:
 link: $header-desktop.site-url

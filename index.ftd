@@ -15,267 +15,83 @@ export: code, rendered
 
 
 
--- page: Documentation 
+
+
+-- page: Overview
+document-description: Simple, easy-to-use set-3-ds template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-title: fastn set-3-ds Template. Build Your Own Website with Ease
+document-image: https://fastn-community.github.io/set-3-ds/-/fastn-community.github.io/set-3-ds/static/set-3-ds-og-image.jpg
+site-logo: $common.site-logo
+github-url: https://github.com/fastn-community/set-3-ds/
+github-icon: true
 sidebar: true
-show-footer: true
+
+-- page.right-sidebar:
+
+-- toc-title: On this page
+
+-- link-group: Fast Track
+cta: #fast-track
+
+-- link-group: Whats next?
+cta: #whats-next
+
+-- link-group: Want to learn more?
+cta: #want-to-learn-more
+
+-- link-group: Used by?
+cta: #used-by
+
+-- end: page.right-sidebar
 
 -- page.footer:
 
 -- footer:
-social: true
-site-logo: $assets.files.assets.dummy-site-logo.png
-site-url: $common.site-url
-site-name: $common.site-name
-twitter-url: https://twitter.com/FifthTryHQ
-facebook-url: /
-discord-url: https://discord.gg/bucrdvptYd
-instagram-url: /
-telegram-url: /
-copyright: Copyright © 2023 - fifthtry.com
-
-Stay in touch with everything you need
+site-logo: $common.site-logo
+site-url: $common.site-url 
+logo-width: $common.logo-width
+logo-height: $common.logo-height
+footer-links: $common.footer-links
+social-links: $common.social-links
 
 -- end: page.footer
 
--- page.right-sidebar:
+-- page.body:
 
--- link-group: Docker
-cta: #docker
+⚡️ `set-3-ds` will help you create a beautiful documentation site in no time.
 
--- link-group: Linux VM
-cta: #linux-vm
+It provides out-of-the-box documentation features that can be used to create any
+kind of site(personal website, blog, etc).
 
--- link-group: macOS
-cta: #mac-os
 
--- link-group: Windows
-cta: #windows
+-- h3: 🚀 Fast Track 
+id: fast-track
 
--- link-group: GPU
-cta: #gpu
+Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
+project in just 5 minutes!
 
--- link-group: Arm
-cta: #arm
+ [Click here](https://github.com/fastn-stack/fastn-template/) to use `set-3-ds`
+for your fastn project.
 
--- link-group: Self hosted runner
-cta: #self-hosted-runner
+-- h3: 🌟 Whats next?
+id: whats-next
 
--- link-group: Next Steps
-cta: #next-steps
+Create your first page. 
+[Click here to know more](https://fastn-community.github.io/set-3-ds/page/).
 
--- end: page.right-sidebar
+-- h3: 👀 Want to learn more?
+id: want-to-learn-more
 
+Feel free to check [our expander course](https://fastn.com/expander/) or jump
+into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
--- h1: Execution environments overview
+-- h3: 🎯 Used by?
+id: used-by
 
-Our suite of products are open source and available on Github. You are free to 
-download install and customize them to your needs.We’d love to hear your feedback
-and suggestions, and collectively make Documentation easier and better for
-everyone. We enable teams to iterate quickly and develop, preview, and ship 
-delightful user experiences. Fastn has zero-configuration support for 35+ frontend
-frameworks and integrates with your headless content, commerce, or database of 
-choice.
+Our all documentation sites uses this `set-3-ds` theme.
 
--- list-item-bold: 
-
-Unordered lists are displayed with a preceding bullet point.
-
--- list-item-bold: 
-
-Lists can be nested as deeply as needed, and they may alternate between ordered 
-and unordered.
-
--- list-item-bold: 
-
-Lists should align with the font-size, font-weight, and line-height of paragraphs, 
-but are styled with bullets or numbers.
-
--- list-item-bold: 
-
-Lists can have similar children elements as paragraphs to provide emphasis on a 
-certain word or phrase.
-
--- list-item-bold: 
-
-You can switch between an unordered list and ordered list by changing the component 
-variant in the Design panel.
-
--- list-item-bold: 
-
-You can remove a list item from the default component by deleting it in the Layers panel.
-
--- h3: Docker
-id: docker
-
-Our suite of products are open source and available on Github. You are free to download 
-install and customize them to your needs.We’d love to hear your feedback and suggestions, 
-and collectively make Documentation easier and better for everyone. 
-
--- tip: Important
-
-Please note that some functionality (for example, anchor links) will not work in 
-development. The functionality will work as expected in production.
-
--- ftd.text:
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
-To access the Docker execution environment, use the docker executor and specify an image. 
-For a full list of convenience images, which are built by CircleCI, see the
-
--- small-heading: Material for MKDocs
-
--- image: 
-src: $assets.files.assets.mk-docs.png
-width.fixed.percent: 100
-
--- ftd.text:
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
-Find out more about the Docker execution environment on the using docker 
-
--- small-heading: Material for MKDocs
-
--- h3: Linux VM
-id: linux-vm
-
-To access the Docker execution environment, use the docker executor and specify an image. 
-For a full list of convenience images, which are built by CircleCI, see the
-
--- small-heading: Material for MKDocs
-
--- t.tabs:
-
--- t.tab: React
-index: 1
-$active-item: true
-
--- t.tab: Vue
-index: 2
-
--- t.tab: Angular
-index: 3
-
--- end: t.tabs
-
--- t.tab-image:
-
--- h3: macOS
-id: mac-os
-
--- small-heading: Material for MKDocs
-
--- tip: Important
-
-Please note that some functionality (for example, anchor links) will not work in 
-development. The functionality will work as expected in production.
-
-
--- image: 
-src: $assets.files.assets.mk-docs.png
-width.fixed.percent: 100
-
--- ftd.text:
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
-Find out more about the Docker execution environment on the using docker 
-
--- small-heading: Material for MKDocs
-
--- h3: Windows
-id: windows
-
-To access the Docker execution environment, use the docker executor and specify an image. 
-For a full list of convenience images, which are built by CircleCI, see the
-
--- small-heading: Material for MKDocs
-
--- t.tabs:
-
--- t.tab: React
-index: 1
-$active-item: true
-
--- t.tab: Vue
-index: 2
-
--- t.tab: Angular
-index: 3
-
--- end: t.tabs
-
--- t.tab-image:
-
--- h3: GPU
-id: gpu
-
-To access the Docker execution environment, use the docker executor and specify an image. 
-For a full list of convenience images, which are built by CircleCI, see the
-
--- small-heading: Material for MKDocs
-
--- t.tabs:
-
--- t.tab: React
-index: 1
-$active-item: true
-
--- t.tab: Vue
-index: 2
-
--- t.tab: Angular
-index: 3
-
--- end: t.tabs
-
--- t.tab-image:
-
--- tip: Important
-type: 2
-
-Please note that some functionality (for example, anchor links) will not work in 
-development. The functionality will work as expected in production.
-
--- h3: Arm
-id: arm
-
-To access the Docker execution environment, use the docker executor and specify an image. 
-For a full list of convenience images, which are built by CircleCI, see the
-
--- small-heading: Material for MKDocs
-
--- t.tabs:
-
--- t.tab: React
-index: 1
-$active-item: true
-
--- t.tab: Vue
-index: 2
-
--- t.tab: Angular
-index: 3
-
--- end: t.tabs
-
--- t.tab-image:
-
--- h3: Self-hosted runner
-id: self-hosted-runner
-
-To access the Docker execution environment, use the docker executor and specify an image. 
-For a full list of convenience images, which are built by CircleCI, see the
-
--- h3: Next Steps
-id: next-steps
-
-To access the Docker execution environment, use the docker executor and specify an image. 
-For a full list of convenience images, which are built by CircleCI, see the
-
-
-
+- [fastn.com](https://fastn.com/home/)
+- [FifthTry.com](https://www.fifthtry.com/)
 
 -- end: page
 
@@ -479,7 +295,6 @@ width: fill-container
 align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
 border-top-width.px: 1
 border-color: $inherited.colors.text
-margin-bottom.rem: 3.15
 
 -- render-toc:
 if: { !ftd.is_empty(doc-page-desktop.toc) }
@@ -526,7 +341,8 @@ min-height.fixed.calc: 100vh - 0px
 height: fill-container
 width.fixed.percent: 28.5
 padding-horizontal.px: 26
-padding-top.px: 50
+padding-top.px: 20
+padding-bottom.px: 42
 spacing.fixed.rem: 1.5
 
 -- toc-instance:
