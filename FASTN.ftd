@@ -8,6 +8,9 @@
 -- fastn.dependency: fastn-community.github.io/code-block
 -- fastn.dependency: fastn-community.github.io/typography
 
+-- fastn.auto-import: fastn-community.github.io/code-block as cb
+exposing: code, rendered
+
 -- fastn.auto-import: fastn-community.github.io/set-3-ds/FASTN/config as my-ds
 -- fastn.auto-import: cs
 -- fastn.auto-import: typo
