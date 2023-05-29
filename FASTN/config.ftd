@@ -1,0 +1,54 @@
+-- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/footer
+-- import: fastn-community.github.io/set-3-ds/common
+
+-- ftd.image-src fastn-logo:
+light: https://fastn.com/-/fastn.com/images/fastn.svg
+dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
+
+
+-- component page:
+children wrapper:
+optional caption title:
+optional body body:
+boolean sidebar: true
+ftd.ui list right-sidebar:
+optional string document-title:
+optional string document-description:
+optional ftd.raw-image-src document-image:
+optional ftd.image-src site-logo: $common.site-logo
+
+-- ds.page: $page.title
+site-logo: $page.site-logo
+body: $page.body
+show-footer: true
+right-sidebar: $page.right-sidebar
+sidebar: $page.sidebar
+document-title: $page.document-title
+document-description: $page.document-description
+document-image: $page.document-image
+github-url: https://github.com/fastn-community/set-3-ds/
+github-icon: true
+
+-- ds.page.footer:
+
+-- ds.footer:
+site-logo: $common.site-logo
+site-url: $common.site-url 
+logo-width: $common.logo-width
+logo-height: $common.logo-height
+footer-links: $common.footer-links
+social-links: $common.social-links
+
+-- end: ds.page.footer
+
+-- ftd.column:
+spacing.fixed.em: 0.8
+width: fill-container
+children: $page.wrapper
+
+-- end: ftd.column
+
+-- end: ds.page
+
+-- end: page

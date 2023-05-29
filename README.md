@@ -1,43 +1,27 @@
-# Welcome to your [FASTN site](https://fastn.io/)
+# Welcome to [FASTN set-3-ds](https://fastn-community.github.io/set-3-ds/)
+![Contributors](https://img.shields.io/github/contributors/fastn-community/set-3-ds?color=dark-green) [![Discord](https://img.shields.io/discord/793929082483769345)](https://discord.com/channels/793929082483769345/) ![License](https://img.shields.io/github/license/fastn-community/set-3-ds)
+# Overview
 
-FASTN Blank Package Template Repo
+⚡️ [set-3-ds](https://fastn-community.github.io/set-3-ds/) will help you create a beautiful documentation site in no time.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fifthtry/fastn-heroku&env[DOWNLOAD_BASE_URL]=https://raw.githubusercontent.com/fastn-community/set-3-ds/main/)
+It provides out-of-the-box documentation features that can be used to create any kind of site(personal website, blog, etc).
 
+## How it looks?
 
-> 🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
+![set-3-ds](/assets/set-3-ds-example-dark.png)
 
-![doc-site](doc-site-example.png)
+## 🚀 Fast Track
 
+Use this fastn template to create your first [fastn web-site](https://fastn.com/expander/hello-world/-/build/) project in just 5 minutes!
 
-## 🚀 Project Structure
+## 🌟 Whats next?
 
-Inside of your FASTN project, you'll see the following folders and files:
+Read our [set-3-ds documentation](https://fastn-community.github.io/set-3-ds/)
 
-```
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FASTN.ftd
-├── index.ftd
-└── README.md
-```
+Create your first page. [Click here to know more](https://fastn-community.github.io/set-3-ds/page/)
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `fastn build`            | FASTN builder installs all `FASTN` dependencies        |
-| `fastn serve`            | Starts local dev server at available port`localhost:8000`          |
-
-
+## ⚓ [Changelog](Changelog.md)
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fastn.io/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+Feel free to check our [expander course](https://fastn.com/expander/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
