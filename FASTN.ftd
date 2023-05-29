@@ -15,34 +15,26 @@ exposing: code, rendered
 -- fastn.auto-import: cs
 -- fastn.auto-import: typo
 
-
-
 -- fastn.sitemap:
 
-# Home: /
+# Home: /index.html
 
-## Home: /
+- Overview: index.html
+- Getting Started: /getting-started/
+- Adding Favicon: /favicon/
+- Adding Logo & Sitename: /logo/
+- Changing Color Scheme: /cs/
+- Changing Typography: /types/
+- Creating A Page: /page/
+- Adding a image: /image/
+- Adding Assets: /assets/
+- Markdown Primer: /markdown/
+- Understanding Sitemap: /sitemap/
+- Adding Right Sidebar: /right-sidebar/
+- Adding Footer: /footer/
+- SEO: /seo/
 
-- Home: /
-  - Credit: /
-  - Transfer: /
 
-- Pocket: /
-  - Credit: /
-  - Transfer: /
+# Blog  🚧: /blog/
 
-- History: /
-  - Credit: /
-  - Transfer: /
-
-- Service: /
-  - Credit: /
-  - Transfer: /
-
-# Label: /
-
-# Label: /
-
-# Label: /
-
-# Label: /
+- Overview 🚧: /blog/
