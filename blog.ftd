@@ -1,0 +1,24 @@
+-- import: fastn-community.github.io/set-3-ds as ds
+
+-- my-ds.page: Blog
+
+-- my-ds.page.right-sidebar:
+
+-- ds.toc-title: On this page
+
+-- ds.link-group: Coming Soon
+cta: blog/#coming-soon
+
+-- end: my-ds.page.right-sidebar
+
+-- my-ds.page.body:
+
+In this section, we will learn about creating blog article page in `set-3-ds`.
+
+-- ds.h3: Coming Soon 🚧
+id: coming-soon
+
+This page is under constuction. We are preparing something amazing and
+exciting for you.
+
+-- end: my-ds.page

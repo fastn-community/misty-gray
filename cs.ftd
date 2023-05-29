@@ -1,0 +1,142 @@
+-- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/set-3-ds/assets
+
+-- my-ds.page: Changing Color Scheme
+
+-- my-ds.page.right-sidebar:
+
+-- ds.link-group: How to add color scheme?
+cta: cs/#how-to-add-color-scheme
+
+-- ds.link-group: How to create a global my-ds page module for set-3-ds?
+cta: cs/#how-to-create-a-global-my-ds-page-module-for-set-3-ds
+
+-- end: my-ds.page.right-sidebar
+
+-- my-ds.page.body:
+
+In this section, we will learn about changing color scheme of `set-3-ds`.
+
+`set-3-ds` uses `fastn` default color scheme. If you wish to update color 
+scheme, choose a color scheme from our [fastn-community]
+(https://fastn.com/featured/cs/) color schemes.
+
+To choose one of featured color scheme, visit our 
+[featured color schemes](https://fastn.com/featured/cs/)
+
+-- ds.h3: How to add color scheme?
+id: how-to-add-color-scheme
+
+To add color scheme to your fastn web sites. Edit your `FASTN.ftd` file and add
+color scheme dependency into it.
+
+In the below example, we are using https://fastn-community.github.io/set-3-cs/
+color scheme.
+
+Add color scheme dependency into your `FASTN.ftd` file as shown in below
+example:
+
+-- ds.code:
+lang: ftd
+
+\-- fastn.dependency: fastn-community.github.io/set-3-ds
+\-- fastn.dependency: fastn-community.github.io/set-3-cs
+
+-- ds.h3: How to create a global `my-ds` page module for `set-3-ds`?
+id: how-to-create-a-global-my-ds-page-module-for-set-3-ds
+
+You can create a `my-ds.ftd` module inside your `fastn` package and create your
+custom `my-ds` page component.
+
+Let's learn how to create a module:
+
+Create a new file let’s say `my-ds.ftd`. 
+
+Here’s what your `my-ds.ftd` module would look like:
+
+-- cb.code: my-ds.ftd module
+lang: ftd
+download: my-ds.ftd
+
+\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/set-3-cs
+
+\-- component page:
+children wrapper:
+optional caption title:
+optional body body:
+boolean sidebar: false
+
+\-- ds.page: $page.title
+site-logo: $fastn-assets.files.images.fastn.svg
+body: $page.body
+sidebar: $page.sidebar
+colors: $set-3-cs.main
+
+\-- end: ds.page.banner
+
+\-- ds.page.extra-headers:
+
+\-- ds.h3: Heading in sidebar
+
+`<You can add any component like this inside sidebar.>`
+
+\-- end: ds.page.extra-headers
+
+\-- ftd.column:
+spacing.fixed.em: 0.8
+width: fill-container
+children: $page.wrapper
+
+\-- end: ftd.column
+
+\-- end: ds.page
+
+\-- end: page
+
+-- ds.markdown:
+
+Click on download icon of above code-block. `my-ds.ftd` file will be
+downloaded. Import this file inside your new `.ftd` file.
+
+Then use `my-ds` component to create a new page using it.
+
+-- ds.code:
+lang: ftd
+download: cs.ftd
+
+\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: <your fastn package name>/my-ds
+
+\-- my-ds.page: This is page title
+
+This is body area. It contains multiple paragraphs.
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+praesentium voluptatum.
+
+\-- ds.h1: This is heading level 1
+
+This is heading level 1 optional body content.
+
+\-- ds.h2: This is heading level 2
+
+This is heading level 2 optional body content.
+
+\-- ds.h3: This is heading level 3
+
+This is heading level 3 optional body content.
+
+\-- end: my-ds.page
+
+-- ds.markdown:
+
+Click on the download icon of the above code-block. `my-ds.ftd` file will be
+downloaded. Import this file inside your new `.ftd` file.
+
+Add this file inside your `fastn` project and deploy or run `fastn serve` on
+your localhost. Access your localhost in the browser
+e.g.`http://127.0.0.1:8000/cs/` you will see page colors with
+[Set 3 CS](https://fastn-community.github.io/set-3-cs/)
+
+-- end: my-ds.page
