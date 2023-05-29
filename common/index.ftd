@@ -7,6 +7,8 @@
 
 -- ftd.image-src site-logo: $assets.files.assets.ipsum-logo.svg
 
+-- string site-name: Doc Site
+
 -- integer logo-width: 200
 
 -- integer logo-height: 44

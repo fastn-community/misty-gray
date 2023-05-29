@@ -135,7 +135,7 @@ align-content: center
 spacing.fixed.px: 12
 
 -- ftd.image:
-if: { header-desktop.site-logo != NULL }
+if: { header-desktop.site-logo != NULL && header-desktop.site-name == NULL }
 src: $header-desktop.site-logo
 width.fixed.px: $header-desktop.logo-width
 height.fixed.px: $header-desktop.logo-height
@@ -401,6 +401,7 @@ if: { header-mobile.site-logo != NULL }
 height.fixed.px: 38
 
 -- ftd.image:
+if: { header-mobile.site-logo != NULL && header-mobile.site-name == NULL }
 src: $header-mobile.site-logo
 height.fixed.px: 44
 

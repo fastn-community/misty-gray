@@ -19,7 +19,7 @@ export: code, rendered
 document-description: Simple, easy-to-use set-3-ds template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-title: fastn set-3-ds Template. Build Your Own Website with Ease
 document-image: https://fastn-community.github.io/set-3-ds/-/fastn-community.github.io/set-3-ds/assets/set-3-ds-og-image.jpg
-site-logo: $common.site-logo
+site-logo: NULL
 github-url: https://github.com/fastn-community/set-3-ds/
 github-icon: true
 sidebar: true
@@ -110,7 +110,7 @@ optional ftd.image-src site-logo:
 integer logo-width: $common.logo-width
 integer logo-height: $common.logo-height
 optional string $site-url: $common.site-url
-optional string site-name:
+optional string site-name: $common.site-name
 pr.toc-item list toc: $common.sitemap.toc
 optional string login-btn-txt: Login
 optional string login-btn-url: index.html
@@ -1131,50 +1131,32 @@ width: fill-container
 -- ftd.desktop:
 
 -- footer-desktop:
-site-name: $footer.site-name
-telegram-url: $footer.telegram-url
-instagram-url: $footer.instagram-url
-twitter-url: $footer.twitter-url
-discord-url: $footer.discord-url
-facebook-url: $footer.facebook-url
-logo-5: $footer.logo-5
-logo-4: $footer.logo-4
 bio: $footer.bio
+site-name: $footer.site-name
 copyright: $footer.copyright
 logo-height: $footer.logo-height
 background-color: $footer.background-color
 footer-list: $footer.footer-list
-logo-1: $footer.logo-1
-logo-2: $footer.logo-2
-logo-3: $footer.logo-3
 site-url: $footer.site-url
 site-logo: $footer.site-logo
 social: $footer.social
+social-links: $footer.social-links
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
 -- footer-mobile:
-site-name: $footer.site-name
-telegram-url: $footer.telegram-url
-instagram-url: $footer.instagram-url
-twitter-url: $footer.twitter-url
-discord-url: $footer.discord-url
-facebook-url: $footer.facebook-url
-logo-5: $footer.logo-5
-logo-4: $footer.logo-4
 bio: $footer.bio
+site-name: $footer.site-name
 copyright: $footer.copyright
 logo-height: $footer.logo-height
 background-color: $footer.background-color
 footer-list: $footer.footer-list
-logo-1: $footer.logo-1
-logo-2: $footer.logo-2
-logo-3: $footer.logo-3
 site-url: $footer.site-url
 site-logo: $footer.site-logo
 social: $footer.social
+social-links: $footer.social-links
 
 -- end: ftd.mobile
 
@@ -1192,25 +1174,16 @@ social: $footer.social
 
 
 -- component footer-desktop:
+body bio:
+string copyright:
+boolean social:
+integer logo-height:
 optional string site-name:
 optional string site-url:
-optional ftd.image-src logo-1: 
-optional ftd.image-src logo-2:
-optional ftd.image-src logo-3: 
-optional ftd.image-src logo-4:
-optional ftd.image-src logo-5:
-optional string twitter-url: /
-optional string facebook-url: /
-optional string discord-url: /
-optional string instagram-url:/ 
-optional string telegram-url: /
-optional string copyright:
-optional body bio:
 optional ftd.image-src site-logo:
-integer logo-height:
-boolean social:
 optional ftd.color background-color:
 pr.toc-item list footer-list:
+common.social-media list social-links:
 
 -- ftd.column:
 width: fill-container
@@ -1274,16 +1247,7 @@ spacing.fixed.px: 32
 if: { footer-desktop.social }
 
 -- images-list:
-logo-1: $footer-desktop.logo-1
-twitter-url: $footer-desktop.twitter-url
-logo-2: $footer-desktop.logo-2
-facebook-url: $footer-desktop.facebook-url
-logo-3: $footer-desktop.logo-3
-discord-url: $footer-desktop.discord-url
-logo-4: $footer-desktop.logo-4
-instagram-url: $footer-desktop.instagram-url
-logo-5: $footer-desktop.logo-5
-telegram-url: $footer-desktop.telegram-url
+social-links: $footer-desktop.social-links
 
 -- end: ftd.row
 
@@ -1305,16 +1269,6 @@ telegram-url: $footer-desktop.telegram-url
 -- component footer-mobile:
 optional string site-name:
 optional string site-url:
-optional ftd.image-src logo-1:
-optional ftd.image-src logo-2:
-optional ftd.image-src logo-3:
-optional ftd.image-src logo-4:
-optional ftd.image-src logo-5:
-optional string twitter-url: /
-optional string facebook-url: /
-optional string discord-url: /
-optional string instagram-url:/ 
-optional string telegram-url: /
 optional string copyright:
 optional body bio:
 optional ftd.image-src site-logo:
@@ -1322,6 +1276,7 @@ integer logo-height:
 boolean social:
 optional ftd.color background-color:
 pr.toc-item list footer-list:
+common.social-media list social-links:
 
 -- ftd.column:
 width: fill-container
@@ -1383,16 +1338,7 @@ spacing.fixed.px: 32
 if: { footer-mobile.social }
 
 -- images-list:
-logo-1: $footer-mobile.logo-1
-twitter-url: $footer-mobile.twitter-url
-logo-2: $footer-mobile.logo-2
-facebook-url: $footer-mobile.facebook-url
-logo-3: $footer-mobile.logo-3
-discord-url: $footer-mobile.discord-url
-logo-4: $footer-mobile.logo-4
-instagram-url: $footer-mobile.instagram-url
-logo-5: $footer-mobile.logo-5
-telegram-url: $footer-mobile.telegram-url
+social-links: $footer-mobile.social-links
 
 -- end: ftd.row
 
@@ -1415,64 +1361,17 @@ text-align: center
 
 
 -- component images-list:
-optional ftd.image-src logo-1:
-optional ftd.image-src logo-2:
-optional ftd.image-src logo-3:
-optional ftd.image-src logo-4:
-optional ftd.image-src logo-5:
-optional string twitter-url:
-optional string facebook-url:
-optional string discord-url:
-optional string instagram-url:
-optional string telegram-url:
+common.social-media list social-links:
 
 -- ftd.row:
 spacing.fixed.px: 24
 
--- ftd.image: 
-if: { images-list.twitter-url != NULL }
-src: $images-list.logo-1
-link: $images-list.twitter-url
+-- ftd.image:
+$loop$: $images-list.social-links as $obj
+src: $obj.src
+link: $obj.link
 width.fixed.px: 24
 height.fixed.px: 24
-width.fixed.px if { ftd.device == "mobile" }: 24
-height.fixed.px if { ftd.device == "mobile" }: 24
-
--- ftd.image: 
-if: { images-list.facebook-url != NULL }
-src: $images-list.logo-2
-link: $images-list.facebook-url
-width.fixed.px: 24
-height.fixed.px: 24
-width.fixed.px if { ftd.device == "mobile" }: 24
-height.fixed.px if { ftd.device == "mobile" }: 24
-
--- ftd.image: 
-if: { images-list.discord-url != NULL }
-src: $images-list.logo-3
-link: $images-list.discord-url
-width.fixed.px: 24
-height.fixed.px: 24
-width.fixed.px if { ftd.device == "mobile" }: 24
-height.fixed.px if { ftd.device == "mobile" }: 24
-
--- ftd.image: 
-if: { images-list.instagram-url != NULL }
-src: $images-list.logo-4
-link: $images-list.instagram-url
-width.fixed.px: 24
-height.fixed.px: 24
-width.fixed.px if { ftd.device == "mobile" }: 24
-height.fixed.px if { ftd.device == "mobile" }: 24
-
--- ftd.image: 
-if: { images-list.telegram-url != NULL }
-src: $images-list.logo-5
-link: $images-list.telegram-url
-width.fixed.px: 24
-height.fixed.px: 24
-width.fixed.px if { ftd.device == "mobile" }: 24
-height.fixed.px if { ftd.device == "mobile" }: 24
 
 -- end: ftd.row
 
