@@ -1,13 +1,9 @@
+-- import: fastn-community.github.io/set-3-ds/assets
 -- import: fastn-community.github.io/set-3-ds as ds
-
-
-
 
 -- my-ds.page: Adding Assets
 
 -- my-ds.page.right-sidebar:
-
--- ds.toc-title: On this page
 
 -- ds.link-group: How to link image assets?
 cta: assets/#how-to-link-image-assets
@@ -23,7 +19,7 @@ To add assets into `set-3-ds` project add folder inside it. You can also keep
 your image assets into root directory. We recommend adding all your images into
 a seperate folder to maintain your images at one place.
 
--- ds.h2: How to link image assets?
+-- ds.h3: How to link image assets?
 id: how-to-link-image-assets
 
 Let's say you have created a folder name `<images>` into your fastn project. And

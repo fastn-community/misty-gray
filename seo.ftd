@@ -1,16 +1,10 @@
 -- import: fastn-community.github.io/set-3-ds as ds
 
-
-
-
-
 -- my-ds.page: SEO
 document-description: Custom SEO description
 document-image: https://fastn.com/-/fastn.com/images/featured/set-3-ds.png
 
 -- my-ds.page.right-sidebar:
-
--- ds.toc-title: On this page
 
 -- ds.link-group: How to customize document title?
 cta: seo/#how-to-customize-document-title
@@ -31,7 +25,7 @@ web site.
 -- ds.youtube:
 v: 72N7f9on8iw
 
--- ds.h2: How to customize document title?
+-- ds.h3: How to customize document title?
 id: how-to-customize-document-title
 
 💡 If you want to add different title than `page` title then add `document-title`
@@ -40,7 +34,6 @@ property to `page`.
 `page` component title will be treated as document title if `document-title`
 property is not added to `page` component. And same page title will be added
 to `<meta>` tag `og-title` and `twitter:title` in rendered html.
-
 
 If you add `document-title` property to `ds.page` component, then same title
 will be added into `<meta>` `og-title` and `twitter:title`
@@ -54,7 +47,7 @@ lang: ftd
 \-- ds.page: This is page title
 document-title: Custom SEO title
 
--- ds.h2: How to add page description?
+-- ds.h3: How to add page description?
 id: how-to-add-page-description
 
 To add page description use below example code.
@@ -68,9 +61,8 @@ lang: ftd
 \-- ds.page: This is page title
 document-description: Custom SEO description
 
--- ds.h2: How to add page document-image?
+-- ds.h3: How to add page document-image?
 id: how-to-add-pade-document-image
-
 
 To add page document-image use below example code.
 
@@ -82,8 +74,5 @@ lang: ftd
 
 \-- ds.page: This is page title
 document-image: https://fastn.com/-/fastn.com/images/featured/set-3-ds.png
-
-
-
 
 -- end: my-ds.page

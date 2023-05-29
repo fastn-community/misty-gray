@@ -1,11 +1,9 @@
 -- import: fastn/processors as pr
 -- import: fastn-community.github.io/set-3-ds/assets
 -- import: fastn-community.github.io/set-3-ds/common
--- import: fastn-community.github.io/set-3-ds/tabs as t
 -- import: fastn-community.github.io/set-3-ds/common/fonts as fonts
 -- import: fastn-community.github.io/dark-mode-switcher as dms
 -- import: fastn-community.github.io/set-3-ds/header as h
--- import: fifthtry.github.io/package-doc/forest-theme as ft
 
 -- import: fastn-community.github.io/typography as tf
 export: h0, h1, h2, h3, markdown

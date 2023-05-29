@@ -1,14 +1,8 @@
 -- import: fastn-community.github.io/set-3-ds as ds
 
-
-
-
-
 -- my-ds.page: Markdown Primer
 
 -- my-ds.page.right-sidebar:
-
--- ds.toc-title: On this page
 
 -- ds.link-group: Markdown
 cta: markdown/#markdown
@@ -17,12 +11,12 @@ cta: markdown/#markdown
 
 -- my-ds.page.body:
 
-`set-3-ds` supports markdown. If you want to use it you can use `--ds.mardkdown`
-for inline anchor links etc.
+`set-3-ds` supports markdown. If you want to use it you can use `--
+ds.mardkdown` for inline anchor links etc.
 
 `set-3-ds` comes with inbuit `-- ds.markdown` component.
 
--- ds.h2: Markdown
+-- ds.h3: Markdown
 id: markdown
 
 -- ds.code:
@@ -30,8 +24,8 @@ lang: ftd
 
 \-- ds.markdown:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+tempor incididunt.
 
 -- ds.rendered: Inline links
 
@@ -39,14 +33,14 @@ incididunt.
 
 \-- ds.markdown:
 
-Lorem ipsum [dolor sit](/docs/markup-support/) amet, consectetur adipiscing 
+Lorem ipsum [dolor sit](/docs/markup-support/) amet, consectetur adipiscing
 elit, sed do eiusmod tempor incididunt.
 
 -- ds.rendered.output:
 
 -- ds.markdown:
 
-Lorem ipsum [dolor sit](/docs/markup-support/) amet, consectetur adipiscing 
+Lorem ipsum [dolor sit](/docs/markup-support/) amet, consectetur adipiscing
 elit, sed do eiusmod tempor incididunt.
 
 -- end: ds.rendered.output
@@ -107,8 +101,8 @@ elit, sed do eiusmod tempor incididunt.
 
 \-- ds.markdown:
 
-**Lorem ipsum** dolor sit amet, *consectetur adipiscing* elit, sed do eiusmod
-  tempor incididunt.
+**Lorem ipsum** dolor sit amet, *consectetur adipiscing* elit, sed do
+eiusmod tempor incididunt.
 
 -- ds.rendered.output:
 

@@ -1,16 +1,10 @@
 -- import: fastn-community.github.io/set-3-ds as ds
 -- import: fastn-community.github.io/set-3-ds/assets
 
-
-
-
-
 -- my-ds.page: Right Sidebar
 sidebar: true
 
 -- my-ds.page.right-sidebar:
-
--- ds.toc-title: On this page
 
 -- ds.link-group: How to create a global my-ds page module for set-3-ds?
 cta: right-sidebar/#how-to-create-a-global-my-ds-page-module-for-set-3-DS
@@ -37,7 +31,6 @@ We are trying to create the language for human beings and we do not believe it
 would be possible without your support. We would love to hear from you.
 
 -- end: my-ds.page.right-sidebar
-
 
 -- my-ds.page.body:
 
@@ -146,7 +139,6 @@ downloaded.
 Add this file inside your `fastn` project and deploy or run `fastn serve` on
 your localhost. Access your localhost in browser
 e.g.`http://127.0.0.1:8000/sidebar/` you will see page with right-sidebar.
-
 
 -- ds.h3: How to enable right-sidebar without adding `my-ds` module?
 id: how-to-enable-right-sidebar-without-adding-my-ds-module

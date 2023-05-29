@@ -1,22 +1,15 @@
 -- import: fastn-community.github.io/set-3-ds as ds
-
-
-
-
+-- import: fastn-community.github.io/set-3-ds/assets
 
 -- my-ds.page: Getting Started
 
 -- my-ds.page.right-sidebar:
 
--- ds.toc-title: On this page
-
 -- ds.link-group: Creating fastn web-site using set-3-ds
 cta: getting-started/#creating-fastn-web-site-using-set-3-ds
 
--- ds.link: How to publish a package?
+-- ds.link-group: How to publish a package?
 cta: getting-started/#how-to-publish-a-package
-
--- end: ds.link-group
 
 -- ds.link-group: Whats next?
 cta: getting-started/#what-next
@@ -29,7 +22,7 @@ You can create your documentation web-sites using `set-3-ds`. `set-3-ds` also
 helps authors, entrepreneurs, corporate groups and bloggers to create their own
 fastn web project.
 
--- ds.h2: 🎨 Creating fastn web-site using `set-3-ds`
+-- ds.h3: 🎨 Creating fastn web-site using `set-3-ds`
 id: creating-fastn-web-site-using-set-3-ds
 
 Please, refer [this documentation](https://fastn.com/github-pages/) to
@@ -49,7 +42,7 @@ v: tsHB2Vrhb2c
 
 - [Fastn Template](https://github.com/fastn-stack/fastn-template) 
 
--- ds.h2: 🌟 Whats next?
+-- ds.h3: 🌟 Whats next?
 id: what-next
 
 `-- page` component comes with inbuit navbar, sidebar and body content area.
