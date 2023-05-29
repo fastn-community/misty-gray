@@ -18,15 +18,13 @@ export: code, rendered
 -- page: Overview
 document-description: Simple, easy-to-use set-3-ds template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-title: fastn set-3-ds Template. Build Your Own Website with Ease
-document-image: https://fastn-community.github.io/set-3-ds/-/fastn-community.github.io/set-3-ds/static/set-3-ds-og-image.jpg
+document-image: https://fastn-community.github.io/set-3-ds/-/fastn-community.github.io/set-3-ds/assets/set-3-ds-og-image.jpg
 site-logo: $common.site-logo
 github-url: https://github.com/fastn-community/set-3-ds/
 github-icon: true
 sidebar: true
 
 -- page.right-sidebar:
-
--- toc-title: On this page
 
 -- link-group: Fast Track
 cta: #fast-track

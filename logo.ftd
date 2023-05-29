@@ -41,7 +41,7 @@ lang: ftd
 \-- import: fastn-community.github.io/set-3-ds as ds
 
 \-- ds.page: Page title
-site-logo: $assets.files.static.ipsum-logo.svg
+site-logo: $assets.files.assets.ipsum-logo.svg
 site-name: NULL
 
 Some body content of the page.
@@ -83,7 +83,7 @@ optional caption title:
 optional body body:
 
 \-- ds.page: $page.title
-site-logo: $assets.files.static.ipsum-logo.svg
+site-logo: $assets.files.assets.ipsum-logo.svg
 site-name: NULL
 body: $page.body
 

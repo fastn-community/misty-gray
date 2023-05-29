@@ -3,7 +3,9 @@
 
 -- boolean show-footer: true
 
--- ftd.image-src site-logo: $assets.files.static.ipsum-logo.svg
+-- pr.toc-item list empty-toc:
+
+-- ftd.image-src site-logo: $assets.files.assets.ipsum-logo.svg
 
 -- integer logo-width: 200
 
@@ -30,23 +32,23 @@ string link: /
 
 -- social-media:
 link: /
-src: $assets.files.static.fb.png
+src: $assets.files.assets.fb.png
 
 -- social-media: 
 link: /
-src: $assets.files.static.figma.png
+src: $assets.files.assets.figma.png
 
 -- social-media:
 link: /
-src: $assets.files.static.google.png
+src: $assets.files.assets.google.png
 
 -- social-media: 
 link: /
-src: $assets.files.static.chat.png
+src: $assets.files.assets.chat.png
 
 -- social-media: 
 link: /
-src: $assets.files.static.social.png
+src: $assets.files.assets.social.png
 
 -- end: social-links
 
