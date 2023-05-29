@@ -1,5 +1,15 @@
 # Set-3-ds Change Log
 
+## May 29, 2023
+
+- [Updated Docs For Each Component](https://github.com/fastn-community/set-3-ds/commit/42568af4f912ef26b3590d09ce0b050c44ff278b)
+- [Fixed the Footer, SEO and right-sidebar documentation](https://github.com/fastn-community/set-3-ds/commit/ca9188e332f3c78531739458fd78b5bd3bf6411c)
+- [Fixed The Footer issue](https://github.com/fastn-community/set-3-ds/commit/d2f42a0109aef03602ac7bfeef94da0c38c4f945)
+
+## May 26, 2023
+
+- [Fixed Most of the build Issues](https://github.com/fastn-community/set-3-ds/commit/a9f6b0c9b27029c34090ccb4be27f8b424bc7246)
+- [Updated Tabs Component](https://github.com/fastn-community/set-3-ds/commit/d75fc9b584f535ad31c408d8c4fda41e135fd39e)
 ## May 25, 2023
 
 - [Added Required Files](https://github.com/fastn-community/set-3-ds/commit/8af7bf48ecfc65c285190568cf6bbeca5185dcef)
