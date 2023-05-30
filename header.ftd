@@ -144,7 +144,7 @@ align-self: center
 -- ftd.text: $header-desktop.site-name
 if: { header-desktop.site-name != NULL }
 role: $inherited.types.heading-medium
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 margin-left.px if { header-desktop.site-logo != NULL }: 16
 white-space: nowrap
 align-self: center
@@ -255,7 +255,7 @@ optional string site-name:
 -- ftd.text: LOGO
 if: { fallback-title.site-name == NULL }
 role: $inherited.types.heading-large
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
@@ -285,7 +285,7 @@ if: { !header-item.is-active }
 role: $inherited.types.copy-regular
 link if { header-item.link != NULL}: $header-item.link
 white-space: nowrap
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 padding-top.rem: 0.4
 opacity: 0.6
 
@@ -294,7 +294,7 @@ if: { header-item.is-active }
 role: $inherited.types.copy-regular
 white-space: nowrap
 link if { header-item.link != NULL }: $header-item.link
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 padding-top.rem: 0.4
 style: bold
 
