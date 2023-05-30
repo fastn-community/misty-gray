@@ -273,9 +273,9 @@ github-icon: $doc-page-desktop.github-icon
 github-url: $doc-page-desktop.github-url
 
 -- ftd.column:
-margin-horizontal.rem: 2.5
+padding-horizontal.rem: 2.5
 margin-bottom.rem: 3.12
-margin-top.px: 10
+width: fill-container
 
 -- ftd.text: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
@@ -313,7 +313,6 @@ max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.
 max-width if { doc-page-desktop.full-width }: fill-container
 width: fill-container
 width if { doc-page-desktop.full-width }: fill-container
-margin-bottom.rem: 3.15
 
 -- end: ftd.column
 
@@ -344,7 +343,6 @@ min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 0px
 height: fill-container
 width.fixed.percent: 28.5
-padding-horizontal.px: 26
 padding-top.px: 50
 padding-bottom.px: 42
 spacing.fixed.rem: 1.5
@@ -384,7 +382,7 @@ margin-left.px: 28
 link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 role: $inherited.types.button-medium
 color: $inherited.colors.text
-color if { toc-instance.toc.is-active }: $inherited.colors.accent.primary
+color if { toc-instance.toc.is-active }: $inherited.colors.text-strong
 width: fill-container
 
 -- end: ftd.row
@@ -620,7 +618,7 @@ align-self: start
 
 -- ftd.text: On this page
 role: $inherited.types.blockquote
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 style: bold
 margin-bottom.px: 20
 
@@ -1192,11 +1190,15 @@ common.social-media list social-links:
 -- ftd.column:
 width: fill-container
 padding-vertical.px: 42
-padding-horizontal.px: 120
-background.solid: $footer-desktop.background-color
 spacing.fixed.px: 24
 border-top-width.px: 1
 border-color: $inherited.colors.border
+
+-- ftd.column:
+align-self: center
+max-width.fixed.px: 1178
+spacing.fixed.px: 24
+width: fill-container
 
 -- ftd.row:
 width: fill-container
@@ -1259,6 +1261,8 @@ social-links: $footer-desktop.social-links
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
