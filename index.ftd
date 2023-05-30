@@ -132,6 +132,7 @@ boolean show-banner: false
 ftd.ui list banner:
 boolean github-icon: false
 optional string github-url:
+boolean full-width: false
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -176,6 +177,7 @@ sidebar: $page.sidebar
 right-sidebar: $page.right-sidebar
 github-icon: $page.github-icon
 github-url: $page.github-url
+full-width: $page.full-width
 
 -- end: ftd.desktop
 
@@ -246,6 +248,7 @@ boolean sidebar: false
 ftd.ui list right-sidebar:
 boolean github-icon: false
 optional string github-url: 
+boolean full-width:
 
 -- ftd.column:
 width: fill-container
@@ -290,22 +293,25 @@ $doc-page-desktop.body
 width: fill-container
 align-content if { ftd.is_empty(doc-page-desktop.toc) }: center
 border-top-width.px: 1
-border-color: $inherited.colors.text
+border-color: $inherited.colors.border
 
 -- render-toc:
 if: { !ftd.is_empty(doc-page-desktop.toc) }
 toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
-padding-horizontal.px: 50
-padding-top.px: 50
-border-color: $inherited.colors.text
-width: fill-container
+padding-horizontal.rem: 3.12
+padding-bottom.px: 50
+border-color: $inherited.colors.border
 align-content: top-left
 children: $doc-page-desktop.wrapper
 spacing.fixed.em: 0.8
-border-left-width.px: 1
+border-left-width.px if { !ftd.is_empty(doc-page-desktop.toc) && doc-page-desktop.sidebar }: 1
 min-height: fill-container
+max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
+max-width if { doc-page-desktop.full-width }: fill-container
+width: fill-container
+width if { doc-page-desktop.full-width }: fill-container
 
 -- end: ftd.column
 
@@ -337,7 +343,7 @@ min-height.fixed.calc: 100vh - 0px
 height: fill-container
 width.fixed.percent: 28.5
 padding-horizontal.px: 26
-padding-top.px: 20
+padding-top.px: 50
 padding-bottom.px: 42
 spacing.fixed.rem: 1.5
 
@@ -421,7 +427,7 @@ link if { childrens.toc.url != NULL } : $childrens.toc.url
 text: $childrens.toc.title
 role: $inherited.types.copy-small
 color: $inherited.colors.text
-color if { childrens.toc.is-active }: $inherited.colors.text-strong
+color if { childrens.toc.is-active }: $inherited.colors.text
 
 -- childrens:
 if: {!ftd.is_empty(childrens.toc.children) }
@@ -849,6 +855,13 @@ width: fill-container
 
 
 
+
+
+
+
+
+
+
 -- component card:
 caption title:
 body body:
@@ -868,7 +881,7 @@ width.fixed.percent: 46
 src: $card.src
 
 -- ftd.text: $card.title
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 role: $inherited.types.heading-small
 margin-top.rem: 1
 
@@ -1059,7 +1072,7 @@ height.fixed.px: $logo-with-name.logo-height
 
 -- ftd.text: $logo-with-name.site-name
 if: { logo-with-name.site-name != NULL }
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 role: $inherited.types.heading-small
 
 -- end: ftd.row
@@ -1087,7 +1100,7 @@ optional string site-name:
 -- ftd.text: LOGO
 if: { fallback-title.site-name == NULL }
 role: $inherited.types.heading-large
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 
 -- end: fallback-title
 
@@ -1188,6 +1201,7 @@ common.social-media list social-links:
 -- ftd.column:
 width: fill-container
 padding-vertical.px: 40
+padding-horizontal.px: 120
 background.solid: $footer-desktop.background-color
 spacing.fixed.px: 24
 
@@ -1407,7 +1421,7 @@ height.fixed.px: $logo-with-name.logo-height
 
 -- ftd.text: $logo-with-name.site-name
 if: { logo-with-name.site-name != NULL }
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 role: $inherited.types.heading-small
 
 -- end: ftd.row
@@ -1429,8 +1443,8 @@ role: $inherited.types.heading-small
 caption title:
 optional string url: /
 boolean is-active: false
-ftd.color text-color: $inherited.colors.text-strong
-ftd.color active-text-color: $inherited.colors.text-strong
+ftd.color text-color: $inherited.colors.text
+ftd.color active-text-color: $inherited.colors.text
 pr.toc-item list sub-sections: $common.empty-toc
 boolean show-toc: false
 boolean show-subsections: false
@@ -1499,8 +1513,8 @@ $loop$: $footer-list-section.sub-sections as $obj
 caption title:
 optional string url: /
 boolean is-active: false
-ftd.color text-color: $inherited.colors.text-strong
-ftd.color active-text-color: $inherited.colors.text-strong 
+ftd.color text-color: $inherited.colors.text
+ftd.color active-text-color: $inherited.colors.text 
 pr.toc-item list toc: $common.empty-toc
 children wrap:
 boolean show-subsections: false
@@ -1560,8 +1574,8 @@ children: $footer-list-toc.wrap
 caption title:
 optional string url: /
 boolean is-active: false
-ftd.color text-color: $inherited.colors.text-strong
-ftd.color active-text-color: $inherited.colors.text-strong 
+ftd.color text-color: $inherited.colors.text
+ftd.color active-text-color: $inherited.colors.text 
 pr.toc-item list toc: $common.empty-toc
 children wrap:
 
@@ -1617,7 +1631,7 @@ width: fill-container
 
 -- ftd.text: $h1.title
 role: $fonts.heading-large-v2
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 margin-bottom.px: 18
 width: fill-container
 padding-top.em: 0.5
@@ -1659,7 +1673,7 @@ margin-top.px: 50
 
 -- ftd.text: $h3.title
 role: $inherited.types.heading-small
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 style: bold
 margin-bottom.rem: 1
 width: fill-container
@@ -1761,7 +1775,7 @@ border-color: $inherited.colors.border
 
 -- ftd.text: $compact-text.title
 role: $inherited.types.heading-small
-color: $inherited.colors.text-strong
+color: $inherited.colors.text
 padding-bottom.px: 16
 padding-top.px: 8
 region: h4
