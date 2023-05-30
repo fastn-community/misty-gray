@@ -170,7 +170,8 @@ is-active: $obj.is-active
 
 -- ftd.row:
 if: { header-desktop.current-section != NULL }
-padding-vertical.px: 50
+padding-top.px: 20
+padding-bottom.px: 42
 width: fill-container
 align-content: center
 

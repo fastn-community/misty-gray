@@ -313,6 +313,7 @@ max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.
 max-width if { doc-page-desktop.full-width }: fill-container
 width: fill-container
 width if { doc-page-desktop.full-width }: fill-container
+margin-bottom.rem: 3.15
 
 -- end: ftd.column
 
@@ -1116,16 +1117,6 @@ color: $inherited.colors.text
 -- component footer:
 optional string site-name:
 optional string site-url:
-optional ftd.image-src logo-1: $assets.files.assets.meta.png
-optional ftd.image-src logo-2: $assets.files.assets.figma.png
-optional ftd.image-src logo-3: $assets.files.assets.google.png
-optional ftd.image-src logo-4: $assets.files.assets.messanger.png
-optional ftd.image-src logo-5: $assets.files.assets.basketball.png
-optional string twitter-url:
-optional string facebook-url:
-optional string discord-url:
-optional string instagram-url:
-optional string telegram-url:
 optional string copyright: Copyright © 2023 - fifthtry.com
 optional body bio:
 integer logo-width: $common.logo-width
@@ -1200,10 +1191,12 @@ common.social-media list social-links:
 
 -- ftd.column:
 width: fill-container
-padding-vertical.px: 40
+padding-vertical.px: 42
 padding-horizontal.px: 120
 background.solid: $footer-desktop.background-color
 spacing.fixed.px: 24
+border-top-width.px: 1
+border-color: $inherited.colors.border
 
 -- ftd.row:
 width: fill-container
@@ -1369,6 +1362,11 @@ text-align: center
 
 
 -- end: footer-mobile
+
+
+
+
+
 
 
 
