@@ -5,7 +5,7 @@
 -- import: fastn-community.github.io/dark-mode-switcher as dms
 -- import: fastn-community.github.io/set-3-ds/header as h
 
--- import: fastn-community.github.io/typography as tf
+-- import: fastn-community.github.io/set-3-ds/typography as tf
 export: h0, h1, h2, h3, markdown
 
 -- import: fastn-community.github.io/code-block as cb
@@ -280,7 +280,7 @@ margin-top.px: 10
 -- ftd.text: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 
 -- tf.markdown:
 if: {doc-page-desktop.body != NULL}
@@ -302,6 +302,7 @@ toc-obj: $doc-page-desktop.toc
 -- ftd.column:
 padding-horizontal.rem: 3.12
 padding-bottom.px: 50
+border-right-width.px if { !ftd.is_empty(doc-page-desktop.toc) && doc-page-desktop.sidebar }: 1
 border-color: $inherited.colors.border
 align-content: top-left
 children: $doc-page-desktop.wrapper
@@ -381,7 +382,7 @@ $on-click$: $ftd.toggle($a = $toc-instance.toc-clone.is-open)
 margin-left.px: 28
 link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 role: $inherited.types.button-medium
-color: $inherited.colors.accent.primary
+color: $inherited.colors.text
 color if { toc-instance.toc.is-active }: $inherited.colors.accent.primary
 width: fill-container
 
@@ -651,7 +652,7 @@ boolean $active: false
 $on-click$: $ftd.set-bool($a= $link-group.active, v = true)
 spacing.fixed.rem: 0.81
 padding-left.px: 18
-border-left-width.px: 2
+border-left-width.px: 1
 border-color: $inherited.colors.border
 
 -- ftd.column:
@@ -977,7 +978,6 @@ role: $inherited.types.button-small
 color: $inherited.colors.text
 color if { link.active}: $inherited.colors.accent.primary
 link: $link.cta
-opacity if { !link.active}: 0.6
 style: regular
 
 -- ftd.column:
@@ -1219,7 +1219,7 @@ logo-height: $footer-desktop.logo-height
 if: { footer-desktop.bio != NULL }
 text: $footer-desktop.bio
 role: $inherited.types.copy-small
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 width.fixed.px: 305
 align-self: center
 
@@ -1421,7 +1421,7 @@ height.fixed.px: $logo-with-name.logo-height
 
 -- ftd.text: $logo-with-name.site-name
 if: { logo-with-name.site-name != NULL }
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 role: $inherited.types.heading-small
 
 -- end: ftd.row
@@ -1455,7 +1455,7 @@ margin-bottom.px if { ftd.device == "mobile" }: 24
 
 -- ftd.text: $footer-list-section.title
 if: { footer-list-section.show-toc }
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 role: $inherited.types.button-large
 link: $footer-list-section.url
 width: fill-container
@@ -1464,7 +1464,7 @@ margin-bottom.px: 12
 
 -- ftd.text: $footer-list-section.title
 if: { footer-list-section.show-subsections && !footer-list-section.show-toc }
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 role: $inherited.types.button-medium
 link: $footer-list-section.url
 width: fill-container
@@ -1473,7 +1473,7 @@ margin-bottom.px: 12
 
 -- ftd.text: $footer-list-section.title
 if: { !footer-list-section.show-toc && ! footer-list-section.show-subsections }
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 role: $inherited.types.copy-regular
 link: $footer-list-section.url
 width: fill-container
@@ -1609,119 +1609,6 @@ children: $footer-list-toc-children.wrap
 -- end: ftd.column
 
 -- end: footer-list-toc-children
-
-
-
-
-
-
-
-
-
-
--- component h1:
-caption title:
-optional body body:
-children inner:
-optional string id:
-
--- ftd.column:
-id if { $h1.id != NULL }: $h1.id
-width: fill-container
-
--- ftd.text: $h1.title
-role: $fonts.heading-large-v2
-color: $inherited.colors.text
-margin-bottom.px: 18
-width: fill-container
-padding-top.em: 0.5
-region: h1
-
--- markdown:
-if: { h1.body != NULL }
-body: $h1.body
-
--- ftd.column:
-children: $h1.inner
-width: fill-container
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: h1
-
-
-
-
-
-
-
-
-
-
--- component h3:
-caption title:
-optional body body:
-children inner:
-optional string id:
-
--- ftd.column:
-id if { $h3.id != NULL }: $h3.id
-width: fill-container
-margin-top.px: 50
-
--- ftd.text: $h3.title
-role: $inherited.types.heading-small
-color: $inherited.colors.text
-style: bold
-margin-bottom.rem: 1
-width: fill-container
-padding-top.em: 0.17
-region: h3
-
--- markdown:
-if: { h3.body != NULL }
-body: $h3.body
-
--- ftd.column:
-children: $h3.inner
-width: fill-container
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: h3
-
-
-
-
-
-
-
-
-
--- component markdown:
-body body:
-optional boolean collapsed:
-optional caption title:
-optional boolean two_columns:
-optional string id:
-
--- ftd.column:
-width: fill-container
-id if { $markdown.id != NULL }: $markdown.id
-
--- ftd.text: 
-text: $markdown.body
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-classes: markdown
-
--- end: ftd.column
-
--- end: markdown
 
 
 
