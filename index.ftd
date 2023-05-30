@@ -281,6 +281,7 @@ width: fill-container
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
+margin-bottom.rem: 1.32
 
 -- tf.markdown:
 if: {doc-page-desktop.body != NULL}
