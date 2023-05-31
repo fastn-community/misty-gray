@@ -1197,9 +1197,8 @@ border-color: $inherited.colors.border
 
 -- ftd.column:
 align-self: center
-max-width.fixed.px: 1178
+width.fixed.percent: 80
 spacing.fixed.px: 24
-width: fill-container
 
 -- ftd.row:
 width: fill-container
