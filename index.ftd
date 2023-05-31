@@ -273,14 +273,15 @@ github-icon: $doc-page-desktop.github-icon
 github-url: $doc-page-desktop.github-url
 
 -- ftd.column:
-margin-horizontal.rem: 2.5
+padding-horizontal.rem: 2.5
 margin-bottom.rem: 3.12
-margin-top.px: 10
+width: fill-container
 
 -- ftd.text: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
+margin-bottom.rem: 1.32
 
 -- tf.markdown:
 if: {doc-page-desktop.body != NULL}
@@ -343,7 +344,6 @@ min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 0px
 height: fill-container
 width.fixed.percent: 28.5
-padding-horizontal.px: 26
 padding-top.px: 50
 padding-bottom.px: 42
 spacing.fixed.rem: 1.5
@@ -383,7 +383,7 @@ margin-left.px: 28
 link if { toc-instance.toc.url != NULL }: $toc-instance.toc.url
 role: $inherited.types.button-medium
 color: $inherited.colors.text
-color if { toc-instance.toc.is-active }: $inherited.colors.accent.primary
+color if { toc-instance.toc.is-active }: $inherited.colors.text-strong
 width: fill-container
 
 -- end: ftd.row
@@ -619,7 +619,7 @@ align-self: start
 
 -- ftd.text: On this page
 role: $inherited.types.blockquote
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 style: bold
 margin-bottom.px: 20
 
@@ -1116,16 +1116,6 @@ color: $inherited.colors.text
 -- component footer:
 optional string site-name:
 optional string site-url:
-optional ftd.image-src logo-1: $assets.files.assets.meta.png
-optional ftd.image-src logo-2: $assets.files.assets.figma.png
-optional ftd.image-src logo-3: $assets.files.assets.google.png
-optional ftd.image-src logo-4: $assets.files.assets.messanger.png
-optional ftd.image-src logo-5: $assets.files.assets.basketball.png
-optional string twitter-url:
-optional string facebook-url:
-optional string discord-url:
-optional string instagram-url:
-optional string telegram-url:
 optional string copyright: Copyright © 2023 - fifthtry.com
 optional body bio:
 integer logo-width: $common.logo-width
@@ -1200,9 +1190,14 @@ common.social-media list social-links:
 
 -- ftd.column:
 width: fill-container
-padding-vertical.px: 40
-padding-horizontal.px: 120
-background.solid: $footer-desktop.background-color
+padding-vertical.px: 42
+spacing.fixed.px: 24
+border-top-width.px: 1
+border-color: $inherited.colors.border
+
+-- ftd.column:
+align-self: center
+width.fixed.percent: 82
 spacing.fixed.px: 24
 
 -- ftd.row:
@@ -1266,6 +1261,8 @@ social-links: $footer-desktop.social-links
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -1369,6 +1366,11 @@ text-align: center
 
 
 -- end: footer-mobile
+
+
+
+
+
 
 
 
