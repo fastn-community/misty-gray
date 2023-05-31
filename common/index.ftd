@@ -57,6 +57,34 @@ src: $assets.files.assets.tweak.svg
 -- pr.toc-item list footer-links:
 $processor$: pr.toc
 
+
+
+
+
+-- record author-meta:
+optional caption title:
+optional string profile:
+optional string company:
+optional string bio-url:
+optional ftd.image-src image:
+optional body body:
+
+
+
+
+
+-- record post-meta:
+caption title:
+string published-on:
+optional ftd.image-src post-image:
+optional body body:
+string post-url:
+optional author-meta author:
+
+
+
+
+
 - HEADING: /
   - Footer Link 01: /
   - Footer Link 01: /
