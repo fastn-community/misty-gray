@@ -1,21 +1,45 @@
--- import: fastn-community.github.io/doc-site/assets
--- import: fastn-community.github.io/doc-site as ds
--- import: fastn-community.github.io/doc-site/common
--- import: fastn-community.github.io/doc-site/blog-authors/amitu as author
-
+-- import: fastn-community.github.io/set-3-ds/assets
+-- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/set-3-ds/common
+-- import: fastn-community.github.io/set-3-ds/blog-authors/abrar as author
 
 
 ; Change below details for your new blog post
 
--- common.post-meta meta: Understanding process of statup-up funding
+-- common.post-meta meta: 10 Hilarious Cartoons That Depict Real-Life Problems of Programmers
 published-on: July 22, 2014 at 10:02 pm
-post-image: $assets.files.static.image-placeholder.png
-post-url: blog-articles/category-1/sample-post-2/
-author: $author.amitu
+post-image: $assets.files.assets.post-img.png
+post-url: blog-articles/category-1/sample-post-1/
+author: $author.abrar
+tag: Design Inspiration
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
 
+
+
+
+
+-- common.post-meta meta-2: We Transform ideas into digital outcomes.
+published-on: July 22, 2014 at 10:02 pm
+post-image: $assets.files.assets.post-img.png
+post-url: blog-articles/category-1/sample-post-1/
+author: $author.abrar
+tag: Design Inspiration
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+
+
+
+
+-- common.post-meta meta-3: Bringing the world together through live experiences.
+published-on: July 22, 2014 at 10:02 pm
+post-image: $assets.files.assets.blog-hero.png
+post-url: blog-articles/category-1/sample-post-1/
+author: $author.abrar
+tag: Design Inspiration
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
 
 
 
@@ -63,8 +87,7 @@ color: $fastn.color.main.text-strong
 
 -- ds.h1: Some title of the level 1 heading
 
-Here we add a body for the level 1 heading. This can be multiline and has no
-limits.
+Here we add body for the level 1 heading. This can be multiline and has no limits.
 
 You also can use `markdown` **Bold** links [markdown primer](markdown/).
 

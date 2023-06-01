@@ -79,6 +79,7 @@ string published-on:
 optional ftd.image-src post-image:
 optional body body:
 string post-url:
+optional string tag:
 optional author-meta author:
 
 

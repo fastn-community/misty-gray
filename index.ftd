@@ -133,6 +133,7 @@ ftd.ui list banner:
 boolean github-icon: false
 optional string github-url:
 boolean full-width: false
+optional boolean blog: false
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -178,6 +179,7 @@ right-sidebar: $page.right-sidebar
 github-icon: $page.github-icon
 github-url: $page.github-url
 full-width: $page.full-width
+blog: $page.blog
 
 -- end: ftd.desktop
 
@@ -249,6 +251,7 @@ ftd.ui list right-sidebar:
 boolean github-icon: false
 optional string github-url: 
 boolean full-width:
+optional boolean blog:
 
 -- ftd.column:
 width: fill-container
@@ -310,7 +313,7 @@ children: $doc-page-desktop.wrapper
 spacing.fixed.em: 0.8
 border-left-width.px if { !ftd.is_empty(doc-page-desktop.toc) && doc-page-desktop.sidebar }: 1
 min-height: fill-container
-max-width.fixed.px if { ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
+max-width.fixed.px if { !doc-page-desktop.blog && ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
 max-width if { doc-page-desktop.full-width }: fill-container
 width: fill-container
 width if { doc-page-desktop.full-width }: fill-container
@@ -456,19 +459,34 @@ ftd.image-src src:
 optional ftd.align alignment: center
 optional ftd.resizing width:
 optional ftd.resizing height:
+optional ftd.image-src src2:
+optional boolean blog: false
 
 -- ftd.column:
 width: fill-container
 align-content: center
-height: $image.height
+
+-- ftd.row:
+spacing.fixed.px: 26
 
 -- ftd.image:
 src: $image.src
 width: auto
 width if { image.width != NULL }: $image.width
 max-width: fill-container
-height: auto
+height if { image.height != NULL }: $image.height
 align-self: center
+
+-- ftd.image:
+if: { image.src2 != NULL }
+src: $image.src2
+width: auto
+width if { image.width != NULL }: $image.width
+max-width: fill-container
+height if { image.height != NULL }: $image.height
+align-self: center
+
+-- end: ftd.row
 
 -- ftd.text:
 if: { image.caption != NULL }
@@ -477,7 +495,10 @@ color: $inherited.colors.text
 role: $inherited.types.label-large
 border-bottom-left-radius.px: 5
 border-bottom-right-radius.px: 5
+border-bottom-left-radius.px if { image.blog }: 0
+border-bottom-right-radius.px if { image.blog }: 0
 background.solid: $inherited.colors.background.step-1
+background.solid if { image.blog } : $inherited.colors.background.base
 padding-vertical.rem: 0.5
 padding-horizontal.rem: 1.25
 text-align: center
@@ -609,15 +630,17 @@ border-radius.px: 3
 
 -- component right-sidebar:
 ftd.ui list right-sidebar:
+optional boolean blog: false
 
 -- ftd.column:
 width: fill-container
 padding-horizontal.px: 20
 margin-top.px: 50
-max-width.fixed.percent: 20
+max-width.fixed.percent if { !right-sidebar.blog }: 20
 align-self: start
 
 -- ftd.text: On this page
+if: { !right-sidebar.blog }
 role: $inherited.types.blockquote
 color: $inherited.colors.text-strong
 style: bold
@@ -647,13 +670,14 @@ caption title:
 string cta:
 children wrapper:
 boolean $active: false
+optional boolean blog: false
 
 -- ftd.column:
 $on-click$: $ftd.set-bool($a= $link-group.active, v = true)
 spacing.fixed.rem: 0.81
-padding-left.px: 18
-border-left-width.px: 1
-border-color: $inherited.colors.border
+padding-left.px if { !link-group.blog }: 18
+border-left-width.px if { !link-group.blog }: 1
+border-color if { !link-group.blog }: $inherited.colors.border
 
 -- ftd.column:
 if: { link-group.active }
@@ -1706,41 +1730,402 @@ width: fill-container
 
 
 
--- pr.toc-item list items: 
-$processor$: pr.toc
+-- component post-card-ui:
+caption title:
+string timestamp:
+ftd.image-src image: 
+string url:
+body body:
+optional common.author-meta author:
+optional string tag:
 
-- Section 1: basic-footer/
-  - Sub-section 1: /
-    - Label 1: index.html
-    - Label 2: index.html
-    - Label 3: index.html
-    - Label 4: index.html
-    - Label 5: index.html
-- Section 2: social-footer/
-  - Sub-section 2: /
-    - Label 1: index.html
-    - Label 2: index.html
-    - Label 3: index.html
-    - Label 4: index.html
-    - Label 5: index.html
-- Section 3: footer/
-  - Sub-section 3: /
-    - Label 1: index.html
-    - Label 2: index.html
-    - Label 3: index.html
-    - Label 4: index.html
-    - Label 5: index.html
-- Section 4: basic-footer/
-  - Sub-section 4:
-    - Label 1: index.html
-    - Label 2: index.html
-    - Label 3: index.html
-    - Label 4: index.html
-    - Label 5: index.html
-- Section 5: basic-footer/
-  - Sub-section 5:
-    - Label 1: index.html
-    - Label 2: index.html
-    - Label 3: index.html
-    - Label 4: index.html
-    - Label 5: index.html
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 60
+
+-- ftd.column:
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $post-card-ui.tag
+if: { post-card-ui.tag != NULL }
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+background.solid: rgba(36, 176, 126, 0.4)
+padding-horizontal.px: 10
+padding-vertical.px: 5
+
+-- ftd.text: $post-card-ui.timestamp
+color: $inherited.colors.text
+role: $inherited.types.label-small
+padding-horizontal.px: 12
+padding-vertical.px: 5
+
+-- end: ftd.row
+
+-- ftd.text: $post-card-ui.title
+color: $inherited.colors.text
+role: $inherited.types.heading-small
+margin-top.px: 24
+
+-- ftd.text:
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 12
+
+$post-card-ui.body
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $post-card-ui.image
+height.fixed.px: 200
+width.fixed.px: 300
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+
+-- end: post-card-ui
+
+
+
+
+
+
+
+
+
+
+-- component featured-post-card:
+caption title:
+body body:
+ftd.image-src src:
+string url:
+string timestamp:
+common.author-meta author:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 120
+
+-- ftd.row:
+if: { !featured-post-card.focus }
+width: fill-container
+border-left-width.px: 19
+border-color: $inherited.colors.accent.primary
+spacing: space-between
+
+-- ftd.column:
+width.fixed.px: 445
+margin-left.px: 24
+align-self: center
+
+-- ftd.text: $featured-post-card.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.text:
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 24
+
+$featured-post-card.body
+
+-- ftd.row:
+padding-horizontal.px: 20
+padding-vertical.px: 12
+spacing.fixed.px: 8
+background.solid: $inherited.colors.cta-primary.base
+align-content: center
+margin-top.px: 24
+
+-- ftd.text: Button
+color: $inherited.colors.cta-primary.text
+role: $inherited.types.copy-regular
+link: /
+
+-- ftd.image:
+src: $assets.files.assets.correct.svg
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+width.fixed.px: 737
+src: $featured-post-card.src
+align-self: end
+
+-- end: ftd.row
+
+-- ftd.column:
+width: fill-container
+if: { featured-post-card.focus }
+align-content: center
+
+-- ftd.text: $featured-post-card.title
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-large
+max-width.fixed.percent: 70
+text-align: center
+
+-- ftd.image:
+width: fill-container
+src: $featured-post-card.src
+margin-top.px: 50
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: featured-post-card
+
+
+
+
+
+
+
+
+
+
+-- component featured-post:
+common.post-meta post-data:
+
+-- featured-post-card: $featured-post.post-data.title
+timestamp: $featured-post.post-data.published-on
+author: $featured-post.post-data.author
+src: $featured-post.post-data.post-image
+url:  $featured-post.post-data.post-url
+body: $featured-post.post-data.body
+
+-- end: featured-post
+
+
+
+
+
+
+
+
+
+
+-- component post-card:
+common.post-meta post-data:
+
+-- post-card-ui: $post-card.post-data.title
+timestamp: $post-card.post-data.published-on
+image: $post-card.post-data.post-image
+url:  $post-card.post-data.post-url
+body: $post-card.post-data.body
+author: $post-card.post-data.author
+tag: $post-card.post-data.tag
+
+-- end: post-card
+
+
+
+
+
+
+
+
+
+
+-- component posts:
+optional caption title:
+optional body body:
+children container:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.text: $posts.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.text:
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 20
+
+$posts.body
+
+-- ftd.row:
+margin-top.px: 50
+width: fill-container
+
+-- ftd.column:
+border-right-width.px: 1
+border-color: $inherited.colors.border
+padding-right.px: 20
+children: $posts.container
+spacing.fixed.px: 20
+width.fixed.percent: 77
+
+-- end: ftd.column
+
+-- ftd.column:
+padding-left.px: 40
+padding-right.px: 30
+width.fixed.percent: 23
+
+-- ftd.text: Recommended Topics
+color: $inherited.colors.text
+role: $inherited.types.copy-small
+style: bold
+
+-- ftd.row:
+margin-top.px: 15
+wrap: true
+spacing.fixed.px: 10
+
+-- ftd.text: Programming
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+background.solid: rgba(36, 176, 126, 0.4)
+padding-horizontal.px: 10
+padding-vertical.px: 5
+
+-- ftd.text: Data Science
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+background.solid: rgba(36, 176, 126, 0.4)
+padding-horizontal.px: 10
+padding-vertical.px: 5
+
+-- ftd.text: Technology
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+background.solid: rgba(36, 176, 126, 0.4)
+padding-horizontal.px: 10
+padding-vertical.px: 5
+
+-- ftd.text: Writing
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+background.solid: rgba(36, 176, 126, 0.4)
+padding-horizontal.px: 10
+padding-vertical.px: 5
+
+-- ftd.text: AI/ML
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+background.solid: rgba(36, 176, 126, 0.4)
+padding-horizontal.px: 10
+padding-vertical.px: 5
+
+-- ftd.text: UI/UX
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+background.solid: rgba(36, 176, 126, 0.4)
+padding-horizontal.px: 10
+padding-vertical.px: 5
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: posts
+
+
+
+
+
+
+
+
+
+
+-- component post:
+common.post-meta meta:
+children atictles-container:
+optional boolean sidebar: false
+ftd.ui list right-sidebar:
+
+-- ftd.column:
+width: fill-container
+
+-- article-card: $post.meta.title
+image: $post.meta.post-image
+author: $post.meta.author
+timestamp: $post.meta.published-on
+
+$post.meta.body
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 77
+spacing.fixed.px: 30
+margin-top.px: 50
+children: $post.atictles-container
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 23
+padding-left.px: 20
+
+-- right-sidebar:
+if: { post.sidebar }
+right-sidebar: $post.right-sidebar
+blog: true
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: post
+
+
+
+
+
+
+
+
+
+
+-- component article-card:
+caption title:
+optional ftd.image-src image:
+common.author-meta author:
+string timestamp:
+optional body body:
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+align-content: center
+
+-- ftd.text: $article-card.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+text-align: center
+max-width.fixed.percent: 70
+
+-- ftd.image:
+if: {article-card.image != NULL}
+src: $article-card.image
+width: fill-container
+height: hug-content
+margin-top.px: 50
+
+-- end: ftd.column
+
+-- end: article-card

@@ -1,16 +1,17 @@
--- import: fastn-community.github.io/doc-site/assets
--- import: fastn-community.github.io/doc-site as ds
--- import: fastn-community.github.io/doc-site/common
--- import: fastn-community.github.io/doc-site/blog-authors/abrar as author
+-- import: fastn-community.github.io/set-3-ds/assets
+-- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/set-3-ds/common
+-- import: fastn-community.github.io/set-3-ds/blog-authors/amitu as author
+
 
 
 ; Change below details for your new blog post
 
--- common.post-meta meta: A day in a city of dreams
+-- common.post-meta meta: Understanding process of statup-up funding
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
-post-url: blog-articles/category-1/sample-post-1/
-author: $author.abrar
+post-url: blog-articles/category-1/sample-post-2/
+author: $author.amitu
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
@@ -62,7 +63,8 @@ color: $fastn.color.main.text-strong
 
 -- ds.h1: Some title of the level 1 heading
 
-Here we add body for the level 1 heading. This can be multiline and has no limits.
+Here we add a body for the level 1 heading. This can be multiline and has no
+limits.
 
 You also can use `markdown` **Bold** links [markdown primer](markdown/).
 

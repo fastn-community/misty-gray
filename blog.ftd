@@ -1,24 +1,62 @@
 -- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/set-3-ds/assets
+-- import: fastn-community.github.io/set-3-ds/common
+-- import: fastn-community.github.io/set-3-ds/blog-articles/sample-post-1
+-- import: fastn-community.github.io/set-3-ds/blog-articles/sample-post-2 
 
--- my-ds.page: Blog
 
--- my-ds.page.right-sidebar:
+-- ds.page: Blog
+blog: true
 
--- ds.toc-title: On this page
+-- ds.featured-post:
+post-data: $sample-post-1.meta-2
 
--- ds.link-group: Coming Soon
-cta: blog/#coming-soon
+-- ds.posts: Feature blog
 
--- end: my-ds.page.right-sidebar
+Sed nec pharetra felis, in ultrices neque. Phasellus varius semper tellus, ac imperdiet erat commodo id. Aenean lobortis justo et velit ornare malesuada. 
 
--- my-ds.page.body:
+-- ds.post-card:
+post-data: $sample-post-1.meta
 
-In this section, we will learn about creating blog article page in `set-3-ds`.
+-- ds.post-card:
+post-data: $sample-post-1.meta
 
--- ds.h3: Coming Soon 🚧
-id: coming-soon
+-- ds.post-card:
+post-data: $sample-post-1.meta
 
-This page is under constuction. We are preparing something amazing and
-exciting for you.
+-- ds.post-card:
+post-data: $sample-post-1.meta
 
--- end: my-ds.page
+-- ds.post-card:
+post-data: $sample-post-1.meta
+
+-- ds.post-card:
+post-data: $sample-post-1.meta
+
+-- ds.post-card:
+post-data: $sample-post-1.meta
+
+-- ds.post-card:
+post-data: $sample-post-1.meta
+
+-- ds.post-card:
+post-data: $sample-post-1.meta
+
+-- ds.post-card:
+post-data: $sample-post-1.meta
+
+-- ds.post-card:
+post-data: $sample-post-1.meta
+
+-- end: ds.posts
+
+
+-- ds.footer:
+site-logo: $common.site-logo
+site-url: $common.site-url 
+logo-width: $common.logo-width
+logo-height: $common.logo-height
+footer-links: $common.footer-links
+social-links: $common.social-links
+
+-- end: ds.page

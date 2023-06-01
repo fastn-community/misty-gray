@@ -1,7 +1,7 @@
--- import: fastn-community.github.io/doc-site/assets
--- import: fastn-community.github.io/doc-site as ds
--- import: fastn-community.github.io/doc-site/blog-articles/category-1/sample-post-1
--- import: fastn-community.github.io/doc-site/blog-articles/category-1/sample-post-2 
+-- import: fastn-community.github.io/set-3-ds/assets
+-- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/set-3-ds/blog-articles/category-1/sample-post-1
+-- import: fastn-community.github.io/set-3-ds/blog-articles/category-1/sample-post-2 
 
 -- my-ds.page: Category title - News & Culture
 

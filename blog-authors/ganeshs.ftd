@@ -1,6 +1,6 @@
--- import: fastn-community.github.io/doc-site as ds
--- import: fastn-community.github.io/doc-site/assets
--- import: fastn-community.github.io/doc-site/common
+-- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/set-3-ds/assets
+-- import: fastn-community.github.io/set-3-ds/common
 
 
 
