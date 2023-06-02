@@ -1737,7 +1737,7 @@ ftd.image-src image:
 string url:
 body body:
 optional common.author-meta author:
-optional string tag:
+common.tags-list list tags:
 
 -- ftd.column:
 width: fill-container
@@ -1751,13 +1751,9 @@ spacing.fixed.px: 60
 -- ftd.row:
 width: fill-container
 
--- ftd.text: $post-card-ui.tag
-if: { post-card-ui.tag != NULL }
-color: $inherited.colors.cta-primary.base
-role: $inherited.types.button-small
-background.solid: rgba(36, 176, 126, 0.4)
-padding-horizontal.px: 10
-padding-vertical.px: 5
+-- topic: $obj.title
+$loop$: $post-card-ui.tags as $obj
+tag-link: $obj.tag-link
 
 -- ftd.text: $post-card-ui.timestamp
 color: $inherited.colors.text
@@ -1790,7 +1786,6 @@ width.fixed.px: 300
 
 -- end: ftd.column
 
-
 -- end: post-card-ui
 
 
@@ -1804,18 +1799,22 @@ width.fixed.px: 300
 
 -- component featured-post-card:
 caption title:
-body body:
-ftd.image-src src:
-string url:
-string timestamp:
+optional body body:
+optional string url:
+optional string timestamp:
+optional ftd.image-src image:
 common.author-meta author:
+optional string extra-text:
+optional string cta-primary: 
+optional string cta-primary-url:
+optional string cta-secondary: 
+optional string cta-secondary-url:
 
 -- ftd.column:
 width: fill-container
 padding-vertical.px: 120
 
 -- ftd.row:
-if: { !featured-post-card.focus }
 width: fill-container
 border-left-width.px: 19
 border-color: $inherited.colors.accent.primary
@@ -1851,7 +1850,7 @@ role: $inherited.types.copy-regular
 link: /
 
 -- ftd.image:
-src: $assets.files.assets.correct.svg
+src: $assets.files.assets.tick.svg
 
 -- end: ftd.row
 
@@ -1859,28 +1858,10 @@ src: $assets.files.assets.correct.svg
 
 -- ftd.image:
 width.fixed.px: 737
-src: $featured-post-card.src
+src: $featured-post-card.image
 align-self: end
 
 -- end: ftd.row
-
--- ftd.column:
-width: fill-container
-if: { featured-post-card.focus }
-align-content: center
-
--- ftd.text: $featured-post-card.title
-color: $inherited.colors.text-strong
-role: $inherited.types.heading-large
-max-width.fixed.percent: 70
-text-align: center
-
--- ftd.image:
-width: fill-container
-src: $featured-post-card.src
-margin-top.px: 50
-
--- end: ftd.column
 
 -- end: ftd.column
 
@@ -1897,13 +1878,22 @@ margin-top.px: 50
 
 -- component featured-post:
 common.post-meta post-data:
+optional string cta-primary: 
+optional string cta-primary-url:
+optional string cta-secondary: 
+optional string cta-secondary-url:
+optional string extra-text:
 
 -- featured-post-card: $featured-post.post-data.title
 timestamp: $featured-post.post-data.published-on
 author: $featured-post.post-data.author
-src: $featured-post.post-data.post-image
-url:  $featured-post.post-data.post-url
 body: $featured-post.post-data.body
+image: $featured-post.post-data.post-image
+extra-text: $featured-post.extra-text
+cta-primary: $featured-post.cta-primary
+cta-primary-url: $featured-post.cta-primary-url
+cta-secondary: $featured-post.cta-secondary
+cta-secondary-url: $featured-post.cta-secondary-url
 
 -- end: featured-post
 
@@ -1925,7 +1915,7 @@ image: $post-card.post-data.post-image
 url:  $post-card.post-data.post-url
 body: $post-card.post-data.body
 author: $post-card.post-data.author
-tag: $post-card.post-data.tag
+tags: $post-card.post-data.tags
 
 -- end: post-card
 
@@ -1942,16 +1932,19 @@ tag: $post-card.post-data.tag
 optional caption title:
 optional body body:
 children container:
+common.tags-list list topics:
 
 -- ftd.column:
 width: fill-container
 align-content: center
 
 -- ftd.text: $posts.title
+if: { posts.title != NULL }
 color: $inherited.colors.text
 role: $inherited.types.heading-large
 
 -- ftd.text:
+if: { posts.body != NULL }
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 margin-top.px: 20
@@ -1987,47 +1980,9 @@ margin-top.px: 15
 wrap: true
 spacing.fixed.px: 10
 
--- ftd.text: Programming
-color: $inherited.colors.cta-primary.base
-role: $inherited.types.button-small
-background.solid: rgba(36, 176, 126, 0.4)
-padding-horizontal.px: 10
-padding-vertical.px: 5
-
--- ftd.text: Data Science
-color: $inherited.colors.cta-primary.base
-role: $inherited.types.button-small
-background.solid: rgba(36, 176, 126, 0.4)
-padding-horizontal.px: 10
-padding-vertical.px: 5
-
--- ftd.text: Technology
-color: $inherited.colors.cta-primary.base
-role: $inherited.types.button-small
-background.solid: rgba(36, 176, 126, 0.4)
-padding-horizontal.px: 10
-padding-vertical.px: 5
-
--- ftd.text: Writing
-color: $inherited.colors.cta-primary.base
-role: $inherited.types.button-small
-background.solid: rgba(36, 176, 126, 0.4)
-padding-horizontal.px: 10
-padding-vertical.px: 5
-
--- ftd.text: AI/ML
-color: $inherited.colors.cta-primary.base
-role: $inherited.types.button-small
-background.solid: rgba(36, 176, 126, 0.4)
-padding-horizontal.px: 10
-padding-vertical.px: 5
-
--- ftd.text: UI/UX
-color: $inherited.colors.cta-primary.base
-role: $inherited.types.button-small
-background.solid: rgba(36, 176, 126, 0.4)
-padding-horizontal.px: 10
-padding-vertical.px: 5
+-- topic: $obj.title
+$loop$: $posts.topics as $obj
+tag-link: $obj.tag-link
 
 -- end: ftd.row
 
@@ -2053,6 +2008,9 @@ common.post-meta meta:
 children atictles-container:
 optional boolean sidebar: false
 ftd.ui list right-sidebar:
+string previous-cta-txt: Back to blog
+optional string previous-cta-url:
+string share-txt: Share
 
 -- ftd.column:
 width: fill-container
@@ -2129,3 +2087,239 @@ margin-top.px: 50
 -- end: ftd.column
 
 -- end: article-card
+
+
+
+
+
+
+
+
+
+
+-- component newsletter:
+caption title:
+string cta-txt: Sign me up
+string cta-url: /
+string cta-placeholder: Enter your work email...
+optional body body:
+optional ftd.image-src cta-icon:
+ftd.image-src info-icon: $assets.files.static.check-circle.svg
+integer width: 1200
+ftd.color bg-color: $inherited.colors.background.step-2
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- newsletter-desktop: $newsletter.title
+cta-txt: $newsletter.cta-txt
+cta-url: $newsletter.cta-url 
+cta-placeholder: $newsletter.cta-placeholder 
+body: $newsletter.body 
+info-icon: $newsletter.info-icon 
+bg-color: $newsletter.bg-color 
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- newsletter-mobile: $newsletter.title
+cta-txt: $newsletter.cta-txt
+cta-url: $newsletter.cta-url 
+cta-placeholder: $newsletter.cta-placeholder 
+body: $newsletter.body 
+info-icon: $newsletter.info-icon 
+bg-color: $newsletter.bg-color 
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: newsletter
+
+
+
+
+
+
+
+
+
+
+-- component newsletter-desktop:
+caption title:
+string cta-txt: 
+string cta-url: 
+string cta-placeholder: 
+optional body body:
+optional ftd.image-src info-icon: 
+ftd.color bg-color: 
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.row:
+width.fixed.percent: 85
+margin-vertical.px: 60
+padding-top.px: 69
+padding-bottom.px: 65
+padding-horizontal.px: 75
+background.solid: $newsletter-desktop.bg-color
+border-radius.px: 20
+align-content: center
+spacing: space-between
+
+
+-- ftd.text: $newsletter-desktop.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+padding-right.px: 16
+
+-- ftd.column:
+
+-- ftd.row:
+spacing.fixed.px: 20
+margin-bottom.px: 20
+
+-- ftd.text-input:
+placeholder: $newsletter-desktop.cta-placeholder
+padding-vertical.px: 15
+padding-horizontal.px: 15
+border-radius.px: 30
+width.fixed.px: 310
+
+-- ftd.text: $newsletter-desktop.cta-txt
+role: $inherited.types.link
+min-width.fixed.px: 87
+text-align: center
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-primary.base
+padding-vertical.rem: 0.78
+padding-horizontal.rem: 1.75
+link if { newsletter-desktop.cta-url != NULL }: $newsletter-desktop.cta-url
+border-radius.px: 50
+white-space: nowrap
+
+-- end: ftd.row
+
+-- ftd.row: 
+spacing.fixed.px: 10
+align-content: center
+
+-- ftd.image:
+if: { newsletter-desktop.info-icon != NULL }
+src: $newsletter-desktop.info-icon
+
+-- ftd.text:
+if: { newsletter-desktop.body != NULL }
+text: $newsletter-desktop.body
+role: $inherited.types.label-small
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: newsletter-desktop
+
+
+
+
+
+
+
+
+
+
+-- component newsletter-mobile:
+caption title:
+string cta-txt: 
+string cta-url: 
+string cta-placeholder: 
+optional body body:
+optional ftd.image-src info-icon: 
+ftd.color bg-color: 
+
+-- ftd.column:
+padding-vertical.px: 24
+padding-horizontal.px: 24
+background.solid: $newsletter-mobile.bg-color
+border-radius.px: 20
+align-content: center
+spacing.fixed.px: 32
+width: fill-container
+
+-- ftd.text: $newsletter-mobile.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+padding-right.px: 16
+width: fill-container
+text-align: center
+
+-- ftd.text-input:
+placeholder: $newsletter-mobile.cta-placeholder
+padding-vertical.px: 15
+padding-horizontal.px: 15
+border-radius.px: 30
+
+-- ftd.text: $newsletter-mobile.cta-txt
+role: $inherited.types.link
+min-width.fixed.px: 87
+text-align: center
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-primary.base
+padding-vertical.rem: 0.78
+padding-horizontal.rem: 1.75
+link if { newsletter-mobile.cta-url != NULL }: $newsletter-mobile.cta-url
+border-radius.px: 50
+white-space: nowrap
+
+-- ftd.row: 
+spacing.fixed.px: 10
+align-content: center
+
+-- ftd.image:
+if: { newsletter-mobile.info-icon != NULL }
+src: $newsletter-mobile.info-icon
+
+-- ftd.text:
+if: { newsletter-mobile.body != NULL }
+text: $newsletter-mobile.body
+role: $inherited.types.label-small
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: newsletter-mobile
+
+
+
+
+
+
+
+
+
+
+-- component topic:
+caption title:
+string tag-link:
+
+-- ftd.text: $topic.title
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+background.solid: rgba(36, 176, 126, 0.4)
+padding-horizontal.px: 10
+padding-vertical.px: 5
+link: $topic.tag-link
+
+-- end: topic

@@ -54,8 +54,18 @@ src: $assets.files.assets.tweak.svg
 
 -- end: social-links
 
+-- social-media list share:
+
 -- pr.toc-item list footer-links:
 $processor$: pr.toc
+
+
+
+
+
+-- record tags-list:
+caption title:
+string tag-link:
 
 
 
@@ -66,7 +76,7 @@ optional caption title:
 optional string profile:
 optional string company:
 optional string bio-url:
-optional ftd.image-src image:
+optional ftd.image-src avatar:
 optional body body:
 
 
@@ -79,8 +89,47 @@ string published-on:
 optional ftd.image-src post-image:
 optional body body:
 string post-url:
-optional string tag:
+tags-list list tags:
 optional author-meta author:
+optional string info:
+social-media list social-list:
+
+
+
+
+
+-- tags-list list topic:
+
+-- tags-list: Design Inspiration
+tag-link: blog/
+
+-- end: topic
+
+
+
+
+
+-- tags-list list tags:
+
+-- tags-list: Programming
+tag-link: blog/
+
+-- tags-list: Data Science
+tag-link: blog/
+
+-- tags-list: Technology
+tag-link: blog/
+
+-- tags-list: Writing
+tag-link: blog/
+
+-- tags-list: AI/ML
+tag-link: blog/
+
+-- tags-list: UI/UX
+tag-link: blog/
+
+-- end: tags
 
 
 
