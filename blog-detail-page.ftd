@@ -99,7 +99,7 @@ src: $assets.files.assets.blog-detail-2.png
 
 -- ds.image: Bringing the world together through live experiences.
 src: $assets.files.assets.blog-detail-3.png
-extra-src: $assets.files.assets.blog-detail-4.png
+right-img: $assets.files.assets.blog-detail-4.png
 width.fixed.px: 472
 height.fixed.px: 320
 blog: true
