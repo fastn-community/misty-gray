@@ -9,6 +9,8 @@ blog: true
 
 -- ds.featured-post:
 post-data: $sample-post-1.meta-2
+cta-primary: Button
+cta-primary-url: blog/
 
 -- ds.posts: Feature blog
 topics: $common.tags

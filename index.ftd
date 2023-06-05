@@ -1868,10 +1868,10 @@ background.solid: $inherited.colors.cta-primary.base
 align-content: center
 margin-top.px: 24
 
--- ftd.text: Button
+-- ftd.text: $featured-post-card.cta-primary
 color: $inherited.colors.cta-primary.text
 role: $inherited.types.copy-regular
-link: /
+link: $featured-post-card.cta-primary-url
 
 -- ftd.image:
 src: $assets.files.assets.tick.svg
@@ -1911,13 +1911,14 @@ optional string extra-text:
 -- featured-post-card: $featured-post.post-data.title
 timestamp: $featured-post.post-data.published-on
 author: $featured-post.post-data.author
-body: $featured-post.post-data.body
 image: $featured-post.post-data.post-image
 extra-text: $featured-post.extra-text
 cta-primary: $featured-post.cta-primary
 cta-primary-url: $featured-post.cta-primary-url
 cta-secondary: $featured-post.cta-secondary
 cta-secondary-url: $featured-post.cta-secondary-url
+
+body: $featured-post.post-data.body
 
 -- end: featured-post
 
@@ -2130,7 +2131,7 @@ string cta-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
 ftd.image-src info-icon: $assets.files.static.check-circle.svg
-integer width: 1200
+integer width:
 ftd.color bg-color: $inherited.colors.background.step-2
 
 -- ftd.column:
@@ -2191,7 +2192,7 @@ width.fixed.percent: 85
 margin-vertical.px: 60
 padding-top.px: 69
 padding-bottom.px: 65
-padding-horizontal.px: 75
+padding-horizontal.px: 48
 background.solid: $newsletter-desktop.bg-color
 border-radius.px: 20
 align-content: center

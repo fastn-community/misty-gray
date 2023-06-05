@@ -25,6 +25,8 @@ post-image: $assets.files.assets.post-img.png
 post-url: blog-articles/category-1/sample-post-1/
 author: $author.patrica
 tags: $common.topic
+cta-primary: Button
+cta-primary-url: blog/
 
 We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
 
