@@ -1854,10 +1854,13 @@ color: $inherited.colors.text
 role: $inherited.types.heading-large
 link: $featured-post-card.cta-primary-url
 
+
 -- ftd.text:
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 margin-top.px: 24
+link: $featured-post-card.cta-primary-url
+
 
 $featured-post-card.body
 
@@ -1868,11 +1871,11 @@ spacing.fixed.px: 8
 background.solid: $inherited.colors.cta-primary.base
 align-content: center
 margin-top.px: 24
+link: $featured-post-card.cta-primary-url
 
 -- ftd.text: $featured-post-card.cta-primary
 color: $inherited.colors.cta-primary.text
 role: $inherited.types.copy-regular
-link: $featured-post-card.cta-primary-url
 
 -- ftd.image:
 src: $assets.files.assets.tick.svg
@@ -1881,9 +1884,15 @@ src: $assets.files.assets.tick.svg
 
 -- end: ftd.column
 
--- ftd.image:
+-- ftd.column:
 width.fixed.percent: 55
+
+-- ftd.image:
+width: fill-container
 src: $featured-post-card.image
+link: $featured-post-card.cta-primary-url
+
+-- end: ftd.column
 
 -- end: ftd.row
 
