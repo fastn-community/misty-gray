@@ -479,7 +479,7 @@ ftd.image-src src:
 optional ftd.align alignment: center
 optional ftd.resizing width:
 optional ftd.resizing height:
-optional ftd.image-src src2:
+optional ftd.image-src extra-src:
 optional boolean blog: false
 
 -- ftd.column:
@@ -498,8 +498,8 @@ height if { image.height != NULL }: $image.height
 align-self: center
 
 -- ftd.image:
-if: { image.src2 != NULL }
-src: $image.src2
+if: { image.extra-src != NULL }
+src: $image.extra-src
 width: auto
 width if { image.width != NULL }: $image.width
 max-width: fill-container

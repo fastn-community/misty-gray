@@ -68,7 +68,7 @@ style: bold
 
 -- component tab-image:
 ftd.image-src src1: $assets.files.assets.windows.png
-ftd.image-src src2: $assets.files.assets.linux-vm.png
+ftd.image-src extra-src: $assets.files.assets.linux-vm.png
 ftd.image-src src3: $assets.files.assets.windows.png
 
 -- ftd.column:
@@ -90,7 +90,7 @@ if: { current-tab == 2 }
 width: fill-container
 
 -- ftd.image:
-src: $tab-image.src2
+src: $tab-image.extra-src
 width: fill-container
 
 -- end: ftd.column
