@@ -1918,7 +1918,7 @@ cta-primary-url: $featured-post.cta-primary-url
 cta-secondary: $featured-post.cta-secondary
 cta-secondary-url: $featured-post.cta-secondary-url
 
-body: $featured-post.post-data.body
+$featured-post.post-data.body
 
 -- end: featured-post
 
