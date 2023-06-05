@@ -1828,7 +1828,7 @@ optional string url:
 optional string timestamp:
 optional ftd.image-src image:
 common.author-meta author:
-optional string extra-text:
+optional string info:
 optional string cta-primary: 
 optional string cta-primary-url:
 optional string cta-secondary: 
@@ -1906,13 +1906,13 @@ optional string cta-primary:
 optional string cta-primary-url:
 optional string cta-secondary: 
 optional string cta-secondary-url:
-optional string extra-text:
+optional string info:
 
 -- featured-post-card: $featured-post.post-data.title
 timestamp: $featured-post.post-data.published-on
 author: $featured-post.post-data.author
 image: $featured-post.post-data.post-image
-extra-text: $featured-post.extra-text
+info: $featured-post.info
 cta-primary: $featured-post.cta-primary
 cta-primary-url: $featured-post.cta-primary-url
 cta-secondary: $featured-post.cta-secondary
