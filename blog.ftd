@@ -12,6 +12,7 @@ post-data: $sample-post-1.meta-2
 
 -- ds.posts: Feature blog
 topics: $common.tags
+sub-heading: Recommended Topics
 
 Sed nec pharetra felis, in ultrices neque. Phasellus varius semper tellus, ac imperdiet erat commodo id. Aenean lobortis justo et velit ornare malesuada. 
 
