@@ -1776,6 +1776,7 @@ width: fill-container
 -- topic: $obj.title
 $loop$: $post-card-ui.tags as $obj
 tag-link: $obj.tag-link
+active: true
 
 -- ftd.text: $post-card-ui.timestamp
 color: $inherited.colors.text
@@ -2336,13 +2337,19 @@ color: $inherited.colors.text-strong
 -- component topic:
 caption title:
 string tag-link:
+boolean active: false
+boolean $hover: false
 
 -- ftd.text: $topic.title
-color: $inherited.colors.cta-primary.base
 role: $inherited.types.button-small
+color if { !topic.active && topic.hover }: $inherited.colors.text-strong
+color: $inherited.colors.cta-primary.base
+background.solid if { !topic.active && topic.hover }: $inherited.colors.cta-primary.base
 background.solid: rgba(36, 176, 126, 0.4)
 padding-horizontal.px: 10
 padding-vertical.px: 5
 link: $topic.tag-link
+$on-mouse-enter$: $ftd.set-bool($a = $topic.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $topic.hover, v = false)
 
 -- end: topic
