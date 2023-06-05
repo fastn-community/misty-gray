@@ -13,9 +13,9 @@
 
 -- integer logo-height: 44
 
--- string $site-url: index.html
+-- string site-url: index.html
 
--- integer $max-width: 1320
+-- integer max-width: 1320
 
 -- pr.sitemap-data sitemap:
 $processor$: pr.sitemap
