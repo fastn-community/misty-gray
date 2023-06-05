@@ -109,7 +109,7 @@ optional body body:
 optional ftd.image-src site-logo: 
 integer logo-width: $common.logo-width
 integer logo-height: $common.logo-height
-optional string $site-url: $common.site-url
+optional string site-url: $common.site-url
 optional string site-name: $common.site-name
 pr.toc-item list toc: $common.sitemap.toc
 optional string login-btn-txt: Login
