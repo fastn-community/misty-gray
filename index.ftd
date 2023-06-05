@@ -1845,13 +1845,14 @@ border-color: $inherited.colors.accent.primary
 spacing: space-between
 
 -- ftd.column:
-width.fixed.px: 445
+width.fixed.percent: 35
 margin-left.px: 24
 align-self: center
 
 -- ftd.text: $featured-post-card.title
 color: $inherited.colors.text
 role: $inherited.types.heading-large
+link: $featured-post-card.cta-primary-url
 
 -- ftd.text:
 color: $inherited.colors.text
@@ -1883,7 +1884,6 @@ src: $assets.files.assets.tick.svg
 -- ftd.image:
 width.fixed.percent: 55
 src: $featured-post-card.image
-align-self: end
 
 -- end: ftd.row
 
