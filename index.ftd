@@ -1857,10 +1857,13 @@ color: $inherited.colors.text
 role: $inherited.types.heading-large
 link: $featured-post-card.cta-primary-url
 
+
 -- ftd.text:
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 margin-top.px: 24
+link: $featured-post-card.cta-primary-url
+
 
 $featured-post-card.body
 
@@ -1875,12 +1878,12 @@ $on-mouse-enter$: $ftd.set-bool($a = $featured-post-card.cta-hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $featured-post-card.cta-hover, v = false)
 border-width.px if { featured-post-card.cta-hover }: 2
 border-color if { featured-post-card.cta-hover }: $inherited.colors.accent.primary
+link: $featured-post-card.cta-primary-url
 
 -- ftd.text: $featured-post-card.cta-primary
 color if { featured-post-card.cta-hover }: $inherited.colors.text-strong
 color: $inherited.colors.cta-primary.text
 role: $inherited.types.copy-regular
-link: $featured-post-card.cta-primary-url
 
 -- ftd.image:
 src: $assets.files.assets.tick.svg
