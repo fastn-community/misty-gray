@@ -135,8 +135,6 @@ optional string github-url:
 boolean full-width: false
 optional boolean blog: false
 ftd.ui list hero:
-boolean blog: false
-ftd.ui list hero:
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -309,17 +307,12 @@ toc-obj: $doc-page-desktop.toc
 
 -- ftd.column:
 padding-horizontal.px: 50
-padding-vertical.px: 50
-border-color: $inherited.colors.border
 min-height.fixed.calc: 100vh - 128px
 max-width.fixed.px if { !doc-page-desktop.blog && ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
 max-width if { doc-page-desktop.full-width }: fill-container
 max-width if { doc-page-desktop.blog }: fill-container
 width: fill-container
 width if { doc-page-desktop.full-width }: fill-container
-border-left-width.px if {  !doc-page-desktop.blog && !ftd.is_empty(doc-page-desktop.toc)  }: 1
-border-right-width.px if { !ftd.is_empty(doc-page-desktop.toc) && doc-page-desktop.sidebar }: 1
-border-top-width.px if { !ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.blog || doc-page-desktop.sidebar }: 1
 
 -- ftd.text: $doc-page-desktop.title
 if: { doc-page-desktop.title != NULL }
@@ -368,11 +361,8 @@ min-width.fixed.percent: 20
 min-height.fixed.calc: 100vh - 200px
 height: fill-container
 width: fill-container
-padding-top.px: 50
 padding-bottom.px: 42
 spacing.fixed.px: 27
-border-top-width.px: 1
-border-color: $inherited.colors.border
 
 -- toc-instance:
 $loop$: $render-toc.toc-obj as $obj
@@ -656,11 +646,8 @@ optional boolean blog: false
 -- ftd.column:
 width: fill-container
 padding-horizontal.px: 20
-padding-top.px: 50
 max-width.fixed.percent if { !right-sidebar.blog }: 20
 align-self: start
-border-top-width.px: 1
-border-color: $inherited.colors.border
 
 -- ftd.text: On this page
 if: { !right-sidebar.blog }
@@ -699,8 +686,6 @@ optional boolean blog: false
 $on-click$: $ftd.set-bool($a= $link-group.active, v = true)
 spacing.fixed.px: 13
 padding-left.px if { !link-group.blog }: 18
-border-left-width.px if { !link-group.blog }: 1
-border-color if { !link-group.blog }: $inherited.colors.border
 
 -- ftd.column:
 if: { link-group.active }
@@ -887,6 +872,8 @@ $list-item-bold.body
 
 
 
+
+
 -- component cards:
 children wrapper:
 
@@ -954,6 +941,8 @@ margin-top.px: 32
 
 
 -- end: card
+
+
 
 
 
@@ -1041,6 +1030,12 @@ children: $link.wrapper
 
 
 
+
+
+
+
+
+
 -- component link-group:
 caption title:
 string cta:
@@ -1069,25 +1064,6 @@ margin-left.px: 29
 -- end: ftd.column
 
 -- end: link-group
-
-
-
-
-
-
-
-
-
-
--- component small-heading:
-caption title:
-
--- ftd.text: $small-heading.title
-role: $inherited.types.copy-regular
-style: bold
-color: $inherited.colors.accent.primary
-
--- end: small-heading
 
 
 
@@ -1239,8 +1215,6 @@ common.social-media list social-links:
 width: fill-container
 padding-vertical.px: 42
 spacing.fixed.px: 24
-border-top-width.px: 1
-border-color: $inherited.colors.border
 
 -- ftd.column:
 align-self: center
