@@ -11,7 +11,7 @@ id if { $h0.id != NULL }: $h0.id
 -- ftd.text: $h0.title
 role: $inherited.types.heading-hero
 color: $inherited.colors.text-strong
-margin-bottom.rem: 0.5
+margin-bottom.px: 8
 width: fill-container
 border-bottom-width.px: 1
 border-color: $inherited.colors.border
@@ -56,7 +56,7 @@ role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 margin-bottom.px: 18
 width: fill-container
-padding-top.em: 0.5
+padding-top.px: 8
 region: h1
 
 -- markdown:
@@ -95,9 +95,9 @@ width: fill-container
 -- ftd.text: $h2.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
-margin-bottom.rem: 0.5
+margin-bottom.px: 8
 width: fill-container
-padding-top.em: 0.3
+padding-top.px: 4
 region: h2
 
 -- markdown:
@@ -138,9 +138,9 @@ margin-top.px: 50
 role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
 style: bold
-margin-bottom.rem: 1
+margin-bottom.px: 16
 width: fill-container
-padding-top.em: 0.17
+padding-top.px: 3
 region: h3
 
 -- markdown:
@@ -179,9 +179,9 @@ width: fill-container
 -- ftd.text: $h4.title
 role: $inherited.types.heading-tiny
 color: $inherited.colors.text-strong
-margin-bottom.rem: 0.5
+margin-bottom.px: 8
 width: fill-container
-padding-top.em: 0.08
+padding-top.px: 1
 region: h4
 
 -- markdown:
