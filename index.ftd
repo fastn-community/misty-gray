@@ -1790,6 +1790,7 @@ padding-vertical.px: 5
 -- ftd.text: $post-card-ui.title
 color: $inherited.colors.text
 role: $inherited.types.heading-small
+link: $post-card-ui.url
 margin-top.px: 24
 
 -- ftd.text:
@@ -1805,6 +1806,7 @@ $post-card-ui.body
 src: $post-card-ui.image
 height.fixed.px: 200
 width.fixed.px: 300
+link: $post-card-ui.url
 
 -- end: ftd.row
 
@@ -1828,6 +1830,7 @@ optional string url:
 optional string timestamp:
 optional ftd.image-src image:
 common.author-meta author:
+optional boolean $cta-hover: false
 optional string info:
 optional string cta-primary: 
 optional string cta-primary-url:
@@ -1847,7 +1850,7 @@ spacing: space-between
 -- ftd.column:
 width.fixed.percent: 35
 margin-left.px: 24
-align-self: center
+margin-top.px: 20
 
 -- ftd.text: $featured-post-card.title
 color: $inherited.colors.text
@@ -1865,11 +1868,16 @@ $featured-post-card.body
 padding-horizontal.px: 20
 padding-vertical.px: 12
 spacing.fixed.px: 8
-background.solid: $inherited.colors.cta-primary.base
+background.solid if { !featured-post-card.cta-hover }: $inherited.colors.cta-primary.base
 align-content: center
 margin-top.px: 24
+$on-mouse-enter$: $ftd.set-bool($a = $featured-post-card.cta-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $featured-post-card.cta-hover, v = false)
+border-width.px if { featured-post-card.cta-hover }: 2
+border-color if { featured-post-card.cta-hover }: $inherited.colors.accent.primary
 
 -- ftd.text: $featured-post-card.cta-primary
+color if { featured-post-card.cta-hover }: $inherited.colors.text-strong
 color: $inherited.colors.cta-primary.text
 role: $inherited.types.copy-regular
 link: $featured-post-card.cta-primary-url
@@ -1881,9 +1889,15 @@ src: $assets.files.assets.tick.svg
 
 -- end: ftd.column
 
--- ftd.image:
+-- ftd.column:
 width.fixed.percent: 55
+
+-- ftd.image:
+width: fill-container
 src: $featured-post-card.image
+link: $featured-post-card.cta-primary-url
+
+-- end: ftd.column
 
 -- end: ftd.row
 

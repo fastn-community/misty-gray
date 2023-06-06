@@ -1,18 +1,58 @@
--- import: fastn-community.github.io/set-3-ds as ds
 -- import: fastn-community.github.io/set-3-ds/assets
+-- import: fastn-community.github.io/set-3-ds as ds
 -- import: fastn-community.github.io/set-3-ds/common
+-- import: fastn-community.github.io/set-3-ds/blog-authors/patrica as author
 -- import: fastn-community.github.io/set-3-ds/typography as tf
 export: h0, h1, h2, h3, markdown
 
--- import: fastn-community.github.io/set-3-ds/blog-articles/sample-post-1
--- import: fastn-community.github.io/set-3-ds/blog-articles/sample-post-2 
+-- import: fastn-community.github.io/set-3-ds/blog-articles/sample-post
+
+; Change below details for your new blog post
+
+-- common.post-meta meta: 10 Hilarious Cartoons That Depict Real-Life Problems of Programmers
+published-on: July 22, 2014 at 10:02 pm
+post-image: $assets.files.assets.post-img.png
+post-url: blog-articles/sample-post/
+author: $author.patrica
+tags: $common.topic
+
+Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
+
+
+
+
+
+-- common.post-meta meta-2: We Transform ideas into digital outcomes.
+published-on: July 22, 2014 at 10:02 pm
+post-image: $assets.files.assets.post-img.png
+post-url: blog-articles/sample-post/
+author: $author.patrica
+tags: $common.topic
+cta-primary: Button
+cta-primary-url: blog/
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+
+
+
+
+-- common.post-meta meta-3: Bringing the world together through live experiences.
+published-on: July 22, 2014 at 10:02 pm
+post-image: $assets.files.assets.blog-hero.png
+post-url: blog-articles/sample-post/
+author: $author.patrica
+tags: $common.topic
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
 
 
 -- ds.page:
 blog: true
 
 -- ds.post:
-meta: $sample-post-1.meta-3
+meta: $sample-post.meta-3
 sidebar: true
 
 -- ds.post.right-sidebar:
