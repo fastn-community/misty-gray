@@ -328,7 +328,7 @@ $doc-page-desktop.body
 -- ftd.column:
 align-content: top-left
 children: $doc-page-desktop.wrapper
-spacing.fixed.em: 0.8
+spacing.fixed.px: 13
 
 -- end: ftd.column
 

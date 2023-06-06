@@ -81,7 +81,7 @@ lang: ftd
 \-- end: my-ds.page.right-sidebar
 
 \-- ftd.column:
-spacing.fixed.em: 0.8
+spacing.fixed.px: 13
 width: fill-container
 children: $page.wrapper
 

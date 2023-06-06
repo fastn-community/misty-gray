@@ -84,7 +84,7 @@ colors: $set-3-cs.main
 \-- end: ds.page.extra-headers
 
 \-- ftd.column:
-spacing.fixed.em: 0.8
+spacing.fixed.px: 13
 width: fill-container
 children: $page.wrapper
 

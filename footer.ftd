@@ -91,7 +91,7 @@ Stay in touch with everything you need
 Some page body components and content here
 
 \-- ftd.column:
-spacing.fixed.em: 0.8
+spacing.fixed.px: 13
 width: fill-container
 children: $page.wrapper
 
