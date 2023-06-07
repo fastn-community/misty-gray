@@ -1,6 +1,8 @@
 -- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/set-3-ds/common
 
 -- my-ds.page: Adding Favicon
+site-logo: NULL
 
 -- my-ds.page.right-sidebar:
 

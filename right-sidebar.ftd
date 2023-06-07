@@ -2,6 +2,7 @@
 -- import: fastn-community.github.io/set-3-ds/assets
 
 -- my-ds.page: Right Sidebar
+site-logo: NULL
 sidebar: true
 
 -- my-ds.page.right-sidebar:

@@ -19,6 +19,7 @@ export: code, rendered
 document-description: Simple, easy-to-use set-3-ds template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-title: fastn set-3-ds Template. Build Your Own Website with Ease
 document-image: https://fastn-community.github.io/set-3-ds/-/fastn-community.github.io/set-3-ds/assets/set-3-ds-og-image.jpg
+site-name: $common.site-name
 site-logo: NULL
 github-url: https://github.com/fastn-community/set-3-ds/
 github-icon: true
@@ -44,6 +45,7 @@ cta: #used-by
 
 -- footer:
 site-logo: $common.site-logo
+site-name: $common.site-name
 site-url: $common.site-url 
 logo-width: $common.logo-width
 logo-height: $common.logo-height
@@ -1103,6 +1105,7 @@ role: $inherited.types.heading-small
 -- fallback-title:
 if: { logo-with-name.site-logo == NULL }
 site-name: $logo-with-name.site-name
+site-url: $logo-with-name.site-url
 
 -- end: ftd.row
 
@@ -1119,11 +1122,13 @@ site-name: $logo-with-name.site-name
 
 -- component fallback-title:
 optional string site-name:
+optional string site-url:
 
--- ftd.text: LOGO
+-- ftd.text: Fastn
 if: { fallback-title.site-name == NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text
+link: $fallback-title.site-url
 
 -- end: fallback-title
 
@@ -1430,8 +1435,6 @@ optional ftd.image-src site-logo:
 integer logo-height: 38
 
 -- ftd.row:
-
--- ftd.row:
 spacing.fixed.px: 8
 link: $logo-with-name.site-url
 align-content: center
@@ -1446,8 +1449,6 @@ height.fixed.px: $logo-with-name.logo-height
 if: { logo-with-name.site-name != NULL }
 color: $inherited.colors.text-strong
 role: $inherited.types.heading-small
-
--- end: ftd.row
 
 -- end: ftd.row
 

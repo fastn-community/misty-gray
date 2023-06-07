@@ -22,6 +22,7 @@ boolean blog: false
 ftd.ui list hero:
 
 -- ds.page: $page.title
+site-name: $common.site-name
 site-logo: $page.site-logo
 body: $page.body
 show-footer: true

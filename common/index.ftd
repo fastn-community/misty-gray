@@ -13,7 +13,7 @@
 
 -- integer logo-height: 44
 
--- string site-url: index.html
+-- string site-url: index.html/
 
 -- integer max-width: 1320
 

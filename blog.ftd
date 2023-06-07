@@ -5,6 +5,7 @@
 
 
 -- ds.page: Blog Page
+site-logo: NULL
 blog: true
 
 -- ds.featured-post:
