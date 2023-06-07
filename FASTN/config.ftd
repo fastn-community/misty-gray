@@ -16,6 +16,7 @@ ftd.ui list right-sidebar:
 optional string document-title:
 optional string document-description:
 optional ftd.raw-image-src document-image:
+optional string site-name: $common.site-name
 optional ftd.image-src site-logo: $common.site-logo
 boolean full-width: false
 boolean blog: false
@@ -41,6 +42,7 @@ hero: $page.hero
 
 -- ds.footer:
 site-logo: $common.site-logo
+site-name: $common.site-name 
 site-url: $common.site-url 
 logo-width: $common.logo-width
 logo-height: $common.logo-height

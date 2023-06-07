@@ -1124,7 +1124,7 @@ site-url: $logo-with-name.site-url
 optional string site-name:
 optional string site-url:
 
--- ftd.text: Fastn
+-- ftd.text: $fallback-title.site-name
 if: { fallback-title.site-name == NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text
