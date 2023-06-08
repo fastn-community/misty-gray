@@ -171,7 +171,7 @@ is-active: $obj.is-active
 -- ftd.row:
 if: { header-desktop.current-section != NULL }
 padding-top.px: 20
-padding-bottom.px: 42
+padding-bottom.px: 62
 width: fill-container
 align-content: center
 
@@ -287,7 +287,7 @@ role: $inherited.types.copy-regular
 link if { header-item.link != NULL}: $header-item.link
 white-space: nowrap
 color: $inherited.colors.text-strong
-padding-top.rem: 0.4
+padding-top.px: 6
 opacity: 0.6
 
 -- ftd.text: $header-item.title
@@ -296,7 +296,7 @@ role: $inherited.types.copy-regular
 white-space: nowrap
 link if { header-item.link != NULL }: $header-item.link
 color: $inherited.colors.text-strong
-padding-top.rem: 0.4
+padding-top.px: 6
 style: bold
 
 -- end: ftd.row
