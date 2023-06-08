@@ -7,7 +7,7 @@
 
 -- common.author-meta patrica: Patrica Ava
 profile: Software Developer
-bio-url:  blog-authors/patrica/
+bio-link:  blog-authors/patrica/
 image: $assets.files.static.authors.patrica.jpg
 company: XYZ Pvt. Ltd.
 

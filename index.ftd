@@ -364,7 +364,7 @@ min-height.fixed.calc: 100vh - 200px
 height: fill-container
 width: fill-container
 padding-bottom.px: 42
-spacing.fixed.px: 27
+spacing.fixed.px: 16
 
 -- toc-instance:
 $loop$: $render-toc.toc-obj as $obj
@@ -438,9 +438,8 @@ pr.toc-item toc:
 -- ftd.column:
 width: fill-container
 
--- ftd.text:
+-- ftd.text: $childrens.toc.title
 link if { childrens.toc.url != NULL } : $childrens.toc.url
-text: $childrens.toc.title
 role: $inherited.types.copy-small
 color: $inherited.colors.text
 color if { childrens.toc.is-active }: $inherited.colors.text
@@ -500,9 +499,8 @@ align-self: center
 
 -- end: ftd.row
 
--- ftd.text:
+-- ftd.text: $image.caption
 if: { image.caption != NULL }
-text: $image.caption
 color: $inherited.colors.text
 role: $inherited.types.label-large
 border-bottom-left-radius.px: 5
@@ -903,7 +901,7 @@ caption title:
 body body:
 ftd.image-src src:  $assets.files.assets.dollar.svg
 string cta-label: Button
-string cta-url: /
+string cta-link: /
 
 -- ftd.column:
 padding-top.px: 40
@@ -1236,9 +1234,8 @@ site-name: $footer-desktop.site-name
 site-url: $footer-desktop.site-url
 logo-height: $footer-desktop.logo-height
 
--- ftd.text:
+-- ftd.text: $footer-desktop.bio
 if: { footer-desktop.bio != NULL }
-text: $footer-desktop.bio
 role: $inherited.types.copy-small
 color: $inherited.colors.text-strong
 width.fixed.px: 305
@@ -1333,9 +1330,8 @@ site-name: $footer-mobile.site-name
 site-url: $footer-mobile.site-url
 logo-height: $footer-mobile.logo-height
 
--- ftd.text:
+-- ftd.text: $footer-mobile.bio
 if: { footer-mobile.bio != NULL }
-text: $footer-mobile.bio
 role: $inherited.types.fine-print
 color: $inherited.colors.text
 width: fill-container
@@ -1379,8 +1375,7 @@ social-links: $footer-mobile.social-links
 
 -- end: ftd.row
 
--- ftd.text: 
-text: $footer-mobile.copyright
+-- ftd.text: $footer-mobile.copyright
 color: $inherited.colors.text
 role: $inherited.types.label-small
 width: fill-container
@@ -1695,9 +1690,8 @@ region: h4
 width: fill-container
 ;; margin-bottom.px if { compact-text.body != NULL }: -26
 
--- ftd.text:
+-- ftd.text: $compact-text.body
 if: { compact-text.body != NULL }
-text: $compact-text.body
 role: $inherited.types.fine-print
 color: $inherited.colors.text
 
@@ -1732,7 +1726,7 @@ width: fill-container
 caption title:
 string timestamp:
 ftd.image-src image: 
-string url:
+string link:
 body body:
 optional common.author-meta author:
 common.tags-list list tags:
@@ -1765,7 +1759,7 @@ padding-vertical.px: 5
 -- ftd.text: $post-card-ui.title
 color: $inherited.colors.text
 role: $inherited.types.heading-small
-link: $post-card-ui.url
+link: $post-card-ui.link
 margin-top.px: 24
 
 -- ftd.text:
@@ -1781,7 +1775,7 @@ $post-card-ui.body
 src: $post-card-ui.image
 height.fixed.px: 200
 width.fixed.px: 300
-link: $post-card-ui.url
+link: $post-card-ui.link
 
 -- end: ftd.row
 
@@ -1808,9 +1802,9 @@ common.author-meta author:
 optional boolean $cta-hover: false
 optional string info:
 optional string cta-primary: 
-optional string cta-primary-url:
+optional string cta-primary-link:
 optional string cta-secondary: 
-optional string cta-secondary-url:
+optional string cta-secondary-link:
 
 -- ftd.column:
 width: fill-container
@@ -1830,14 +1824,14 @@ margin-top.px: 20
 -- ftd.text: $featured-post-card.title
 color: $inherited.colors.text
 role: $inherited.types.heading-large
-link: $featured-post-card.cta-primary-url
+link: $featured-post-card.cta-primary-link
 
 
 -- ftd.text:
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 margin-top.px: 24
-link: $featured-post-card.cta-primary-url
+link: $featured-post-card.cta-primary-link
 
 
 $featured-post-card.body
@@ -1851,9 +1845,11 @@ align-content: center
 margin-top.px: 24
 $on-mouse-enter$: $ftd.set-bool($a = $featured-post-card.cta-hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $featured-post-card.cta-hover, v = false)
+border-width.px: 2
+border-color: $inherited.colors.accent.primary
 border-width.px if { featured-post-card.cta-hover }: 2
 border-color if { featured-post-card.cta-hover }: $inherited.colors.accent.primary
-link: $featured-post-card.cta-primary-url
+link: $featured-post-card.cta-primary-link
 
 -- ftd.text: $featured-post-card.cta-primary
 color if { featured-post-card.cta-hover }: $inherited.colors.text-strong
@@ -1873,7 +1869,7 @@ width.fixed.percent: 55
 -- ftd.image:
 width: fill-container
 src: $featured-post-card.image
-link: $featured-post-card.cta-primary-url
+link: $featured-post-card.cta-primary-link
 
 -- end: ftd.column
 
@@ -1895,9 +1891,9 @@ link: $featured-post-card.cta-primary-url
 -- component featured-post:
 common.post-meta post-data:
 optional string cta-primary: 
-optional string cta-primary-url:
+optional string cta-primary-link:
 optional string cta-secondary: 
-optional string cta-secondary-url:
+optional string cta-secondary-link:
 optional string info:
 
 -- featured-post-card: $featured-post.post-data.title
@@ -1906,9 +1902,9 @@ author: $featured-post.post-data.author
 image: $featured-post.post-data.post-image
 info: $featured-post.info
 cta-primary: $featured-post.cta-primary
-cta-primary-url: $featured-post.cta-primary-url
+cta-primary-link: $featured-post.cta-primary-link
 cta-secondary: $featured-post.cta-secondary
-cta-secondary-url: $featured-post.cta-secondary-url
+cta-secondary-link: $featured-post.cta-secondary-link
 
 $featured-post.post-data.body
 
@@ -1929,7 +1925,7 @@ common.post-meta post-data:
 -- post-card-ui: $post-card.post-data.title
 timestamp: $post-card.post-data.published-on
 image: $post-card.post-data.post-image
-url:  $post-card.post-data.post-url
+link:  $post-card.post-data.post-link
 body: $post-card.post-data.body
 author: $post-card.post-data.author
 tags: $post-card.post-data.tags
@@ -2027,7 +2023,7 @@ children atictles-container:
 optional boolean sidebar: false
 ftd.ui list right-sidebar:
 string previous-cta-txt: Back to blog
-optional string previous-cta-url:
+optional string previous-cta-link:
 string share-txt: Share
 
 -- ftd.column:
@@ -2118,13 +2114,12 @@ margin-top.px: 50
 -- component newsletter:
 caption title:
 string cta-txt: Sign me up
-string cta-url: /
+string cta-link: /
 string cta-placeholder: Enter your work email...
 optional body body:
 optional ftd.image-src cta-icon:
 ftd.image-src info-icon: $assets.files.static.check-circle.svg
 integer width:
-ftd.color bg-color: $inherited.colors.background.step-2
 
 -- ftd.column:
 width: fill-container
@@ -2133,7 +2128,7 @@ width: fill-container
 
 -- newsletter-desktop: $newsletter.title
 cta-txt: $newsletter.cta-txt
-cta-url: $newsletter.cta-url 
+cta-link: $newsletter.cta-link 
 cta-placeholder: $newsletter.cta-placeholder 
 body: $newsletter.body 
 info-icon: $newsletter.info-icon 
@@ -2145,7 +2140,7 @@ bg-color: $newsletter.bg-color
 
 -- newsletter-mobile: $newsletter.title
 cta-txt: $newsletter.cta-txt
-cta-url: $newsletter.cta-url 
+cta-link: $newsletter.cta-link 
 cta-placeholder: $newsletter.cta-placeholder 
 body: $newsletter.body 
 info-icon: $newsletter.info-icon 
@@ -2169,11 +2164,10 @@ bg-color: $newsletter.bg-color
 -- component newsletter-desktop:
 caption title:
 string cta-txt: 
-string cta-url: 
+string cta-link: 
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
-ftd.color bg-color: 
 
 -- ftd.column:
 width: fill-container
@@ -2217,7 +2211,7 @@ color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.px: 12
 padding-horizontal.px: 28
-link if { newsletter-desktop.cta-url != NULL }: $newsletter-desktop.cta-url
+link if { newsletter-desktop.cta-link != NULL }: $newsletter-desktop.cta-link
 border-radius.px: 50
 white-space: nowrap
 
@@ -2231,9 +2225,8 @@ align-content: center
 if: { newsletter-desktop.info-icon != NULL }
 src: $newsletter-desktop.info-icon
 
--- ftd.text:
+-- ftd.text: $newsletter-desktop.body
 if: { newsletter-desktop.body != NULL }
-text: $newsletter-desktop.body
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
 
@@ -2259,11 +2252,10 @@ color: $inherited.colors.text-strong
 -- component newsletter-mobile:
 caption title:
 string cta-txt: 
-string cta-url: 
+string cta-link: 
 string cta-placeholder: 
 optional body body:
 optional ftd.image-src info-icon: 
-ftd.color bg-color: 
 
 -- ftd.column:
 padding-vertical.px: 24
@@ -2295,7 +2287,7 @@ color: $inherited.colors.text-strong
 background.solid: $inherited.colors.cta-primary.base
 padding-vertical.px: 12
 padding-horizontal.px: 28
-link if { newsletter-mobile.cta-url != NULL }: $newsletter-mobile.cta-url
+link if { newsletter-mobile.cta-link != NULL }: $newsletter-mobile.cta-link
 border-radius.px: 50
 white-space: nowrap
 
@@ -2307,9 +2299,8 @@ align-content: center
 if: { newsletter-mobile.info-icon != NULL }
 src: $newsletter-mobile.info-icon
 
--- ftd.text:
+-- ftd.text: $newsletter-mobile.body
 if: { newsletter-mobile.body != NULL }
-text: $newsletter-mobile.body
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
 

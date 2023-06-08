@@ -72,7 +72,7 @@ string tag-link:
 optional caption title:
 optional string profile:
 optional string company:
-optional string bio-url:
+optional string bio-link:
 optional ftd.image-src avatar:
 optional body body:
 
@@ -85,7 +85,7 @@ caption title:
 string published-on:
 optional ftd.image-src post-image:
 optional body body:
-string post-url:
+string post-link:
 tags-list list tags:
 optional author-meta author:
 optional string info:

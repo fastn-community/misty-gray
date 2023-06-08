@@ -11,7 +11,7 @@ blog: true
 -- ds.featured-post:
 post-data: $sample-post.meta-2
 cta-primary: Button
-cta-primary-url: blog-articles/sample-post/
+cta-primary-link: blog-articles/sample-post/
 
 -- ds.posts: Feature blog
 topics: $common.tags

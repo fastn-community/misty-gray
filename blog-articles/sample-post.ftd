@@ -12,7 +12,7 @@ export: h0, h1, h2, h3, markdown
 -- common.post-meta meta: 10 Hilarious Cartoons That Depict Real-Life Problems of Programmers
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.assets.post-img.png
-post-url: blog-articles/sample-post/
+post-link: blog-articles/sample-post/
 author: $author.patrica
 tags: $common.topic
 
@@ -25,7 +25,7 @@ Redefined the user acquisition and redesigned the onboarding experience, all wit
 -- common.post-meta meta-2: We Transform ideas into digital outcomes.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.assets.post-img.png
-post-url: blog-articles/sample-post/
+post-link: blog-articles/sample-post/
 author: $author.patrica
 tags: $common.topic
 cta-primary: Button
@@ -40,7 +40,7 @@ We are an award-winning strategic design company that provides consultancy servi
 -- common.post-meta meta-3: Bringing the world together through live experiences.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.assets.blog-hero.png
-post-url: blog-articles/sample-post/
+post-link: blog-articles/sample-post/
 author: $author.patrica
 tags: $common.topic
 
