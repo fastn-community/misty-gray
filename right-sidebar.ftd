@@ -2,6 +2,7 @@
 -- import: fastn-community.github.io/set-3-ds/assets
 
 -- my-ds.page: Right Sidebar
+site-logo: NULL
 sidebar: true
 
 -- my-ds.page.right-sidebar:
@@ -81,7 +82,7 @@ lang: ftd
 \-- end: my-ds.page.right-sidebar
 
 \-- ftd.column:
-spacing.fixed.em: 0.8
+spacing.fixed.px: 13
 width: fill-container
 children: $page.wrapper
 
