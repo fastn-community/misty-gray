@@ -1140,7 +1140,7 @@ link: $fallback-title.site-url
 
 
 -- component footer:
-optional string site-name:
+optional string site-name: $common.site-name
 optional string site-url:
 optional string copyright: Copyright © 2023 - fifthtry.com
 optional body bio:
@@ -1413,41 +1413,6 @@ height.fixed.px: 24
 -- end: ftd.row
 
 -- end: images-list
-
-
-
-
-
-
-
-
-
-
--- component logo-with-name:
-optional string site-name:
-optional string site-url: 
-optional ftd.image-src site-logo: 
-integer logo-height: 38
-
--- ftd.row:
-spacing.fixed.px: 8
-link: $logo-with-name.site-url
-align-content: center
-
--- ftd.image:
-if: { logo-with-name.site-logo != NULL }
-src: $logo-with-name.site-logo
-width: auto
-height.fixed.px: $logo-with-name.logo-height
-
--- ftd.text: $logo-with-name.site-name
-if: { logo-with-name.site-name != NULL }
-color: $inherited.colors.text-strong
-role: $inherited.types.heading-small
-
--- end: ftd.row
-
--- end: logo-with-name
 
 
 
@@ -1795,7 +1760,7 @@ link: $post-card-ui.link
 -- component featured-post-card:
 caption title:
 optional body body:
-optional string url:
+optional string link:
 optional string timestamp:
 optional ftd.image-src image:
 common.author-meta author:
