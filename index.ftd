@@ -1974,7 +1974,7 @@ border-right-width.px: 1
 border-color: $inherited.colors.border
 padding-right.px: 20
 children: $posts.container
-spacing.fixed.px: 20
+spacing.fixed.px: 24
 width.fixed.percent: 77
 
 -- end: ftd.column
@@ -2183,7 +2183,6 @@ background.solid: $newsletter-desktop.bg-color
 border-radius.px: 20
 align-content: center
 spacing: space-between
-
 
 -- ftd.text: $newsletter-desktop.title
 role: $inherited.types.heading-small
