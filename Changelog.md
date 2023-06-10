@@ -1,5 +1,32 @@
 # Set-3-ds Change Log
 
+## June 8, 2023
+
+- [Changed urls to link, removed tabs.ftd file and reduced gap between toc links](https://github.com/fastn-community/set-3-ds/commit/83e72cf4ea6d4c69d949bd53e885157b5e5ccdcc)
+
+## June 7, 2023
+
+- [Resolved UI Review Comments](https://github.com/fastn-community/set-3-ds/commit/603409ea2d4579d60b1319616803c6b87615dfbf)
+
+## June 6, 2023
+
+- [Changed ems and rems to px in all the ftd files](https://github.com/fastn-community/set-3-ds/commit/dde2099e838514d10bc50f4bb97170ffffd03577)
+- [Removed all borders from doc-page](https://github.com/fastn-community/set-3-ds/commit/69af10476ab56f6ff10646a1c7901169bcf0a577)
+- [Resolved UI Review Comments](https://github.com/fastn-community/set-3-ds/commit/813801e40f9b3ada90e6d39d07aa9d9a7f8b572c)
+
+## June 5, 2023
+
+- [Resolved Review Comments](https://github.com/fastn-community/set-3-ds/commit/8f664f1bdd0e67ff5ff78febe33cf5bc1653518e)
+- [Blog && Blog Detail Page are complete](https://github.com/fastn-community/set-3-ds/commit/a6f293d9ea3f86755472689d440e3395c8a73986)
+
+## June 2, 2023
+
+- [Blog Page in Progress](https://github.com/fastn-community/set-3-ds/commit/eb33bf0f7bbcb45e31ac8eec60f47bdc37d664ab)
+
+## June 1, 2023
+
+- [Blog Page && BLog Detail Page Added](https://github.com/fastn-community/set-3-ds/commit/dbb03e28a6bb167e2fed9f16c2278cca7cbf5e4e)
+
 ## May 29, 2023
 
 - [Updated Footer Component resolved review comments](https://github.com/fastn-community/set-3-ds/commit/7054bf677e7bc68120b35b62cf8a914e2be55728)
