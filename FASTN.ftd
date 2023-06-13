@@ -16,6 +16,8 @@ exposing: code, rendered
 -- fastn.auto-import: fastn-community.github.io/set-3-ds/typography as tf
 exposing: h0, h1, h2, h3, markdown
 
+-- fastn.auto-import: fastn-community.github.io/set-3-ds/assets
+-- fastn.auto-import: fastn-community.github.io/set-3-ds/common
 -- fastn.auto-import: fastn-community.github.io/set-3-ds/FASTN/config as my-ds
 -- fastn.auto-import: cs
 -- fastn.auto-import: typo
