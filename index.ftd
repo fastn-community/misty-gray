@@ -307,7 +307,6 @@ toc-obj: $doc-page-desktop.toc
 -- end: ftd.column
 
 -- ftd.column:
-padding-horizontal.px: 50
 min-height.fixed.calc: 100vh - 128px
 max-width.fixed.px if { !doc-page-desktop.blog && ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
 max-width if { doc-page-desktop.full-width }: fill-container
@@ -329,7 +328,6 @@ $doc-page-desktop.body
 -- ftd.column:
 align-content: top-left
 children: $doc-page-desktop.wrapper
-spacing.fixed.px: 13
 
 -- end: ftd.column
 

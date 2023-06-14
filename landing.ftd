@@ -139,6 +139,7 @@ optional boolean align-right:
 -- ftd.column:
 width: fill-container
 padding-vertical.px: 120
+padding-left.px: 100
 
 -- ftd.row:
 width: fill-container
@@ -493,7 +494,7 @@ $logo-cloud-desktop.body
 -- ftd.row:
 width: fill-container
 wrap: true
-spacing.fixed.px: 10
+spacing.fixed.px: 30
 margin-top.px: 30
 align-content: center
 
@@ -545,7 +546,7 @@ $logo-cloud-mobile.body
 
 -- ftd.column:
 wrap: true
-spacing.fixed.px: 10
+spacing.fixed.px: 30
 width: fill-container
 
 -- logo-lists:
@@ -572,7 +573,7 @@ ftd.image-src logo:
 string link:
 
 -- ftd.row:
-width.fixed.px: 261
+width.fixed.px: 274
 width if { ftd.device == "mobile"}: fill-container
 align-content: center
 
@@ -634,14 +635,7 @@ body body:
 
 -- ftd.column:
 padding-vertical.px: 100
-
--- ftd.row:
-width: fill-container
-height.fixed.px: 250
-anchor: parent
-z-index: 0
-
--- end: ftd.row
+margin-left.px: 165
 
 -- ftd.column:
 padding-top.px: 50
@@ -779,16 +773,22 @@ optional string link:
 width: fill-container
 padding-bottom.px: 116
 
+-- ftd.column:
+width.fixed.percent: 50
+
 -- ftd.image:
-src: $hero-image-left-desktop.image
 width: fill-container
-height.fixed.px: 520
+src: $hero-image-left-desktop.image
 link: $hero-image-left-desktop.link
 
+-- end: ftd.column
+
 -- ftd.column:
+width.fixed.percent: 30
+margin-left.px: 134
 padding-top.px: 100
 spacing.fixed.px: 20
-margin-left.px: 134
+align-self: center
 
 -- ftd.text: $hero-image-left-desktop.title
 role: $inherited.types.heading-medium
@@ -840,8 +840,9 @@ src: $assets.files.assets.arrow-to-right.svg
 -- component right-border:
 
 -- ftd.column:
+align-self: center
 margin-left.px: 32
-width.fixed.px: 32
+width.fixed.px: 22
 height: fill-container
 spacing.fixed.px: 40
 
@@ -891,8 +892,8 @@ width: fill-container
 -- component left-border:
 
 -- ftd.column:
-margin-right.px: 32
-width.fixed.px: 32
+align-self: center
+width.fixed.px: 22
 height: fill-container
 spacing.fixed.px: 40
 
@@ -1063,12 +1064,17 @@ optional string link:
 width: fill-container
 padding-bottom.px: 116
 
+-- ftd.row:
+margin-left.px: 100
+
 -- left-border:
 
 -- ftd.column:
+width.fixed.percent: 30
 padding-top.px: 100
 spacing.fixed.px: 20
-margin-right.px: 134
+margin-left.px: 44
+align-self: center
 
 -- ftd.text: $hero-image-right-desktop.title
 role: $inherited.types.heading-medium
@@ -1102,11 +1108,18 @@ src: $assets.files.assets.arrow-to-right.svg
 
 -- end: ftd.column
 
+-- ftd.column:
+width.fixed.percent: 50
+margin-left.px: 134
+
 -- ftd.image:
 src: $hero-image-right-desktop.image
 width: fill-container
-height.fixed.px: 520
 link: $hero-image-right-desktop.link
+
+-- end: ftd.column
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -1230,9 +1243,11 @@ body body:
 info-card list info-cards:
 
 -- ftd.row:
+margin-top.px: 100
 padding-top.px: 100
 width: fill-container
 spacing.fixed.px: 120
+background.solid: $inherited.colors.background.step-2
 
 -- ftd.column:
 width.fixed.percent: 50
@@ -1370,7 +1385,7 @@ $info-banner.body
 
 -- ftd.image:
 src: $info-banner.image
-width.fixed.percent: 90
+width.fixed.percent: 77
 margin-top.px: 50
 
 -- end: ftd.column
@@ -1748,11 +1763,16 @@ feature list features:
 -- ftd.row:
 width: fill-container
 padding-vertical.px: 80
+background.solid: $inherited.colors.background.step-2
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 64
 align-content: center
 
 -- ftd.column:
-align-content: center
-width.fixed.percent: 33
+align-self: start
+width.fixed.percent: 27.5
 width if { ftd.device == "mobile"}: fill-container
 spacing.fixed.px: 16
 
@@ -1769,9 +1789,9 @@ $features-card.body
 -- end: ftd.column
 
 -- ftd.row:
-width.fixed.percent: 67
 wrap: true
-spacing.fixed.px: 32
+width.fixed.percent: 58.5
+spacing.fixed.px: 48
 align-content: center
 
 -- features-card-details:
@@ -1780,6 +1800,8 @@ title: $obj.title
 icon: $obj.icon
 body: $obj.body
 link: $obj.link
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -1803,7 +1825,7 @@ body body:
 optional string link:
 
 -- ftd.column:
-max-width.fixed.px: 350
+max-width.fixed.px: 397
 
 -- ftd.image:
 src: $features-card-details.icon
@@ -1840,15 +1862,18 @@ caption title:
 body body:
 faq list faqs-list:
 
--- ftd.row:
-padding-top.px if {ftd.device != "mobile"}: 80
-padding-bottom.px if {ftd.device != "mobile"}: 70
+-- ftd.column:
 width: fill-container
 align-content: center
-spacing: space-between
+border-left-width.px: 27
+border-color: $inherited.colors.custom.three
+
+-- ftd.row:
+padding-vertical.px if {ftd.device != "mobile"}: 80
+align-content: center
 
 -- ftd.column:
-max-width.fixed.percent: 40
+max-width.fixed.percent: 31.67
 
 -- ftd.text: $faqs.title
 role: $inherited.types.heading-large
@@ -1864,7 +1889,8 @@ $faqs.body
 -- end: ftd.column
 
 -- ftd.column:
-max-width.fixed.percent: 45
+margin-left.px: 148
+max-width.fixed.percent: 37.22
 width if { ftd.device == "mobile" }: fill-container
 spacing.fixed.px: 30
 
@@ -1877,6 +1903,8 @@ body: $obj.body
 -- end: ftd.column
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: faqs
 
@@ -1959,13 +1987,17 @@ string cta:
 string cta-link:
 optional body body:
 
--- ftd.row:
+-- ftd.column:
 width: fill-container
 align-content: center
+border-left-width.px: 27
+border-color: $inherited.colors.custom.three
+background.solid: $inherited.colors.background.step-2
+
+-- ftd.row:
 spacing.fixed.px: 56
 padding-vertical.px: 80
-background.solid: $inherited.colors.background.step-2
-padding-horizontal.px: 48
+max-width.fixed.percent: 80
 
 -- ftd.column:
 width: fill-container
@@ -1997,6 +2029,7 @@ white-space: nowrap
 align-content: center
 spacing.fixed.px: 8
 padding-horizontal.px: 28
+align-self: center
 
 -- ftd.text: $search-card.cta
 role: $inherited.types.button-large
@@ -2011,6 +2044,18 @@ width: auto
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- ftd.column:
+anchor: parent
+bottom.px: 0
+right.px: 0
+width.fixed.px: 27
+height.fixed.px: 142
+background.solid: $inherited.colors.custom.three
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: search-card
 
