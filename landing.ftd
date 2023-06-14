@@ -475,7 +475,7 @@ logos list logo-list:
 
 -- ftd.column:
 width: fill-container
-padding-vertical.px: 80
+padding-top.px: 80
 align-content: center
 
 -- ftd.text: $logo-cloud-desktop.title
@@ -634,7 +634,7 @@ caption title:
 body body: 
 
 -- ftd.column:
-padding-vertical.px: 100
+padding-vertical.px: 64
 margin-left.px: 165
 
 -- ftd.column:
@@ -1063,18 +1063,18 @@ optional string link:
 -- ftd.row:
 width: fill-container
 padding-bottom.px: 116
+align-content: right
 
 -- ftd.row:
-margin-left.px: 100
+spacing.fixed.px: 50
+width.fixed.percent: 35.5
 
 -- left-border:
 
 -- ftd.column:
-width.fixed.percent: 30
-padding-top.px: 100
 spacing.fixed.px: 20
-margin-left.px: 44
 align-self: center
+width: fill-container
 
 -- ftd.text: $hero-image-right-desktop.title
 role: $inherited.types.heading-medium
@@ -1108,6 +1108,8 @@ src: $assets.files.assets.arrow-to-right.svg
 
 -- end: ftd.column
 
+-- end: ftd.row
+
 -- ftd.column:
 width.fixed.percent: 50
 margin-left.px: 134
@@ -1118,8 +1120,6 @@ width: fill-container
 link: $hero-image-right-desktop.link
 
 -- end: ftd.column
-
--- end: ftd.row
 
 -- end: ftd.row
 
