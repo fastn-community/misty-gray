@@ -41,6 +41,4 @@ exposing: h0, h1, h2, h3, markdown
 - Adding Footer: /footer/
 - SEO: /seo/
 
-# Blog: /blog/
-
 ## Sample Post: /blog-articles/sample-post/

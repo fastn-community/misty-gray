@@ -318,7 +318,8 @@ width if { doc-page-desktop.full-width }: fill-container
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
-margin-bottom.px: 21
+margin-vertical.px: 24
+margin-left.px: 40
 
 -- tf.markdown:
 if: {doc-page-desktop.body != NULL}
@@ -1773,7 +1774,7 @@ width: fill-container
 padding-vertical.px: 120
 
 -- ftd.row:
-width: fill-container
+margin-left.px: 120
 border-left-width.px: 19
 border-color: $inherited.colors.accent.primary
 spacing: space-between
@@ -1913,6 +1914,7 @@ common.tags-list list topics:
 -- ftd.column:
 width: fill-container
 align-content: center
+padding-horizontal.px: 60
 
 -- ftd.text: $posts.title
 if: { posts.title != NULL }
@@ -1999,12 +2001,13 @@ timestamp: $post.meta.published-on
 $post.meta.body
 
 -- ftd.row:
+padding-horizontal.px: 50
 width: fill-container
+padding-top.px: 60
 
 -- ftd.column:
 width.fixed.percent: 77
 spacing.fixed.px: 30
-margin-top.px: 50
 children: $post.atictles-container
 
 -- end: ftd.column
