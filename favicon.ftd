@@ -1,5 +1,5 @@
--- import: fastn-community.github.io/set-3-ds as ds
--- import: fastn-community.github.io/set-3-ds/common
+-- import: fastn-community.github.io/misty-gray as ds
+-- import: fastn-community.github.io/misty-gray/common
 
 -- my-ds.page: Adding Favicon
 site-logo: NULL

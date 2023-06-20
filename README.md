@@ -1,14 +1,14 @@
-# Welcome to [FASTN set-3-ds](https://fastn-community.github.io/set-3-ds/)
-![Contributors](https://img.shields.io/github/contributors/fastn-community/set-3-ds?color=dark-green) [![Discord](https://img.shields.io/discord/793929082483769345)](https://discord.com/channels/793929082483769345/) ![License](https://img.shields.io/github/license/fastn-community/set-3-ds)
+# Welcome to [FASTN misty-gray](https://fastn-community.github.io/misty-gray/)
+![Contributors](https://img.shields.io/github/contributors/fastn-community/misty-gray?color=dark-green) [![Discord](https://img.shields.io/discord/793929082483769345)](https://discord.com/channels/793929082483769345/) ![License](https://img.shields.io/github/license/fastn-community/misty-gray)
 # Overview
 
-⚡️ [set-3-ds](https://fastn-community.github.io/set-3-ds/) will help you create a beautiful documentation site in no time.
+⚡️ [misty-gray](https://fastn-community.github.io/misty-gray/) will help you create a beautiful documentation site in no time.
 
 It provides out-of-the-box documentation features that can be used to create any kind of site(personal website, blog, etc).
 
 ## How it looks?
 
-![set-3-ds](/assets/set-3-ds-example-dark.png)
+![misty-gray](/assets/misty-gray-example-dark.png)
 
 ## 🚀 Fast Track
 
@@ -16,9 +16,9 @@ Use this fastn template to create your first [fastn web-site](https://fastn.com/
 
 ## 🌟 Whats next?
 
-Read our [set-3-ds documentation](https://fastn-community.github.io/set-3-ds/)
+Read our [misty-gray documentation](https://fastn-community.github.io/misty-gray/)
 
-Create your first page. [Click here to know more](https://fastn-community.github.io/set-3-ds/page/)
+Create your first page. [Click here to know more](https://fastn-community.github.io/misty-gray/page/)
 
 ## ⚓ [Changelog](Changelog.md)
 
