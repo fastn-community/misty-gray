@@ -4,7 +4,7 @@
 favicon: https://fastn-community.github.io/misty-gray/-/fastn-community.github.io/misty-gray/favicon.svg
 
 -- fastn.dependency: fastn-community.github.io/misty-gray-cs as cs
--- fastn.dependency: github.com/fastn-community/misty-gray-typography as typo
+-- fastn.dependency: fastn-community.github.io/misty-gray-typography as typo
 -- fastn.dependency: fastn-community.github.io/dark-mode-switcher
 -- fastn.dependency: fastn-community.github.io/code-block
 -- fastn.dependency: fastn-community.github.io/rubik-font
