@@ -1,7 +1,7 @@
--- import: fastn-community.github.io/set-3-ds as ds
--- import: fastn-community.github.io/set-3-ds/assets
--- import: fastn-community.github.io/set-3-ds/common
--- import: fastn-community.github.io/set-3-ds/blog-articles/sample-post 
+-- import: fastn-community.github.io/misty-gray as ds
+-- import: fastn-community.github.io/misty-gray/assets
+-- import: fastn-community.github.io/misty-gray/common
+-- import: fastn-community.github.io/misty-gray/blog-articles/sample-post 
 
 
 -- ds.page: Blog Page

@@ -1,8 +1,8 @@
--- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/misty-gray as ds
 
 -- my-ds.page: SEO
 document-description: Custom SEO description
-document-image: https://fastn.com/-/fastn.com/images/featured/set-3-ds.png
+document-image: https://fastn.com/-/fastn.com/images/featured/misty-gray.png
 site-logo: NULL
 
 -- my-ds.page.right-sidebar:
@@ -20,7 +20,7 @@ cta: seo/#how-to-add-page-document-image
 
 -- my-ds.page.body:
 
-In this section, we will learn about `set-3-ds` SEO features for your `fastn`
+In this section, we will learn about `misty-gray` SEO features for your `fastn`
 web site.
 
 -- ds.youtube:
@@ -74,6 +74,6 @@ added into `<meta>` `og-image` and `twitter:image`
 lang: ftd
 
 \-- ds.page: This is page title
-document-image: https://fastn.com/-/fastn.com/images/featured/set-3-ds.png
+document-image: https://fastn.com/-/fastn.com/images/featured/misty-gray.png
 
 -- end: my-ds.page

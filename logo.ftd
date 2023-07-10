@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/misty-gray as ds
 
 -- my-ds.page: Adding Site-logo and Site-name
 site-logo: NULL
@@ -21,7 +21,7 @@ In this section, we will learn about adding `site-logo` and `site-name` to your
 -- ds.h3: `site-logo` and `site-name` logic
 id: site-logo-and-site-name-logic
 
-`set-3-ds` has the provision of adding `site-logo` and `site-name`.
+`misty-gray` has the provision of adding `site-logo` and `site-name`.
 
 Below is the logic for adding a logo and site name:
 
@@ -39,7 +39,7 @@ properties to `-- ds.page` component.
 -- ds.code: Adding site-logo
 lang: ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/misty-gray as ds
 
 \-- ds.page: Page title
 site-logo: $assets.files.assets.ipsum-logo.svg
@@ -52,7 +52,7 @@ Some body content of the page.
 -- ds.code: Adding site-name
 lang: ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/misty-gray as ds
 
 \-- ds.page: Page title
 site-name: fastn
@@ -76,7 +76,7 @@ Here’s what your `my-ds.ftd` module would look like:
 lang: ftd
 download: my-ds.ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/misty-gray as ds
 
 \-- component page:
 children wrapper:
@@ -110,7 +110,7 @@ Use `my-ds` component to create a new page using it.
 lang: ftd
 download: logo.ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/misty-gray as ds
 \-- import: <your fastn package name>/my-ds
 
 \-- my-ds.page: This is page title
