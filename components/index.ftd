@@ -1,0 +1,253 @@
+-- import: fastn.com/ftd/utils as appendix
+
+-- ds.page: misty-gray Components
+document-title: fastn misty-gray Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use misty-gray template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/misty-gray/-/fastn-community.github.io/misty-gray/static/misty-gray-og-image.jpg
+
+Components are like Lego blocks for building websites. They are pre-designed 
+building blocks that serve specific purposes or display specific content, 
+allowing you to easily create a complete webpage by combining and customizing 
+them.
+
+
+-- ds.h1: Index
+
+We have listed all misty-gray components below, click on a component name to
+learn more about it.
+
+-- appendix.letter-stack:
+height.fixed.px if { ftd.device != "mobile" }: 1000
+height: fill-container
+contents-a: $letter-contents-a
+contents-c: $letter-contents-c
+contents-f: $letter-contents-f
+contents-h: $letter-contents-h
+contents-i: $letter-contents-i
+contents-l: $letter-contents-l
+contents-m: $letter-contents-m
+contents-n: $letter-contents-n
+contents-o: $letter-contents-o
+contents-p: $letter-contents-p
+contents-r: $letter-contents-r
+contents-t: $letter-contents-t
+contents-w: $letter-contents-w
+contents-y: $letter-contents-y
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+
+;; APPENDIX ------------------------------------------------------------
+
+-- appendix.letter-data list letter-contents-a:
+
+-- appendix.letter-data: author-bio
+link: components/author-bio/
+
+-- end: letter-contents-a
+
+-- appendix.letter-data list letter-contents-c:
+
+-- appendix.letter-data: code
+link: components/code/
+
+-- appendix.letter-data: compact-text
+link: components/compact-text/
+
+-- end: letter-contents-c
+
+-- appendix.letter-data list letter-contents-f:
+
+-- appendix.letter-data: featured-post
+link: components/featured-post/
+
+-- end: letter-contents-f
+
+-- appendix.letter-data list letter-contents-h:
+
+-- appendix.letter-data: h0, h1, h2, h3
+link: components/headers/
+
+-- end: letter-contents-h
+
+-- appendix.letter-data list letter-contents-i:
+
+-- appendix.letter-data: iframe
+link: components/iframe/
+
+-- appendix.letter-data: image
+link: components/image/
+
+-- appendix.letter-data: image-first
+link: components/image-first/
+
+-- appendix.letter-data: image-in-between
+link: components/image-in-between/
+
+-- end: letter-contents-i
+
+-- appendix.letter-data list letter-contents-l:
+
+-- appendix.letter-data: link & link-group
+link: components/link/
+
+-- end: letter-contents-l
+
+-- appendix.letter-data list letter-contents-m:
+
+-- appendix.letter-data: markdown
+link: components/markdown/
+
+-- end: letter-contents-m
+
+-- appendix.letter-data list letter-contents-n:
+
+-- appendix.letter-data: not-found-1
+link: components/404-1/
+-- appendix.letter-data: not-found-2
+link: components/404-2/
+
+-- end: letter-contents-n
+
+-- appendix.letter-data list letter-contents-o:
+
+-- appendix.letter-data: output
+link: components/output/
+
+-- end: letter-contents-o
+
+-- appendix.letter-data list letter-contents-p:
+
+-- appendix.letter-data: page
+link: components/page/
+
+-- appendix.letter-data: post
+link: components/post/
+
+-- appendix.letter-data: posts
+link: components/posts/
+
+-- end: letter-contents-p
+
+-- appendix.letter-data list letter-contents-r:
+
+-- appendix.letter-data: rendered
+link: components/rendered/
+
+-- end: letter-contents-r
+
+-- appendix.letter-data list letter-contents-t:
+
+-- appendix.letter-data: tip
+link: components/tip/
+
+-- end: letter-contents-t
+
+-- appendix.letter-data list letter-contents-w:
+
+-- appendix.letter-data: without-image
+link: components/without-image/
+
+-- end: letter-contents-w
+
+-- appendix.letter-data list letter-contents-y:
+
+-- appendix.letter-data: youtube
+link: components/youtube/
+
+-- end: letter-contents-y
+
+
+
+
+
+
+
+
+
+
+-- component sidebar-index:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+
+-- ds.h3: Index
+
+-- ds.link: 🏠 misty-gray Components
+cta: components/
+
+-- ds.link: ☞ author-bio
+cta: components/author-bio/
+
+-- ds.link: ☞ code
+cta: components/code/
+
+-- ds.link: ☞ compact-text
+cta: components/compact-text/
+
+-- ds.link: ☞ featured-post
+cta: components/featured-post/
+
+-- ds.link: ☞ h0, h1, h2, h3
+cta: components/headers/
+
+-- ds.link: ☞ iframe
+cta: components/iframe/
+
+-- ds.link: ☞ image
+cta: components/image/
+
+-- ds.link: ☞ image-first
+cta: components/image-first/
+
+-- ds.link: ☞ image-in-between
+cta: components/image-in-between/
+
+-- ds.link: ☞ link & link-group
+cta: components/link/
+
+-- ds.link: ☞ markdown
+cta: components/markdown/
+
+-- ds.link: ☞ not-found-1
+cta: components/404-1/
+
+-- ds.link: ☞ not-found-2
+cta: components/404-2/
+
+-- ds.link: ☞ output
+cta: components/output/
+
+-- ds.link: ☞ page
+cta: components/page/
+
+-- ds.link: ☞ post
+cta: components/post/
+
+-- ds.link: ☞ posts
+cta: components/posts/
+
+-- ds.link: ☞ rendered
+cta: components/rendered/
+
+-- ds.link: ☞ tip
+cta: components/tip/
+
+-- ds.link: ☞ without-image
+cta: components/without-image/
+
+-- ds.link: ☞ youtube
+cta: components/youtube/
+
+-- end: ftd.column
+
+-- end: sidebar-index

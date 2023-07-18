@@ -2301,3 +2301,496 @@ $on-mouse-enter$: $ftd.set-bool($a = $topic.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $topic.hover, v = false)
 
 -- end: topic
+
+
+
+
+
+
+
+
+
+
+-- component image-first:
+common.post-meta post-data:
+
+-- image-first-card: $image-first.post-data.title
+timestamp: $image-first.post-data.published-on
+author: $image-first.post-data.author
+image: $image-first.post-data.post-image
+url:  $image-first.post-data.post-url
+body: $image-first.post-data.body
+
+-- end: image-first
+
+
+
+
+
+
+
+
+
+
+-- component image-first-card:
+optional ftd.image-src image:
+string url:
+string timestamp:
+caption title:
+common.author-meta author:
+body body:
+
+-- ftd.column:
+border-width.px: 1
+border-color: $inherited.colors.border
+padding-vertical.px: 24
+width: fill-container
+padding-horizontal.px: 24
+color: $inherited.colors.text
+margin-top.px : 20
+margin-bottom.px : 12
+spacing.fixed.px: 12
+border-radius.px: 6
+max-width.fixed.percent if { ftd.device == "desktop" }: 48
+min-height.fixed.px if { ftd.device != "mobile" }: 530
+
+-- ftd.column:
+link: $image-first-card.url
+spacing.fixed.px: 8
+
+-- ftd.image:
+src: $image-first-card.image
+width: fill-container
+height: hug-content
+
+-- ftd.text: $image-first-card.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+margin-top.px if {image-first-card.image != NULL}: 12
+
+-- ftd.desktop:
+
+-- ftd.row:
+width: fill-container
+margin-top.px: 8
+
+-- ftd.row:
+spacing.fixed.px: 2
+
+-- ftd.text: $image-first-card.author.title
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+link: $image-first-card.author.bio-url
+
+-- ftd.text: ,
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+margin-right.px: 8
+
+-- end: ftd.row
+
+-- ftd.text: $image-first-card.timestamp
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.row
+
+-- end: ftd.desktop
+
+-- ftd.text:
+text: $image-first-card.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+link: $image-first-card.url
+
+-- end: ftd.column
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 8
+margin-top.px: 8
+
+-- ftd.row:
+spacing.fixed.px: 2
+
+-- ftd.text: $image-first-card.author.title
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+link: $image-first-card.author.bio-url
+
+-- ftd.text:,
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.row
+
+-- ftd.text: $image-first-card.timestamp
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: image-first-card
+
+
+
+
+
+
+
+
+
+
+-- component image-in-between:
+common.post-meta post-data:
+
+-- image-in-between-card: $image-in-between.post-data.title
+timestamp: $image-in-between.post-data.published-on
+image: $image-in-between.post-data.post-image
+author: $image-in-between.post-data.author
+url:  $image-in-between.post-data.post-url
+body: $image-in-between.post-data.body
+
+-- end: image-in-between
+
+
+
+
+
+
+
+
+
+
+-- component image-in-between-card:
+optional ftd.image-src image:
+string url:
+string timestamp:
+caption title:
+common.author-meta author:
+body body:
+
+-- ftd.column:
+border-width.px: 1
+border-color: $inherited.colors.border
+padding-vertical.px: 24
+width: fill-container
+padding-horizontal.px: 24
+color: $inherited.colors.text
+margin-top.px: 20
+margin-bottom.px: 12
+spacing.fixed.px: 8
+border-radius.px: 6
+max-width.fixed.percent if { ftd.device == "desktop" }: 48
+min-height.fixed.px if { ftd.device != "mobile" }: 530
+overflow-y: auto
+
+-- ftd.text: $image-in-between-card.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+link: $image-in-between-card.url
+
+-- ftd.desktop:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 8
+margin-top.px: 8
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 2
+
+-- ftd.text: $image-in-between-card.author.title
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+link: $image-in-between-card.author.bio-url
+
+-- ftd.text:,
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- ftd.text: $image-in-between-card.timestamp
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.desktop
+
+-- ftd.image:
+src: $image-in-between-card.image
+width: fill-container
+height: auto
+link: $image-in-between-card.url
+
+-- ftd.text:
+text: $image-in-between-card.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+link: $image-in-between-card.url
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 8
+margin-top.px: 8
+
+-- ftd.row:
+spacing.fixed.px: 2
+
+-- ftd.text: $image-in-between-card.author.title
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+link: $image-in-between-card.author.bio-url
+
+-- ftd.text:,
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.row
+
+-- ftd.text: $image-in-between-card.timestamp
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: image-in-between-card
+
+
+
+
+
+
+
+
+
+
+-- component without-image:
+common.post-meta post-data:
+
+-- without-image-card: $without-image.post-data.title
+timestamp: $without-image.post-data.published-on
+author: $without-image.post-data.author
+url:  $without-image.post-data.post-url
+body: $without-image.post-data.body
+
+-- end: without-image
+
+
+
+
+
+
+
+
+
+
+-- component without-image-card:
+string url:
+string timestamp:
+caption title:
+common.author-meta author:
+body body:
+
+-- ftd.column:
+border-width.px: 1
+border-color: $inherited.colors.border
+padding-vertical.px: 24
+width: fill-container
+padding-horizontal.px:24
+color: $inherited.colors.text
+margin-top.px: 20
+margin-bottom.px: 12
+spacing.fixed.px: 12
+border-radius.px: 8
+
+-- ftd.text: $without-image-card.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+link: $without-image-card.url
+
+-- ftd.desktop:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 8
+margin-top.px: 8
+
+-- ftd.row:
+
+-- ftd.text: $without-image-card.author.title
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+link: $without-image-card.author.bio-url
+
+-- ftd.text:,
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.row
+
+-- ftd.text: $without-image-card.timestamp
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.row
+-- end: ftd.desktop
+
+-- ftd.text:
+text: $without-image-card.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+link: $without-image-card.url
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 8
+margin-top.px: 8
+
+-- ftd.row:
+
+-- ftd.text: $without-image-card.author.title
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+link: $without-image-card.author.bio-url
+
+-- ftd.text:,
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.row
+
+-- ftd.text: $without-image-card.timestamp
+role: $inherited.types.fine-print
+color: $inherited.colors.cta-primary.border
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: without-image-card
+
+
+
+
+
+
+
+
+
+
+-- component not-found-1:
+caption title:
+string type: 404
+optional string cta-text: 
+optional string cta-link:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.base
+spacing.fixed.px: 32
+height: fill-container
+padding-horizontal.px if { ftd.device == "mobile" }: 24
+
+-- ftd.text: $not-found-1.type
+role: $inherited.types.heading-hero
+color: $inherited.colors.text
+
+-- ftd.text: $not-found-1.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { not-found-1.body != NULL }
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+text-align: center
+
+$not-found-1.body
+
+-- ftd.text: $not-found-1.cta-text
+if: { not-found-1.cta-text != NULL }
+role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-tertiary.base
+padding-horizontal.px: 50
+padding-vertical.px: 16
+link: $not-found-1.cta-link
+border-radius.px: 30
+
+-- end: ftd.column
+
+-- end: not-found-1
+
+
+
+
+
+
+
+
+
+
+-- component not-found-2:
+caption title:
+string type: 404
+optional string cta-text: 
+optional string cta-link:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing.fixed.px: 32
+height: fill-container
+background.solid: #f7f7f7
+padding-horizontal.px if { ftd.device == "mobile" }: 24
+
+-- ftd.text: $not-found-2.type
+role: $inherited.types.heading-hero
+color: $inherited.colors.custom.one
+
+-- ftd.text: $not-found-2.title
+role: $inherited.types.heading-hero
+color: $inherited.colors.text
+
+-- ftd.text: 
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+text-align: center
+
+$not-found-2.body
+
+-- ftd.text: $not-found-2.cta-text
+role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.custom.one
+padding-horizontal.px: 50
+padding-vertical.px: 16
+link: $not-found-2.cta-link
+border-radius.px: 30
+
+-- end: ftd.column
+
+-- end: not-found-2
