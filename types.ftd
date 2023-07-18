@@ -1,9 +1,9 @@
 -- import: fastn-community.github.io/misty-gray as ds
 
--- my-ds.page: Changing Typography
+-- ds.page: Changing Typography
 site-logo: NULL
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.link-group: fastn Typography collection:
 cta: types/#fastn-typography-collection
@@ -14,9 +14,9 @@ cta: types/#how-to-add-a-typography
 -- ds.link-group: How to create a global my-ds page module for misty-gray?
 cta: types/#how-to-create-a-global-my-ds-page-module-for-misty-gray
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about changing typography of `misty-gray`.
 
@@ -48,18 +48,18 @@ lang: ftd
 -- ds.h3: How to create a global `my-ds` page module for `misty-gray`?
 id: how-to-create-a-global-my-ds-page-module-for-Misty-gray
 
-You can create a `my-ds.ftd` module inside your `fastn` package and create your
+You can create a `ds.ftd` module inside your `fastn` package and create your
 custom `my-ds` page component.
 
 Let's learn how to create a module:
 
-Create a new file let’s say `my-ds.ftd`. 
+Create a new file let’s say `ds.ftd`. 
 
-Here’s what your `my-ds.ftd` module would look like:
+Here’s what your `ds.ftd` module would look like:
 
--- cb.code: my-ds.ftd module
+-- cb.code: ds.ftd module
 lang: ftd
-download: my-ds.ftd
+download: ds.ftd
 
 \-- import: fastn-community.github.io/misty-gray as ds
 \-- import: fastn-community.github.io/misty-gray-typography
@@ -99,7 +99,7 @@ children: $page.wrapper
 
 -- ds.markdown:
 
-Click on download icon of above code-block. `my-ds.ftd` file will be
+Click on download icon of above code-block. `ds.ftd` file will be
 downloaded. Import this file inside your new `.ftd` file.
 
 Then use `my-ds` component to create a new page using it.
@@ -111,7 +111,7 @@ download: typography.ftd
 \-- import: fastn-community.github.io/misty-gray as ds
 \-- import: <your fastn package name>/my-ds
 
-\-- my-ds.page: This is page title
+\-- ds.page: This is page title
 
 This is body area. It contains multiple paragraphs.
 
@@ -130,7 +130,7 @@ This is heading level 2 optional body content.
 
 This is heading level 3 optional body content.
 
-\-- end: my-ds.page
+\-- end: ds.page
 
 -- ds.markdown:
 
@@ -144,4 +144,4 @@ e.g.`http://127.0.0.1:8000/typography/` you will see page text with
 sizes in [Lato](https://fastn-community.github.io/lato-font/) and 
 [Source-Code-Pro](https://fastn-community.github.io/source-code-pro-font/) font.
 
--- end: my-ds.page
+-- end: ds.page

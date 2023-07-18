@@ -1,11 +1,11 @@
 -- import: fastn-community.github.io/misty-gray as ds
 
--- my-ds.page: SEO
+-- ds.page: SEO
 document-description: Custom SEO description
 document-image: https://fastn.com/-/fastn.com/images/featured/misty-gray.png
 site-logo: NULL
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.link-group: How to customize document title?
 cta: seo/#how-to-customize-document-title
@@ -16,9 +16,9 @@ cta: seo/#how-to-add-page-description
 -- ds.link-group: How to add page document-image?
 cta: seo/#how-to-add-page-document-image
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about `misty-gray` SEO features for your `fastn`
 web site.
@@ -76,4 +76,4 @@ lang: ftd
 \-- ds.page: This is page title
 document-image: https://fastn.com/-/fastn.com/images/featured/misty-gray.png
 
--- end: my-ds.page
+-- end: ds.page

@@ -1,9 +1,9 @@
 -- import: fastn-community.github.io/misty-gray as ds
 
--- my-ds.page: Adding Site-logo and Site-name
+-- ds.page: Adding Site-logo and Site-name
 site-logo: NULL
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.link-group: site-logo and site-name logic
 cta: logo/#site-logo-and-site-name-logic
@@ -11,9 +11,9 @@ cta: logo/#site-logo-and-site-name-logic
 -- ds.link-group: Adding logo or site-name
 cta: logo/#adding-logo-or-site-name
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about adding `site-logo` and `site-name` to your
 `fastn` web site.
@@ -68,13 +68,13 @@ properties and configurations in one `.ftd` file.
 
 Let's learn how to create a global module:
 
-Create a new file let’s say `my-ds.ftd`. 
+Create a new file let’s say `ds.ftd`. 
 
-Here’s what your `my-ds.ftd` module would look like:
+Here’s what your `ds.ftd` module would look like:
 
--- cb.code: my-ds.ftd module with logo only
+-- cb.code: ds.ftd module with logo only
 lang: ftd
-download: my-ds.ftd
+download: ds.ftd
 
 \-- import: fastn-community.github.io/misty-gray as ds
 
@@ -101,7 +101,7 @@ children: $page.wrapper
 
 -- ds.markdown:
 
-Click on the download icon of the above code-block. `my-ds.ftd` file will be downloaded.
+Click on the download icon of the above code-block. `ds.ftd` file will be downloaded.
 Import this file inside your new `.ftd`.
 
 Use `my-ds` component to create a new page using it.
@@ -113,7 +113,7 @@ download: logo.ftd
 \-- import: fastn-community.github.io/misty-gray as ds
 \-- import: <your fastn package name>/my-ds
 
-\-- my-ds.page: This is page title
+\-- ds.page: This is page title
 
 This is body area. It contains multiple paragraphs.
 
@@ -132,7 +132,7 @@ This is heading level 2 optional body content.
 
 This is heading level 3 optional body content.
 
-\-- end: my-ds.page
+\-- end: ds.page
 
 -- ds.markdown:
 
@@ -143,8 +143,8 @@ Add this file inside your `fastn` project and deploy or run `fastn serve` on
 your localhost. Access your localhost in the browser
 e.g.`http://127.0.0.1:8000/logo/` you will see the page with the logo.
 
-Change `site-name` with your site-name into the `my-ds.ftd` file `string
+Change `site-name` with your site-name into the `ds.ftd` file `string
 site-name: my fastn site` and refresh e.g.`http://127.0.0.1:8000/logo/` page,
 you will see site-name only.
 
--- end: my-ds.page
+-- end: ds.page

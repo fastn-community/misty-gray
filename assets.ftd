@@ -1,16 +1,16 @@
 -- import: fastn-community.github.io/misty-gray/assets
 -- import: fastn-community.github.io/misty-gray as ds
 
--- my-ds.page: Adding Assets
+-- ds.page: Adding Assets
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.link-group: How to link image assets?
 cta: assets/#how-to-link-image-assets
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about adding assets like images into your `fastn`
 `misty-gray` website.
@@ -43,4 +43,4 @@ src: $assets.files.images.sample.jpg
 You can add as many image assets into your `fastn` project as you wish to and refers to 
 them as we see above.
 
--- end: my-ds.page
+-- end: ds.page
