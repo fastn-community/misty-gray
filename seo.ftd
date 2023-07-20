@@ -4,6 +4,7 @@
 document-description: Custom SEO description
 document-image: https://fastn.com/-/fastn.com/images/featured/misty-gray.png
 site-logo: NULL
+sidebar: true
 
 -- ds.page.right-sidebar:
 

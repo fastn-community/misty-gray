@@ -2,6 +2,7 @@
 -- import: fastn-community.github.io/misty-gray as ds
 
 -- ds.page: Adding Assets
+sidebar: true
 
 -- ds.page.right-sidebar:
 

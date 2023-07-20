@@ -2,6 +2,7 @@
 
 -- ds.page: Adding Site-logo and Site-name
 site-logo: NULL
+sidebar: true
 
 -- ds.page.right-sidebar:
 

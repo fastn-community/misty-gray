@@ -2,6 +2,7 @@
 
 -- ds.page: Understanding Sitemap
 site-logo: NULL
+sidebar: true
 
 -- ds.page.right-sidebar:
 

@@ -3,6 +3,7 @@
 
 -- ds.page: Getting Started
 site-logo: NULL
+sidebar: true
 
 -- ds.page.right-sidebar:
 
