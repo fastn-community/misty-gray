@@ -534,14 +534,18 @@ body: $image.body
 
 
 
+
 -- component iframe:
 string src:
+optional ftd.resizing width:
+optional ftd.resizing height:
 
 -- ftd.iframe:
 src: $iframe.src
-height.fixed.px: 400
-width: fill-container
-margin-bottom.px: 34
+height: $iframe.height
+width: $iframe.width
+min-height.fixed.px: 400
+margin-bottom.px: 24
 
 -- end: iframe
 

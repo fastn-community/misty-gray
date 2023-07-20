@@ -45,7 +45,7 @@ deleniti atque corrupti quos dolores.
 
 -- ds.image: This is image caption
 link: https://fastn.com
-src: $assets.files.static.image-placeholder.jpg
+src: $assets.files.assets.image-placeholder.jpg
 
 This is addition body content for above image. At vero eos et accusamus et 
 iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
@@ -72,7 +72,7 @@ deleniti atque corrupti quos dolores.
 
 -- ds.image: Image width 300 pixels
 link: https://fastn.com
-src: $assets.files.static.image-placeholder.jpg
+src: $assets.files.assets.image-placeholder.jpg
 width.fixed.px: 300
 
 This is addition body content for above image. At vero eos et accusamus et 
@@ -101,7 +101,7 @@ deleniti atque corrupti quos dolores.
 
 -- ds.image: Image width 300 pixels and right aligned 
 link: https://fastn.com
-src: $assets.files.static.image-placeholder.jpg
+src: $assets.files.assets.image-placeholder.jpg
 width.fixed.px: 300
 alignment: right
 
@@ -131,7 +131,7 @@ deleniti atque corrupti quos dolores.
 
 -- ds.image: Image width 300 pixels and left aligned 
 link: https://fastn.com
-src: $assets.files.static.image-placeholder.jpg
+src: $assets.files.assets.image-placeholder.jpg
 width.fixed.px: 300
 alignment: left
 
