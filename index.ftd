@@ -319,6 +319,7 @@ if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 margin-vertical.px: 24
+margin-left.px: 40
 
 -- tf.markdown:
 if: {doc-page-desktop.body != NULL}
