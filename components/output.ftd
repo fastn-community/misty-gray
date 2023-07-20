@@ -47,7 +47,7 @@ This is addition body content for above image. At vero eos et accusamus.
 
 -- ds.image: This is image caption
 link: https://fastn.com
-src: $assets.files.static.image-placeholder.jpg
+src: $assets.files.assets.image-placeholder.jpg
 
 This is addition body content for above image. At vero eos et accusamus.
 
