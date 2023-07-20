@@ -1857,7 +1857,7 @@ link: $featured-post-card.cta-primary-link
 -- component featured-post:
 common.post-meta post-data:
 optional string cta-primary: 
-optional string cta-primary-link:
+optional string cta-primary-url:
 optional string cta-secondary: 
 optional string cta-secondary-link:
 optional string info:
@@ -1868,7 +1868,7 @@ author: $featured-post.post-data.author
 image: $featured-post.post-data.post-image
 info: $featured-post.info
 cta-primary: $featured-post.cta-primary
-cta-primary-link: $featured-post.cta-primary-link
+cta-primary-link: $featured-post.cta-primary-url
 cta-secondary: $featured-post.cta-secondary
 cta-secondary-link: $featured-post.cta-secondary-link
 
