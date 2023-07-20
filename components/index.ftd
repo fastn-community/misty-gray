@@ -1,5 +1,3 @@
--- import: fastn.com/ftd/utils as appendix
-
 -- ds.page: misty-gray Components
 document-title: fastn misty-gray Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use misty-gray template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
@@ -16,7 +14,7 @@ them.
 We have listed all misty-gray components below, click on a component name to
 learn more about it.
 
--- appendix.letter-stack:
+-- ds.letter-stack:
 height.fixed.px if { ftd.device != "mobile" }: 1000
 height: fill-container
 contents-a: $letter-contents-a
@@ -47,120 +45,120 @@ contents-y: $letter-contents-y
 
 ;; APPENDIX ------------------------------------------------------------
 
--- appendix.letter-data list letter-contents-a:
+-- ds.letter-data list letter-contents-a:
 
--- appendix.letter-data: author-bio
+-- ds.letter-data: author-bio
 link: components/author-bio/
 
 -- end: letter-contents-a
 
--- appendix.letter-data list letter-contents-c:
+-- ds.letter-data list letter-contents-c:
 
--- appendix.letter-data: code
+-- ds.letter-data: code
 link: components/code/
 
--- appendix.letter-data: compact-text
+-- ds.letter-data: compact-text
 link: components/compact-text/
 
 -- end: letter-contents-c
 
--- appendix.letter-data list letter-contents-f:
+-- ds.letter-data list letter-contents-f:
 
--- appendix.letter-data: featured-post
+-- ds.letter-data: featured-post
 link: components/featured-post/
 
 -- end: letter-contents-f
 
--- appendix.letter-data list letter-contents-h:
+-- ds.letter-data list letter-contents-h:
 
--- appendix.letter-data: h0, h1, h2, h3
+-- ds.letter-data: h0, h1, h2, h3
 link: components/headers/
 
 -- end: letter-contents-h
 
--- appendix.letter-data list letter-contents-i:
+-- ds.letter-data list letter-contents-i:
 
--- appendix.letter-data: iframe
+-- ds.letter-data: iframe
 link: components/iframe/
 
--- appendix.letter-data: image
+-- ds.letter-data: image
 link: components/image/
 
--- appendix.letter-data: image-first
+-- ds.letter-data: image-first
 link: components/image-first/
 
--- appendix.letter-data: image-in-between
+-- ds.letter-data: image-in-between
 link: components/image-in-between/
 
 -- end: letter-contents-i
 
--- appendix.letter-data list letter-contents-l:
+-- ds.letter-data list letter-contents-l:
 
--- appendix.letter-data: link & link-group
+-- ds.letter-data: link & link-group
 link: components/link/
 
 -- end: letter-contents-l
 
--- appendix.letter-data list letter-contents-m:
+-- ds.letter-data list letter-contents-m:
 
--- appendix.letter-data: markdown
+-- ds.letter-data: markdown
 link: components/markdown/
 
 -- end: letter-contents-m
 
--- appendix.letter-data list letter-contents-n:
+-- ds.letter-data list letter-contents-n:
 
--- appendix.letter-data: not-found-1
+-- ds.letter-data: not-found-1
 link: components/404-1/
--- appendix.letter-data: not-found-2
+-- ds.letter-data: not-found-2
 link: components/404-2/
 
 -- end: letter-contents-n
 
--- appendix.letter-data list letter-contents-o:
+-- ds.letter-data list letter-contents-o:
 
--- appendix.letter-data: output
+-- ds.letter-data: output
 link: components/output/
 
 -- end: letter-contents-o
 
--- appendix.letter-data list letter-contents-p:
+-- ds.letter-data list letter-contents-p:
 
--- appendix.letter-data: page
+-- ds.letter-data: page
 link: components/page/
 
--- appendix.letter-data: post
+-- ds.letter-data: post
 link: components/post/
 
--- appendix.letter-data: posts
+-- ds.letter-data: posts
 link: components/posts/
 
 -- end: letter-contents-p
 
--- appendix.letter-data list letter-contents-r:
+-- ds.letter-data list letter-contents-r:
 
--- appendix.letter-data: rendered
+-- ds.letter-data: rendered
 link: components/rendered/
 
 -- end: letter-contents-r
 
--- appendix.letter-data list letter-contents-t:
+-- ds.letter-data list letter-contents-t:
 
--- appendix.letter-data: tip
+-- ds.letter-data: tip
 link: components/tip/
 
 -- end: letter-contents-t
 
--- appendix.letter-data list letter-contents-w:
+-- ds.letter-data list letter-contents-w:
 
--- appendix.letter-data: without-image
+-- ds.letter-data: without-image
 link: components/without-image/
 
 -- end: letter-contents-w
 
--- appendix.letter-data list letter-contents-y:
+-- ds.letter-data list letter-contents-y:
 
--- appendix.letter-data: youtube
+-- ds.letter-data: youtube
 link: components/youtube/
 
 -- end: letter-contents-y
