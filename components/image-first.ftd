@@ -1,6 +1,6 @@
 -- import: fastn-community.github.io/misty-gray/components
--- import: fastn-community.github.io/misty-gray/blog-articles/category-1/sample-post-2 
-
+-- import: fastn-community.github.io/misty-gray/blog-articles/sample-post 
+-- import: fastn-community.github.io/misty-gray/blog-authors/patrica 
 
 -- ds.page: image-first
 document-title: fastn misty-gray Template. Build Your Own Website with Ease
@@ -28,8 +28,8 @@ image-first layout. To see it in action - [Click here](blog/).
 \-- common.post-meta meta: Understanding process of statup-up funding
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
-post-url: blog-articles/category-1/sample-post-2/
-author: $author.patrica
+post-url: blog-articles/sample-post
+author: $patrica.patrica
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
@@ -38,12 +38,12 @@ ab illo inventore.
 Totam rem aperiam, eaque ipsa quae ab illo inventore.
 
 \-- ds.image-first:
-post-data: $sample-post-2.meta
+post-data: $sample-post.meta
 
 -- ds.rendered.output:
 
 -- ds.image-first:
-post-data: $sample-post-2.meta
+post-data: $sample-post.meta
 
 -- end: ds.rendered.output
 
@@ -53,7 +53,7 @@ post-data: $sample-post-2.meta
 lang: ftd
 
 \-- ds.image-first:
-post-data: $sample-post-2.meta
+post-data: $sample-post.meta
 
 -- ds.h3: Properties of `image-post` component
 
@@ -67,8 +67,8 @@ lang: ftd
 \-- common.post-meta meta: Understanding process of statup-up funding
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
-post-url: blog-articles/category-1/sample-post-2/
-author: $author.patrica
+post-url: blog-articles/sample-post/
+author: $patrica.patrica
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 

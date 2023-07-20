@@ -554,17 +554,20 @@ margin-bottom.px: 34
 
 
 
+
 -- component youtube:
 caption v:
+optional ftd.resizing width: fill-container
+optional ftd.resizing height:
 
 -- ftd.iframe:
 youtube: $youtube.v
-height.fixed.px: 400
-width: fill-container
-margin-bottom.px: 34
+min-height.fixed.px: 400
+width: $youtube.width
+height: $youtube.height
+margin-bottom.px: 24
 
 -- end: youtube
-
 
 
 
@@ -1814,6 +1817,7 @@ border-color if { featured-post-card.cta-hover }: $inherited.colors.accent.prima
 link: $featured-post-card.cta-primary-link
 
 -- ftd.text: $featured-post-card.cta-primary
+if: { featured-post-card.cta-primary != NULL }
 color if { featured-post-card.cta-hover }: $inherited.colors.text-strong
 color: $inherited.colors.cta-primary.text
 role: $inherited.types.copy-regular
@@ -1887,7 +1891,7 @@ common.post-meta post-data:
 -- post-card-ui: $post-card.post-data.title
 timestamp: $post-card.post-data.published-on
 image: $post-card.post-data.post-image
-link:  $post-card.post-data.post-link
+link:  $post-card.post-data.post-url
 body: $post-card.post-data.body
 author: $post-card.post-data.author
 tags: $post-card.post-data.tags
@@ -3388,3 +3392,7 @@ optional string link:
 
 
 
+
+
+
+-- ftd.color hover-c: coral

@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/misty-gray/blog-authors/patrica as author
+-- import: fastn-community.github.io/misty-gray/blog-authors/patrica
 -- import: fastn-community.github.io/misty-gray/components
 
 
@@ -43,7 +43,7 @@ author: $patrica
 -- ds.rendered.output:
 
 -- ds.author-bio: 
-author: $author.patrica
+author: $patrica.patrica
 
 -- end: ds.rendered.output
 

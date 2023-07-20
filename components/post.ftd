@@ -36,7 +36,7 @@ download: post.ftd
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
 post-url: blog-articles/sample-post
-author: $author.patrica
+author: $patrica.patrica
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab 
@@ -117,7 +117,7 @@ lang: ftd
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
 post-url: blog-articles/sample-post
-author: $author.patrica
+author: $patrica.patrica
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab 

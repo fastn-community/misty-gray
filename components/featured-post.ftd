@@ -1,5 +1,5 @@
 -- import: fastn-community.github.io/misty-gray/components
--- import: fastn-community.github.io/misty-gray/blog-articles/category-1/sample-post-2 
+-- import: fastn-community.github.io/misty-gray/blog-articles/sample-post
 
 
 -- ds.page: featured-post
@@ -28,19 +28,24 @@ To see it in action - [Click here](blog/).
 \-- common.post-meta meta: Understanding process of statup-up funding
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
-post-url: blog-articles/category-1/sample-post-2/
-author: $author.patrica
+post-url: blog-articles/sample-post/
+author: $patrica.patrica
+
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
 
 \-- ds.featured-post:
-post-data: $sample-post-2.meta
+post-data: $sample-post.meta
+cta-primary: Button
+cta-primary-url: blog/
 
 -- ds.rendered.output:
 
 -- ds.featured-post:
-post-data: $sample-post-2.meta
+post-data: $sample-post.meta
+cta-primary: Button
+cta-primary-url: blog/
 
 -- end: ds.rendered.output
 
@@ -50,7 +55,9 @@ post-data: $sample-post-2.meta
 lang: ftd
 
 \-- ds.featured-post:
-post-data: $sample-post-2.meta
+post-data: $sample-post.meta
+cta-primary: Button
+cta-primary-url: blog/
 
 -- ds.h3: Properties of `featured-post` component
 
@@ -64,8 +71,8 @@ lang: ftd
 \-- common.post-meta meta: Understanding process of statup-up funding
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.static.image-placeholder.png
-post-url: blog-articles/category-1/sample-post-2/
-author: $author.patrica
+post-url: blog-articles/sample-post
+author: $patrica.patrica
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 

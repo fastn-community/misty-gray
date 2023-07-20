@@ -1,5 +1,5 @@
 -- import: fastn-community.github.io/misty-gray/components
--- import: fastn-community.github.io/misty-gray/blog-authors/patrica as author
+-- import: fastn-community.github.io/misty-gray/blog-authors/patrica 
 
 -- ds.page: compact-text
 document-title: fastn misty-gray Template. Build Your Own Website with Ease
@@ -38,7 +38,7 @@ like below author-bio.
 \-- ds.compact-text.inner:
 
 \-- ds.author-bio: 
-author: $author.patrica
+author: $patrica.patrica
 
 \-- end: ds.compact-text.inner
 
@@ -59,7 +59,7 @@ below author-bio.
 -- ds.compact-text.inner:
 
 -- ds.author-bio: 
-author: $author.patrica
+author: $patrica.patrica
 
 -- end: ds.compact-text.inner
 
