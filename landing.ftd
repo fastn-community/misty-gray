@@ -38,7 +38,7 @@ We are an award-winning strategic design company that provides consultancy servi
 and help you create outstanding digital products.
 
 -- hero-image-right: We Transform ideas into digital outcomes
-image: $assets.files.assets.img2.png
+image: $assets.files.assets.Img2.png
 link: landing/
 cta-primary: Sign me up
 cta-link: index.html
