@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/misty-gray as ds
 
 
 
@@ -12,15 +12,15 @@ site-logo: NULL
 
 -- ds.toc-title: On this page
 
--- ds.link-group: How to create a global my-ds page module for set-3-ds?
-cta: footer/#how-to-create-a-global-my-ds-page-Module-for-set-3-ds
+-- ds.link-group: How to create a global my-ds page module for misty-gray?
+cta: footer/#how-to-create-a-global-my-ds-page-Module-for-misty-gray
 
 -- end: my-ds.page.right-sidebar
 
 -- my-ds.page.body:
 
 In this section, we will learn about adding a footer to your pages in
-`set-3-ds`.
+`misty-gray`.
 
 The `page` component has a `show-footer` boolean type property. You can add 
 different footers using the `show-footer: true` property.
@@ -39,8 +39,8 @@ lang: ftd
 
 \-- fastn.dependency: fastn-community.github.io/footer
 
--- ds.h3: How to create a global `my-ds` page module for `set-3-ds`?
-id: how-to-create-a-global-my-ds-page-Module-for-set-3-ds
+-- ds.h3: How to create a global `my-ds` page module for `misty-gray`?
+id: how-to-create-a-global-my-ds-page-Module-for-misty-gray
 
 You can create a `my-ds.ftd` module inside your `fastn` package and create your
 custom `my-ds` page component.
@@ -55,8 +55,8 @@ Here’s what your `my-ds.ftd` module would look like:
 lang: ftd
 download: my-ds.ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
-\-- import: fastn-community.github.io/set-3-ds/common
+\-- import: fastn-community.github.io/misty-gray as ds
+\-- import: fastn-community.github.io/misty-gray/common
 \-- import: fastn-community.github.io/footer
 
 \-- component page:
@@ -114,7 +114,7 @@ Use `my-ds` component to create a new page using it.
 lang: ftd
 download: footer.ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/misty-gray as ds
 \-- import: <your fastn package name>/my-ds
 
 \-- my-ds.page: This is page title

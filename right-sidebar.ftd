@@ -1,5 +1,5 @@
--- import: fastn-community.github.io/set-3-ds as ds
--- import: fastn-community.github.io/set-3-ds/assets
+-- import: fastn-community.github.io/misty-gray as ds
+-- import: fastn-community.github.io/misty-gray/assets
 
 -- my-ds.page: Right Sidebar
 site-logo: NULL
@@ -7,8 +7,8 @@ sidebar: true
 
 -- my-ds.page.right-sidebar:
 
--- ds.link-group: How to create a global my-ds page module for set-3-ds?
-cta: right-sidebar/#how-to-create-a-global-my-ds-page-module-for-set-3-DS
+-- ds.link-group: How to create a global my-ds page module for misty-gray?
+cta: right-sidebar/#how-to-create-a-global-my-ds-page-module-for-misty-gray
 
 -- ds.link-group: How to enable right-sidebar without adding my-ds module?
 cta: right-sidebar/#how-to-enable-right-sidebar-without-adding-my-ds-module
@@ -35,10 +35,10 @@ would be possible without your support. We would love to hear from you.
 
 -- my-ds.page.body:
 
-In this section, we will learn how to add right-sidebar in `set-3-ds`.
+In this section, we will learn how to add right-sidebar in `misty-gray`.
 
--- ds.h3: How to create a global `my-ds` page module for `set-3-ds`?
-id: how-to-create-a-global-my-ds-page-module-for-set-3-DS
+-- ds.h3: How to create a global `my-ds` page module for `misty-gray`?
+id: how-to-create-a-global-my-ds-page-module-for-misty-Gray
 
 You can create a `my-ds.ftd` module inside your `fastn` package and create your
 custom `my-ds` page component.
@@ -53,7 +53,7 @@ Here’s what your `my-ds.ftd` module would look like:
 lang: ftd
 download: my-ds.ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/misty-gray as ds
 
 \-- component page:
 children wrapper:
@@ -104,7 +104,7 @@ Use `my-ds` component to create a new page using it.
 lang: ftd
 download: sidebar.ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/misty-gray as ds
 \-- import: <your fastn package name>/my-ds
 
 \-- my-ds.page: This is page title
@@ -154,7 +154,7 @@ downloaded.
 lang: ftd
 download: right-sidebar.ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/misty-gray as ds
 
 \-- ds.page: Right Sidebar 👉🏻
 sidebar: true

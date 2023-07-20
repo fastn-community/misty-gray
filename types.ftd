@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/misty-gray as ds
 
 -- my-ds.page: Changing Typography
 site-logo: NULL
@@ -11,16 +11,16 @@ cta: types/#fastn-typography-collection
 -- ds.link-group: How to add a typography?
 cta: types/#how-to-add-a-typography
 
--- ds.link-group: How to create a global my-ds page module for set-3-ds?
-cta: types/#how-to-create-a-global-my-ds-page-module-for-Set-3-ds
+-- ds.link-group: How to create a global my-ds page module for misty-gray?
+cta: types/#how-to-create-a-global-my-ds-page-module-for-misty-gray
 
 -- end: my-ds.page.right-sidebar
 
 -- my-ds.page.body:
 
-In this section, we will learn about changing typography of `set-3-ds`.
+In this section, we will learn about changing typography of `misty-gray`.
 
-`set-3-ds` uses `fastn` default typography. If you wish to update it, 
+`misty-gray` uses `fastn` default typography. If you wish to update it, 
 
 -- ds.h3: fastn Typography collection:
 id: fastn-typography-collection
@@ -34,7 +34,7 @@ id: how-to-add-a-typography
 To add typography to your fastn web sites. Edit your `FASTN.ftd` file and add
 typography dependency into it.
 
-In below example we are using https://fastn-community.github.io/set-3-typography/
+In below example we are using https://fastn-community.github.io/misty-gray-typography/
 typography.
 
 Add typography dependency into your `FASTN.ftd` file as shown in below example:
@@ -42,11 +42,11 @@ Add typography dependency into your `FASTN.ftd` file as shown in below example:
 -- ds.code:
 lang: ftd
 
-\-- fastn.dependency: fastn-community.github.io/set-3-ds
-\-- fastn.dependency: fastn-community.github.io/set-3-typography
+\-- fastn.dependency: fastn-community.github.io/misty-gray
+\-- fastn.dependency: fastn-community.github.io/misty-gray-typography
 
--- ds.h3: How to create a global `my-ds` page module for `set-3-ds`?
-id: how-to-create-a-global-my-ds-page-module-for-Set-3-ds
+-- ds.h3: How to create a global `my-ds` page module for `misty-gray`?
+id: how-to-create-a-global-my-ds-page-module-for-Misty-gray
 
 You can create a `my-ds.ftd` module inside your `fastn` package and create your
 custom `my-ds` page component.
@@ -61,8 +61,8 @@ Here’s what your `my-ds.ftd` module would look like:
 lang: ftd
 download: my-ds.ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
-\-- import: fastn-community.github.io/set-3-typography
+\-- import: fastn-community.github.io/misty-gray as ds
+\-- import: fastn-community.github.io/misty-gray-typography
 
 \-- component page:
 children wrapper:
@@ -74,7 +74,7 @@ boolean sidebar: false
 site-logo: $fastn-assets.files.images.fastn.svg
 body: $page.body
 sidebar: $page.sidebar
-types: $set-3-typography.types
+types: $misty-gray-typography.types
 
 \-- end: ds.page.banner
 
@@ -108,7 +108,7 @@ Then use `my-ds` component to create a new page using it.
 lang: ftd
 download: typography.ftd
 
-\-- import: fastn-community.github.io/set-3-ds as ds
+\-- import: fastn-community.github.io/misty-gray as ds
 \-- import: <your fastn package name>/my-ds
 
 \-- my-ds.page: This is page title
@@ -140,7 +140,7 @@ downloaded.
 Add this file inside your `fastn` project and deploy or run `fastn serve` on
 your localhost. Access your localhost in browser
 e.g.`http://127.0.0.1:8000/typography/` you will see page text with
-[set-3-typography](https://fastn-community.github.io/set-3-typography/) font
+[misty-gray-typography](https://fastn-community.github.io/misty-gray-typography/) font
 sizes in [Lato](https://fastn-community.github.io/lato-font/) and 
 [Source-Code-Pro](https://fastn-community.github.io/source-code-pro-font/) font.
 

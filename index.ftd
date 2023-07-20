@@ -1,11 +1,10 @@
 -- import: fastn/processors as pr
--- import: fastn-community.github.io/set-3-ds/assets
--- import: fastn-community.github.io/set-3-ds/common
--- import: fastn-community.github.io/set-3-ds/common/fonts as fonts
+-- import: fastn-community.github.io/misty-gray/common
+-- import: fastn-community.github.io/misty-gray/common/fonts as fonts
 -- import: fastn-community.github.io/dark-mode-switcher as dms
--- import: fastn-community.github.io/set-3-ds/header as h
+-- import: fastn-community.github.io/misty-gray/header as h
 
--- import: fastn-community.github.io/set-3-ds/typography as tf
+-- import: fastn-community.github.io/misty-gray/typography as tf
 export: h0, h1, h2, h3, markdown
 
 -- import: fastn-community.github.io/code-block as cb
@@ -16,12 +15,12 @@ export: code, rendered
 
 
 -- page: Overview
-document-description: Simple, easy-to-use set-3-ds template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
-document-title: fastn set-3-ds Template. Build Your Own Website with Ease
-document-image: https://fastn-community.github.io/set-3-ds/-/fastn-community.github.io/set-3-ds/assets/set-3-ds-og-image.jpg
+document-description: Simple, easy-to-use misty-gray template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-title: fastn misty-gray Template. Build Your Own Website with Ease
+document-image: https://fastn-community.github.io/misty-gray/-/fastn-community.github.io/misty-gray/assets/misty-gray-og-image.jpg
 site-name: $common.site-name
 site-logo: NULL
-github-url: https://github.com/fastn-community/set-3-ds/
+github-url: https://github.com/fastn-community/misty-gray/
 github-icon: true
 sidebar: true
 
@@ -56,7 +55,7 @@ social-links: $common.social-links
 
 -- page.body:
 
-`set-3-ds` will help you create a beautiful documentation site in no time.
+`misty-gray` will help you create a beautiful documentation site in no time.
 
 It provides out-of-the-box documentation features that can be used to create any
 kind of site(personal website, blog, etc).
@@ -68,14 +67,14 @@ id: fast-track
 Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
 project in just 5 minutes!
 
- [Click here](https://github.com/fastn-stack/fastn-template/) to use `set-3-ds`
+ [Click here](https://github.com/fastn-stack/fastn-template/) to use `misty-gray`
 for your fastn project.
 
 -- h3: 🌟 Whats next?
 id: whats-next
 
 Create your first page. 
-[Click here to know more](https://fastn-community.github.io/set-3-ds/page/).
+[Click here to know more](https://fastn-community.github.io/misty-gray/page/).
 
 -- h3: 👀 Want to learn more?
 id: want-to-learn-more
@@ -86,7 +85,7 @@ into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 -- h3: 🎯 Used by?
 id: used-by
 
-Our all documentation sites uses this `set-3-ds` theme.
+Our all documentation sites uses this `misty-gray` theme.
 
 - [fastn.com](https://fastn.com/home/)
 - [FifthTry.com](https://www.fifthtry.com/)
@@ -308,7 +307,6 @@ toc-obj: $doc-page-desktop.toc
 -- end: ftd.column
 
 -- ftd.column:
-padding-horizontal.px: 50
 min-height.fixed.calc: 100vh - 128px
 max-width.fixed.px if { !doc-page-desktop.blog && ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
 max-width if { doc-page-desktop.full-width }: fill-container
@@ -320,7 +318,8 @@ width if { doc-page-desktop.full-width }: fill-container
 if: { doc-page-desktop.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
-margin-bottom.px: 21
+margin-vertical.px: 24
+margin-left.px: 40
 
 -- tf.markdown:
 if: {doc-page-desktop.body != NULL}
@@ -330,7 +329,6 @@ $doc-page-desktop.body
 -- ftd.column:
 align-content: top-left
 children: $doc-page-desktop.wrapper
-spacing.fixed.px: 13
 
 -- end: ftd.column
 
@@ -1776,7 +1774,7 @@ width: fill-container
 padding-vertical.px: 120
 
 -- ftd.row:
-width: fill-container
+margin-left.px: 120
 border-left-width.px: 19
 border-color: $inherited.colors.accent.primary
 spacing: space-between
@@ -1916,6 +1914,7 @@ common.tags-list list topics:
 -- ftd.column:
 width: fill-container
 align-content: center
+padding-horizontal.px: 60
 
 -- ftd.text: $posts.title
 if: { posts.title != NULL }
@@ -2002,12 +2001,13 @@ timestamp: $post.meta.published-on
 $post.meta.body
 
 -- ftd.row:
+padding-horizontal.px: 50
 width: fill-container
+padding-top.px: 60
 
 -- ftd.column:
 width.fixed.percent: 77
 spacing.fixed.px: 30
-margin-top.px: 50
 children: $post.atictles-container
 
 -- end: ftd.column

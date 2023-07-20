@@ -1,6 +1,6 @@
--- import: fastn-community.github.io/set-3-ds as ds
+-- import: fastn-community.github.io/misty-gray as ds
 -- import: fastn-community.github.io/footer
--- import: fastn-community.github.io/set-3-ds/common
+-- import: fastn-community.github.io/misty-gray/common
 
 -- ftd.image-src fastn-logo:
 light: https://fastn.com/-/fastn.com/images/fastn.svg
@@ -32,7 +32,7 @@ sidebar: $page.sidebar
 document-title: $page.document-title
 document-description: $page.document-description
 document-image: $page.document-image
-github-url: https://github.com/fastn-community/set-3-ds/
+github-url: https://github.com/fastn-community/misty-gray/
 github-icon: true
 full-width: $page.full-width
 blog: $page.blog
