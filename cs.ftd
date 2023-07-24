@@ -1,5 +1,3 @@
--- import: fastn-community.github.io/misty-gray as ds
--- import: fastn-community.github.io/misty-gray/assets
 
 -- ds.page: Changing Color Scheme
 sidebar: true
