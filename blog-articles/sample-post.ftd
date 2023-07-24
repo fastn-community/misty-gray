@@ -1,10 +1,4 @@
--- import: fastn-community.github.io/misty-gray/assets
--- import: fastn-community.github.io/misty-gray as ds
--- import: fastn-community.github.io/misty-gray/common
 -- import: fastn-community.github.io/misty-gray/blog-authors/patrica
--- import: fastn-community.github.io/misty-gray/typography as tf
-export: h0, h1, h2, h3, markdown
-
 -- import: fastn-community.github.io/misty-gray/blog-articles/sample-post
 
 ; Change below details for your new blog post

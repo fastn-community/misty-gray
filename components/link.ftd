@@ -47,7 +47,7 @@ cta: components/link/
 
 -- ds.image: You can add any component inside `link-group` component as its child
 link: https://fastn.com
-src: $assets.files.static.image-placeholder.jpg
+src: $assets.files.assets.image-placeholder.jpg
 width.fixed.px: 300
 
 -- end: ds.link-group
