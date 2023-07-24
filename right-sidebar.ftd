@@ -1,5 +1,4 @@
--- import: fastn-community.github.io/misty-gray as ds
--- import: fastn-community.github.io/misty-gray/assets
+
 
 -- ds.page: Right Sidebar
 site-logo: NULL

@@ -41,7 +41,7 @@ exposing: h0, h1, h2, h3, markdown
 - Adding Right Sidebar: /right-sidebar/
 - Adding Footer: /footer/
 - SEO: /seo/
-- Doc-Site Components: /components/
+- Components: /components/
   - author-bio: /components/author-bio/
   skip: true
   - code: /components/code/
