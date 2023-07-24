@@ -1,23 +1,24 @@
--- import: fastn-community.github.io/misty-gray as ds
 
 
 
 
 
 
--- my-ds.page: Adding Footer
+
+-- ds.page: Adding Footer
 site-logo: NULL
+sidebar: true
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.toc-title: On this page
 
 -- ds.link-group: How to create a global my-ds page module for misty-gray?
 cta: footer/#how-to-create-a-global-my-ds-page-Module-for-misty-gray
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about adding a footer to your pages in
 `misty-gray`.
@@ -42,18 +43,18 @@ lang: ftd
 -- ds.h3: How to create a global `my-ds` page module for `misty-gray`?
 id: how-to-create-a-global-my-ds-page-Module-for-misty-gray
 
-You can create a `my-ds.ftd` module inside your `fastn` package and create your
+You can create a `ds.ftd` module inside your `fastn` package and create your
 custom `my-ds` page component.
 
 Let's learn how to create a module:
 
-Create a new file let’s say `my-ds.ftd`. 
+Create a new file let’s say `ds.ftd`. 
 
-Here’s what your `my-ds.ftd` module would look like:
+Here’s what your `ds.ftd` module would look like:
 
--- cb.code: my-ds.ftd module
+-- cb.code: ds.ftd module
 lang: ftd
-download: my-ds.ftd
+download: ds.ftd
 
 \-- import: fastn-community.github.io/misty-gray as ds
 \-- import: fastn-community.github.io/misty-gray/common
@@ -104,7 +105,7 @@ children: $page.wrapper
 
 -- ds.markdown:
 
-Click on the download icon of the above code-block. `my-ds.ftd` file will be downloaded.
+Click on the download icon of the above code-block. `ds.ftd` file will be downloaded.
 Import this file inside your new `.ftd` or download below given `footer.ftd`
 file.
 
@@ -117,7 +118,7 @@ download: footer.ftd
 \-- import: fastn-community.github.io/misty-gray as ds
 \-- import: <your fastn package name>/my-ds
 
-\-- my-ds.page: This is page title
+\-- ds.page: This is page title
 
 This is body area. It contains multiple paragraphs.
 
@@ -136,7 +137,7 @@ This is heading level 2 optional body content.
 
 This is heading level 3 optional body content.
 
-\-- end: my-ds.page
+\-- end: ds.page
 
 -- ds.markdown:
 
@@ -147,4 +148,4 @@ Add this file inside your `fastn` project and deploy or run `fastn serve` on
 your localhost. Access your localhost in the browser
 e.g.`http://127.0.0.1:8000/footer/` you will see the page with the footer.
 
--- end: my-ds.page
+-- end: ds.page

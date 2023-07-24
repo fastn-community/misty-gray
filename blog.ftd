@@ -7,6 +7,7 @@
 -- ds.page: Blog Page
 site-logo: NULL
 blog: true
+sidebar: true
 
 -- ds.featured-post:
 post-data: $sample-post.meta-2

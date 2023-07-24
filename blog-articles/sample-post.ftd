@@ -1,7 +1,7 @@
 -- import: fastn-community.github.io/misty-gray/assets
 -- import: fastn-community.github.io/misty-gray as ds
 -- import: fastn-community.github.io/misty-gray/common
--- import: fastn-community.github.io/misty-gray/blog-authors/patrica as author
+-- import: fastn-community.github.io/misty-gray/blog-authors/patrica
 -- import: fastn-community.github.io/misty-gray/typography as tf
 export: h0, h1, h2, h3, markdown
 
@@ -12,8 +12,8 @@ export: h0, h1, h2, h3, markdown
 -- common.post-meta meta: 10 Hilarious Cartoons That Depict Real-Life Problems of Programmers
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.assets.post-img.png
-post-link: blog-articles/sample-post/
-author: $author.patrica
+post-url: blog-articles/sample-post/
+author: $patrica.patrica
 tags: $common.topic
 
 Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
@@ -25,11 +25,10 @@ Redefined the user acquisition and redesigned the onboarding experience, all wit
 -- common.post-meta meta-2: We Transform ideas into digital outcomes.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.assets.post-img.png
-post-link: blog-articles/sample-post/
-author: $author.patrica
+post-url: blog-articles/sample-post/
+author: $patrica.patrica
 tags: $common.topic
-cta-primary: Button
-cta-primary-url: blog/
+
 
 We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
 
@@ -40,8 +39,8 @@ We are an award-winning strategic design company that provides consultancy servi
 -- common.post-meta meta-3: Bringing the world together through live experiences.
 published-on: July 22, 2014 at 10:02 pm
 post-image: $assets.files.assets.blog-hero.png
-post-link: blog-articles/sample-post/
-author: $author.patrica
+post-url: blog-articles/sample-post/
+author: $patrica.patrica
 tags: $common.topic
 
 We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.

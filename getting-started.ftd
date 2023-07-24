@@ -1,10 +1,10 @@
--- import: fastn-community.github.io/misty-gray as ds
 -- import: fastn-community.github.io/misty-gray/assets
 
--- my-ds.page: Getting Started
+-- ds.page: Getting Started
 site-logo: NULL
+sidebar: true
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.link-group: Creating fastn web-site using misty-gray
 cta: getting-started/#creating-fastn-web-site-using-misty-gray
@@ -15,9 +15,9 @@ cta: getting-started/#how-to-publish-a-package
 -- ds.link-group: Whats next?
 cta: getting-started/#what-next
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 You can create your documentation websites using `misty-gray`. `misty-gray` also 
 helps authors, entrepreneurs, corporate groups, and bloggers to create their 
@@ -68,4 +68,4 @@ SEO support.
 ✨ [Click here](https://fastn-community.github.io/misty-gray/assets/) to know about
 Static Assets.
 
--- end: my-ds.page
+-- end: ds.page
