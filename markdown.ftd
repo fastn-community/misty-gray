@@ -1,16 +1,17 @@
--- import: fastn-community.github.io/misty-gray as ds
 
--- my-ds.page: Markdown Primer
+
+-- ds.page: Markdown Primer
 site-logo: NULL
+sidebar: true
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.link-group: Markdown
 cta: markdown/#markdown
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 `misty-gray` supports markdown. If you want to use it you can use `--
 ds.mardkdown` for inline anchor links etc.
@@ -116,4 +117,4 @@ eiusmod tempor incididunt.
 
 -- end: ds.rendered
 
--- end: my-ds.page
+-- end: ds.page

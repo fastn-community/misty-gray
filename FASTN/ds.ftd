@@ -1,6 +1,6 @@
--- import: fastn-community.github.io/misty-gray as ds
--- import: fastn-community.github.io/footer
--- import: fastn-community.github.io/misty-gray/common
+-- import: fastn-community.github.io/misty-gray 
+export: author-bio,code,compact-text,featured-post,h0,h1,h2,h3,iframe,image,image-first,image-in-between,link,link-group,markdown,not-found-1,not-found-2,output,post,posts,rendered,tip,without-image,youtube, footer,letter, letter-data, letter-bar, letter-category, letter-stack,post-card,toc-title
+
 
 -- ftd.image-src fastn-logo:
 light: https://fastn.com/-/fastn.com/images/fastn.svg
@@ -22,7 +22,7 @@ boolean full-width: false
 boolean blog: false
 ftd.ui list hero:
 
--- ds.page: $page.title
+-- misty-gray.page: $page.title
 site-name: $common.site-name
 site-logo: $page.site-logo
 body: $page.body
@@ -38,9 +38,9 @@ full-width: $page.full-width
 blog: $page.blog
 hero: $page.hero
 
--- ds.page.footer:
+-- misty-gray.page.footer:
 
--- ds.footer:
+-- misty-gray.footer:
 site-logo: $common.site-logo
 site-name: $common.site-name 
 site-url: $common.site-url 
@@ -49,7 +49,7 @@ logo-height: $common.logo-height
 footer-links: $common.footer-links
 social-links: $common.social-links
 
--- end: ds.page.footer
+-- end: misty-gray.page.footer
 
 -- ftd.column:
 spacing.fixed.px: 13
@@ -58,6 +58,6 @@ children: $page.wrapper
 
 -- end: ftd.column
 
--- end: ds.page
+-- end: misty-gray.page
 
 -- end: page

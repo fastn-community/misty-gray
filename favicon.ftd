@@ -1,17 +1,17 @@
--- import: fastn-community.github.io/misty-gray as ds
 -- import: fastn-community.github.io/misty-gray/common
 
--- my-ds.page: Adding Favicon
+-- ds.page: Adding Favicon
 site-logo: NULL
+sidebar: true
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.link-group: How to add favicon?
 cta: favicon/#how-to-add-favicon
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about adding a favicon to your `fastn` web site.
 
@@ -31,4 +31,4 @@ lang: ftd
 \-- fastn.package: fastn-package-name
 favicon: /-/fastn-package-name/favicon.svg
 
--- end: my-ds.page
+-- end: ds.page

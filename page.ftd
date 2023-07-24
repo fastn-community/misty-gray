@@ -1,21 +1,20 @@
--- import: fastn-community.github.io/misty-gray as ds
 
 
 
 
 
--- my-ds.page: Creating A Page
+-- ds.page: Creating A Page
 
--- my-ds.page.right-sidebar:
+-- ds.page.right-sidebar:
 
 -- ds.toc-title: On this page
 
 -- ds.link-group: How to create a new page?
 cta: page/#how-to-create-a-new-page
 
--- end: my-ds.page.right-sidebar
+-- end: ds.page.right-sidebar
 
--- my-ds.page.body:
+-- ds.page.body:
 
 In this section, we will learn about creating pages in `misty-gray`.
 
@@ -61,4 +60,4 @@ This is heading level 2 optional body content.
 
 This is heading level 3 optional body content.
 
--- end: my-ds.page
+-- end: ds.page
