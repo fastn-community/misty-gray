@@ -54,13 +54,4 @@ post-data: $sample-post.meta
 
 -- end: ds.posts
 
-
--- ds.footer:
-site-logo: $common.site-logo
-site-url: $common.site-url 
-logo-width: $common.logo-width
-logo-height: $common.logo-height
-footer-links: $common.footer-links
-social-links: $common.social-links
-
 -- end: ds.page
