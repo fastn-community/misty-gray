@@ -88,4 +88,6 @@ exposing: h0, h1, h2, h3, markdown
 
 # Blog: /blog
 
+# Landing: /landing
+
 ## Sample Post: /blog-articles/sample-post/
