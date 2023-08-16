@@ -30,10 +30,10 @@ exposing: h0, h1, h2, h3, markdown
 -- fastn.sitemap:
 
 # Home: index.html
-  document: /user-manual/index.ftd
-
 - Overview: index.html
-  document: /user-manual/index.ftd
+
+# User Manual: /user-manual/
+- Overview: /user-manual/
 - Create a landing page: /create/
   document: /user-manual/create.ftd
 - Add landing page to your existing site: /integrate/
