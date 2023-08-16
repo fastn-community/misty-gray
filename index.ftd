@@ -23,6 +23,7 @@ github-url: https://github.com/fastn-community/misty-gray/
 github-icon: true
 sidebar: true
 
+
 -- page.right-sidebar:
 
 -- link-group: Fast Track
@@ -135,6 +136,7 @@ optional string github-url:
 boolean full-width: false
 optional boolean blog: false
 ftd.ui list hero:
+
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title

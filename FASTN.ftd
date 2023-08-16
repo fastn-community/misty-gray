@@ -10,6 +10,8 @@ favicon: https://fastn-community.github.io/misty-gray/-/fastn-community.github.i
 -- fastn.dependency: fastn-community.github.io/rubik-font
 -- fastn.dependency: fastn-community.github.io/bling
 -- fastn.dependency: fastn-community.github.io/source-code-pro-font
+-- fastn.dependency: fastn-community.github.io/site-doc
+-- fastn.dependency: fastn-stack.github.io/fastn-js
 
 -- fastn.auto-import: fastn-community.github.io/code-block as cb
 exposing: code, rendered
@@ -22,8 +24,24 @@ exposing: h0, h1, h2, h3, markdown
 -- fastn.auto-import: fastn-community.github.io/misty-gray/FASTN/ds
 -- fastn.auto-import: cs
 -- fastn.auto-import: typo
+-- fastn.auto-import: fastn-community.github.io/site-doc
+
 
 -- fastn.sitemap:
+
+# Home: index.html
+- Overview: index.html
+
+# User Manual: /user-manual/
+- Overview: /user-manual/
+- Create a landing page: /create/
+  document: /user-manual/create.ftd
+- Add landing page to your existing site: /integrate/
+  document: /user-manual/integrate.ftd
+
+
+
+/-- fastn.sitemap:
 
 # Home: /index.html
 
@@ -89,5 +107,7 @@ exposing: h0, h1, h2, h3, markdown
 # Blog: /blog
 
 # Landing: /landing
+
+
 
 ## Sample Post: /blog-articles/sample-post/
