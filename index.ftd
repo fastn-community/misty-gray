@@ -13,7 +13,7 @@ export: code, rendered
 
 
 
--- page: Overview
+-- ds.page: Overview
 document-description: Simple, easy-to-use misty-gray template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-title: fastn misty-gray Template. Build Your Own Website with Ease
 document-image: https://fastn-community.github.io/misty-gray/-/fastn-community.github.io/misty-gray/assets/misty-gray-og-image.jpg
@@ -22,8 +22,16 @@ site-logo: NULL
 github-url: https://github.com/fastn-community/misty-gray/
 github-icon: true
 sidebar: true
+full-width: false
 
--- page.right-sidebar:
+-- ds.page.body:
+
+`misty-gray` will help you create a beautiful documentation site in no time.
+
+It provides out-of-the-box documentation features that can be used to create any
+kind of site(personal website, blog, etc).
+
+-- ds.page.right-sidebar:
 
 -- link-group: Fast Track
 cta: #fast-track
@@ -37,28 +45,7 @@ cta: #want-to-learn-more
 -- link-group: Used by?
 cta: #used-by
 
--- end: page.right-sidebar
-
--- page.footer:
-
--- footer:
-site-logo: $common.site-logo
-site-name: $common.site-name
-site-url: $common.site-url 
-logo-width: $common.logo-width
-logo-height: $common.logo-height
-footer-links: $common.footer-links
-social-links: $common.social-links
-
--- end: page.footer
-
--- page.body:
-
-`misty-gray` will help you create a beautiful documentation site in no time.
-
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
-
+-- end: ds.page.right-sidebar
 
 -- h3: 🚀 Fast Track 
 id: fast-track
@@ -89,7 +76,7 @@ Our all documentation sites uses this `misty-gray` theme.
 - [fastn.com](https://fastn.com/home/)
 - [FifthTry.com](https://www.fifthtry.com/)
 
--- end: page
+-- end: ds.page
 
 
 
@@ -213,7 +200,7 @@ if: { page.show-footer}
 width: fill-container
 children: $page.footer
 align-self: center
-max-width.fixed.px: $common.max-width
+max-width.fixed.px if { !page.full-width }: $common.max-width
 
 -- end: ftd.column
 
@@ -260,7 +247,7 @@ ftd.ui list hero:
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: $common.max-width
+max-width.fixed.px if { !doc-page-desktop.full-width }: $common.max-width
 align-self: center
 
 -- h.header:
@@ -310,7 +297,6 @@ min-height.fixed.calc: 100vh - 128px
 max-width.fixed.px if { !doc-page-desktop.blog && ftd.is_empty(doc-page-desktop.toc) && !doc-page-desktop.full-width && !doc-page-desktop.sidebar }: 800
 max-width if { doc-page-desktop.full-width }: fill-container
 max-width if { doc-page-desktop.blog }: fill-container
-width: fill-container
 width if { doc-page-desktop.full-width }: fill-container
 
 -- ftd.text: $doc-page-desktop.title
